@@ -5,7 +5,7 @@
 **THIS IS A WORK IN PROGRESS**
 
 This project is a mockup of a document library with full text search capabilities.
-This project is complementing Daniel Vaz Gaspar example of flask-Appbuilder. You can find the original project [here](https://github.com/dpgaspar/Flask-AppBuilder/tree/master/examples/quickfiles).
+This project is complementing **Daniel Vaz Gaspar** example of flask-Appbuilder. You can find the original project [here](https://github.com/dpgaspar/Flask-AppBuilder/tree/master/examples/quickfiles).
 The "project" concept being replaced by "Documents".
 
 This app enables you to upload and manage documents. It is a simple app that can be used as a starting point for your own app.
