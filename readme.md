@@ -18,7 +18,7 @@ I have added a few features to the original project:
 - The real new feature is that each time a document is uploaded in the library, a Full Text Search index is created.
 - I have added a search view in the document library using the search box. The search is based on the Full Text Search index if you use the Match capability.
 - The Match capability is added for Text and Strings columns. It is based on the [FTS5](https://www.sqlite.org/fts5.html) extension of SQLite.
-- I have also improved the redering, has all the words in the match search request are highlighted in the document.
+- I have also improved the rendering, has all the words in the match search request are highlighted in the document.
 
 To do that, I have changed few things in the flask-appbuilder project:
 
@@ -28,9 +28,9 @@ You need to use https://github.com/seadevfr/Flask-AppBuilder.git to install the 
 
 Have a look at the requirements.txt file to see the list of dependencies.
 
-Outline the steps required to install the application.
+Outline to install the application.
 
-- best is to use Visual Studio Code
+- easiest is to use Visual Studio Code
 - git clone this repository
 - create a virtualenv
 - install the dependencies
