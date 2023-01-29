@@ -1,6 +1,10 @@
 """Full Text Shearch for Flask App Builder
+
+Summary: This module enables full text search for a table in a database.
+
 """
-import fitz
+from concurrent.futures import ThreadPoolExecutor
+import time
 from sqlalchemy import  (   create_engine,
                             event,
                             MetaData, 
@@ -27,7 +31,7 @@ from sqlalchemy.orm import sessionmaker
 import os
 from flask_appbuilder.filemanager import get_file_original_name
 import types
-from flask import g, redirect, url_for, Markup, current_app
+from flask import g, redirect, url_for, Markup, current_app, flash
 import sqlite3
 from sqlite3 import Connection
 from typing import List
@@ -35,6 +39,11 @@ from flask_appbuilder.models.decorators import renders
 import re
 
 RATIO = 50
+__version__ = "0.0.1"
+__author__ = "Gilbert Brault"
+__email__ = "gbrault@seadev.org"
+__license__ = "MIT"
+__status__ = "Development"
 
 def enable_fts(db: Connection, table: str, columns: List[str], col_attrs: dict):
     """Enable full text search for a table in a database.
@@ -222,41 +231,71 @@ def flags_decomposer(flags):
 
 # get bocks of text from pdf file on disk using fitz
 def read_doc(doc):
-    unreadable_text_len = 0
-    text_len = 0
     all_rectangles = []
-    for page in doc:
-        blocks = page.get_text("dict", flags=11)["blocks"]
-        # select blocks in the table
-        crop_blocks = []
-        for b in blocks:
-            for l in b["lines"]:
-                for s in l["spans"]:
-                    if s["text"].strip() != "":
-                        block = {}
-                        block.update({"font": s["font"]})     # font name
-                        block.update({"style": flags_decomposer(s["flags"])})  # readable font flags
-                        block.update({"size": s["size"]})     # font size
-                        block.update({"color": s["color"]})   # font color
-                        block.update({"text": s["text"]})     # text
-                        block.update({"xlt": s["bbox"][0] })  # x left top
-                        block.update({"ylt": s["bbox"][1] })  # y left top
-                        block.update({"xrb": s["bbox"][2] })  # x right bottom
-                        block.update({"yrb": s["bbox"][3] })  # y right bottom
-                        block.update({"page": page.number })  # page number of the block
-                        if l["dir"] == (0, -1):
-                            block.update({"dir": 1})     # text direction 0=horizontal, 1=vertical                 
-                        text_len += len(s["text"])
-                        crop_blocks.append(block)
-        sorted_crop_blocks = sorted(crop_blocks, key=lambda item: (item['ylt'],item['xlt']) )
-        all_rectangles.extend(find_largest_connex_rectangles(sorted_crop_blocks,RATIO))
+    if fts_config.PDF_BACKEND == "PyMuPDF":
+        for page in doc:
+            blocks = page.get_text("dict", flags=11)["blocks"]
+            # select blocks in the table
+            crop_blocks = []
+            for b in blocks:
+                for l in b["lines"]:
+                    for s in l["spans"]:
+                        if s["text"].strip() != "":
+                            block = {}
+                            block.update({"font": s["font"]})     # font name
+                            block.update({"style": flags_decomposer(s["flags"])})  # readable font flags
+                            block.update({"size": s["size"]})     # font size
+                            block.update({"color": s["color"]})   # font color
+                            block.update({"text": s["text"]})     # text
+                            block.update({"xlt": s["bbox"][0] })  # x left top
+                            block.update({"ylt": s["bbox"][1] })  # y left top
+                            block.update({"xrb": s["bbox"][2] })  # x right bottom
+                            block.update({"yrb": s["bbox"][3] })  # y right bottom
+                            block.update({"page": page.number })  # page number of the block
+                            if l["dir"] == (0, -1):
+                                block.update({"dir": 1})     # text direction 0=horizontal, 1=vertical                 
+                            crop_blocks.append(block)
+            sorted_crop_blocks = sorted(crop_blocks, key=lambda item: (item['ylt'],item['xlt']) )
+            all_rectangles.extend(find_largest_connex_rectangles(sorted_crop_blocks,RATIO))
+    elif fts_config.PDF_BACKEND == "pdfplumber":
+        for page in doc.pages:
+            if 'char' not in page.objects or len(page.objects['char'])==0:
+                continue
+            all_chars = sorted(page.objects['char'], key=lambda c: (page.height-c['y0'],c['x0']))
+            groups = []
+            for i,char in enumerate(all_chars):
+                if i==0:
+                    groups.append([char])
+                    j = 0
+                else:
+                    if (groups[-1][j]["y0"] == char["y0"]) and (
+                        groups[-1][j]["fontname"] == char["fontname"]) and (
+                        groups[-1][j]["size"] == char["size"]) and (
+                        (char["x0"]-groups[-1][j]["x1"])<0.75*(char["width"]+groups[-1][j]["width"])):
+                            groups[-1].append(char)
+                            j += 1
+                    else:
+                        groups.append([char])
+                        j = 0
+            crop_blocks = []
+            for group in groups:
+                l = ""
+                for i,char in enumerate(group):
+                    if i > 0:
+                        if (char["x0"]-group[i-1]["x1"])>0.1*(char["width"]+group[i-1]["width"]):
+                            l +=" "
+                    l += char["text"]
+                crop_blocks.append({"text":l,
+                            "xlt": group[0]["x0"],
+                            "ylt": page.height-group[0]["y1"],
+                            "xrb": group[-1]["x1"],
+                            "yrb": page.height-group[-1]["y0"],
+                            "font": group[0]["fontname"],
+                            "size": group[0]["size"],
+                            "page": page.page_number})                           
+            sorted_crop_blocks = sorted(crop_blocks, key=lambda item: (item['ylt'],item['xlt']) )
+            all_rectangles.extend(find_largest_connex_rectangles(sorted_crop_blocks,RATIO))
     return all_rectangles
-
-__version__ = "0.0.1"
-__author__ = "Gilbert Brault"
-__email__ = "gbrault@seadev.org"
-__license__ = "MIT"
-__status__ = "Development"
 
 # Models ===========================================================================================================================
 
@@ -350,27 +389,72 @@ def fts_menus(appbuilder):
 
 # FTSSearch ===========================================================================================================================================
 
-def pdf_delete(documentfiles):
+# implement a threaded version of document indexing
+# a tasklist is created and each task is a document to index or delete
+# the tasklist is processed by a threadpool
+# the threadpool is created with a maximum number of threads
+# the threadpool is created with a maximum number of tasks in the queue
+
+class FTSSearch:
+    def __init__(self, appbuilder):
+        self.appbuilder = appbuilder
+        self.tasklist = []
+        self.threadpool = ThreadPoolExecutor(max_workers=fts_config.max_workers)
+        self.threadpool.submit(self.process_tasklist)
+
+    def process_tasklist(self):
+        while True:
+            if len(self.tasklist) > 0:
+                task = self.tasklist.pop(0)
+                if task['action'] == 'index':
+                    self.threadpool.submit(pdf_to_documentsfilescontent, task['documentfiles'])
+                if task['action'] == 'delete':
+                    self.threadpool.submit(pdf_delete, task['documentfiles'])
+            else:
+                time.sleep(1)
+
+    def index(self, documentfiles):
+        # check if the document is already indexed and flash a message and return if it is
+        if self.appbuilder.session.query(FTS_DocumentFiles).filter(FTS_DocumentFiles.file == documentfiles.file).first():
+            flash('Document already indexed (or indexing in progress)')
+            return        
+        self.tasklist.append({'action': 'index', 'documentfiles': documentfiles.file})
+
+    def delete(self, documentfiles):
+        doc = self.appbuilder.session.query(FTS_DocumentFiles).filter(FTS_DocumentFiles.file == documentfiles.file).first()
+        self.tasklist.append({'action': 'delete', 'documentfiles': doc.id})
+
+def pdf_delete(id):
     engine = create_engine(fts_config.dbftsurl)
     Session = sessionmaker(engine)
     with Session() as session:
         # delete all the records of FTS_DocumentsFilesContent
-        session.query(FTS_DocumentsFilesContent).filter(FTS_DocumentsFilesContent.document_id == documentfiles.id).delete()
+        session.query(FTS_DocumentsFilesContent).filter(FTS_DocumentsFilesContent.document_id == id).delete()
         session.commit()
         # delete all the records of FTS_DocumentsFiles
-        session.query(FTS_DocumentFiles).filter(FTS_DocumentFiles.id == documentfiles.id).delete()
+        session.query(FTS_DocumentFiles).filter(FTS_DocumentFiles.id == id).delete()
         session.commit()
 
-def pdf_to_documentsfilescontent(documentfiles):
+def pdf_to_documentsfilescontent(file):
     engine = create_engine(fts_config.dbftsurl)
     Session = sessionmaker(engine)
     with Session() as session:
         fts_documentFiles = FTS_DocumentFiles(
-            file = documentfiles.file
+            file = file
         )
         session.add(fts_documentFiles)
         session.commit()
-        doc = fitz.open(os.path.join(fts_config.UPLOAD_FOLDER,documentfiles.file))
+        if fts_config.PDF_BACKEND == "PyMuPDF":
+            import fitz
+            # read the document
+            doc = fitz.open(os.path.join(fts_config.UPLOAD_FOLDER,file))
+        elif fts_config.PDF_BACKEND == "pdfplumber":
+            import pdfplumber
+            # read the document
+            doc = pdfplumber.open(os.path.join(fts_config.UPLOAD_FOLDER,file))
+        else:
+            current_app.logger.error('PDF_BACKEND not supported: please review fts_config.py content') # ça sort pas!
+            return
         # find the rectangles of the doc
         # rectangles is a list of dictionaries with the following keys
         # page,rec,group
@@ -432,8 +516,12 @@ def pdf_to_documentsfilescontent(documentfiles):
                 yrb = yrb,
                 page = page
             )
-            session.add(fts_documentsfilescontent)
-            session.commit()
+            try:
+                session.add(fts_documentsfilescontent)
+                session.commit()
+            except Exception as e:
+                current_app.logger.error('Error inserting into FTS_DocumentsFilesContent: '+str(e))
+                return
 
 def prepare_fts(appbuilder):
     engine = create_engine(fts_config.dbftsurl)

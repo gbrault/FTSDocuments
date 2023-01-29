@@ -1,3 +1,4 @@
 flask
 git+https://github.com/seadevfr/Flask-AppBuilder.git
 pymupdf
+pdfplumber

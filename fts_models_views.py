@@ -53,7 +53,7 @@ class FTS_LEAN_VIEW(Model):
                     for value in values_to_highlight:
                         value = value.strip('"').strip("'")
                         self.text = re.sub('(?i)'+re.escape(value), lambda k: '<mark>' + value + '</mark>', self.text)
-            return Markup(self.text)
+            return Markup(self.text.replace('\n','<br>').replace('\r',''))
         else:
             return self.text
     @renders('document_id')
@@ -62,10 +62,10 @@ class FTS_LEAN_VIEW(Model):
         # get the session from the appbuilder
         from fts import FTS_DocumentFiles
         session = current_app.appbuilder.get_session
-        # get the document name from the document table using the document id
+        # get  the document name from the document table using the document file
         file = session.query(FTS_DocumentFiles.file).filter(FTS_DocumentFiles.id == self.document_id).first()[0]
         as_attachment = 0
-        return Markup(f'''<a href="{url_for('FTS_DocumentFilesView.download', filename=file, as_attachment=as_attachment)}" target="_blank">{self.document_id}</a>''')
+        return Markup(f'''<a href="{url_for('FTS_DocumentFilesView.download', filename=file, as_attachment=as_attachment)}" target="_blank">[{self.document_id}] {get_file_original_name(file).replace(".pdf","").strip("_")}</a>''')
 
 # Views ===========================================================================================================================================
 

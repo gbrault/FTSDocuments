@@ -13,3 +13,7 @@ CSRF_ENABLED = True
 SECRET_KEY = "\2\1thisismyscretkey\1\2\e\y\y\h"
 UPLOAD_FOLDER = os.path.join(basedir,"fts-data")
 SQLALCHEMY_TRACK_MODIFICATIONS = False
+
+max_workers = 4
+
+PDF_BACKEND = "pdfplumber" # "PyMuPDF" or "pdfplumber"

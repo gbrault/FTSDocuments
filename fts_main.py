@@ -1,5 +1,5 @@
 import logging
-import fts_config
+import fts_config # used by app.config.from_object("fts_config")
 import os
 from flask import Flask,  g, redirect, url_for, Markup, current_app
 from flask_appbuilder import AppBuilder, SQLA, Model, ModelView, CompactCRUDMixin
@@ -89,14 +89,16 @@ class DocumentFiles(Model):
 def receive_after_insert(mapper, connection, target):
     if not os.path.isfile(os.path.join(app.config['UPLOAD_FOLDER'], target.file)):
         raise Exception('File not found: ' + target.file)
-    pdf_to_documentsfilescontent(target)
+    # synchronous call: pdf_to_documentsfilescontent(target.file)
+    ftssearch.index(target)
 
 # listen for the 'after_delete' event
 @event.listens_for(DocumentFiles, 'after_delete')
 def receive_after_insert(mapper, connection, target):
     if os.path.isfile(os.path.join(app.config['UPLOAD_FOLDER'], target.file)):
         raise Exception('File is found: ' + target.file)
-    pdf_delete(target)
+    # synchronous call: pdf_delete(target.file)
+    ftssearch.delete(target)
 
 # listen for the 'after_update' event
 @event.listens_for(DocumentFiles, 'after_update')
@@ -150,7 +152,8 @@ class DocumentView(CompactCRUDMixin,ModelView):
     ]
 
 # FTS ==========================================================================================================================
-from fts import *
+from fts import *  # needs to be placed here as work done before is needed
+ftssearch = FTSSearch(appbuilder) # launch the indexing process in a separate thread
 
 # INIT =======================================================================================================================
 
