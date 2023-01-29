@@ -350,6 +350,17 @@ def fts_menus(appbuilder):
 
 # FTSSearch ===========================================================================================================================================
 
+def pdf_delete(documentfiles):
+    engine = create_engine(fts_config.dbftsurl)
+    Session = sessionmaker(engine)
+    with Session() as session:
+        # delete all the records of FTS_DocumentsFilesContent
+        session.query(FTS_DocumentsFilesContent).filter(FTS_DocumentsFilesContent.document_id == documentfiles.id).delete()
+        session.commit()
+        # delete all the records of FTS_DocumentsFiles
+        session.query(FTS_DocumentFiles).filter(FTS_DocumentFiles.id == documentfiles.id).delete()
+        session.commit()
+
 def pdf_to_documentsfilescontent(documentfiles):
     engine = create_engine(fts_config.dbftsurl)
     Session = sessionmaker(engine)

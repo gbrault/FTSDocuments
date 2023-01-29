@@ -88,20 +88,22 @@ class DocumentFiles(Model):
 @event.listens_for(DocumentFiles, 'after_insert')
 def receive_after_insert(mapper, connection, target):
     if not os.path.isfile(os.path.join(app.config['UPLOAD_FOLDER'], target.file)):
-        raise Exception('File not found: ' + target.value)
+        raise Exception('File not found: ' + target.file)
     pdf_to_documentsfilescontent(target)
 
 # listen for the 'after_delete' event
 @event.listens_for(DocumentFiles, 'after_delete')
 def receive_after_insert(mapper, connection, target):
     if os.path.isfile(os.path.join(app.config['UPLOAD_FOLDER'], target.file)):
-        raise Exception('File is found: ' + target.value)
+        raise Exception('File is found: ' + target.file)
+    pdf_delete(target)
 
 # listen for the 'after_update' event
 @event.listens_for(DocumentFiles, 'after_update')
 def receive_after_update(mapper, connection, target):
     if not os.path.isfile(os.path.join(app.config['UPLOAD_FOLDER'], target.file)):
-        raise Exception('File not found: ' + target.value)
+        raise Exception('File not found: ' + target.file)
+    # nothing to do has the file did not change (just the description)
 
 # VIEWS =======================================================================================================================
 
@@ -119,8 +121,8 @@ class DocumentFilesView(ModelView):
     }
     list_columns = ['file_name', 'download', 'description']
     show_columns = ['file_name', 'description', 'download' ]
-    add_columns = ['file', 'description', 'document' ]
-    edit_columns = ['file', 'description', 'document']
+    add_columns = ['file', 'description',"document" ]
+    edit_columns = ['description',"document" ]
 
 class DocumentView(CompactCRUDMixin,ModelView):
     datamodel = SQLAInterface(Document)
