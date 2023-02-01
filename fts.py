@@ -37,15 +37,44 @@ from sqlite3 import Connection
 from typing import List
 from flask_appbuilder.models.decorators import renders
 import re
+import logging
+import os
 
-RATIO = 50
+logger = logging.getLogger(__name__)
+
 __version__ = "0.0.1"
 __author__ = "Gilbert Brault"
 __email__ = "gbrault@seadev.org"
 __license__ = "MIT"
 __status__ = "Development"
 
-def enable_fts(db: Connection, table: str, columns: List[str], col_attrs: dict):
+def convert_pdf_to_html(path):
+    from io import StringIO
+    from pdfminer.pdfinterp import PDFResourceManager, PDFPageInterpreter
+    from pdfminer.converter import HTMLConverter
+    from pdfminer.layout import LAParams
+    from pdfminer.pdfpage import PDFPage
+    from pdfminer.image import ImageWriter
+    logger = logging.getLogger("pdfminer")
+    logger.setLevel(logging.ERROR)
+    manager = PDFResourceManager()
+    output = StringIO()
+    outdir = path.replace(".pdf","")
+    imagewriter = None # imagewriter=ImageWriter(outdir)
+    converter = HTMLConverter(manager, output, laparams=LAParams(), codec=None,imagewriter=imagewriter,showpageno=False)
+    interpreter = PDFPageInterpreter(manager, converter)
+
+    with open(path, 'rb') as fh:
+        for page in PDFPage.get_pages(fh, caching=True, check_extractable=True):
+            interpreter.process_page(page)
+
+    return output.getvalue()
+
+def enable_fts( db: Connection=None, 
+                content: str='',
+                fts: str='',
+                columns: List[str]=[], 
+                col_attrs: dict={}):
     """Enable full text search for a table in a database.
     Args:
         db (Connection): Database connection.
@@ -58,37 +87,41 @@ def enable_fts(db: Connection, table: str, columns: List[str], col_attrs: dict):
             
     column_list = ','.join(f'`{c}`' for c in columns)
     column_list_wattrs = ','.join(f'`{c}` {col_attrs[c] if c in col_attrs else ""}' for c in columns)
+    table = content
+    fts_table = fts
     sql_script_1 = '''
-        CREATE VIRTUAL TABLE IF NOT EXISTS `{table}_fts` USING fts5
+        CREATE VIRTUAL TABLE IF NOT EXISTS `{fts_table}` USING fts5
         (
             {column_list_wattrs},
             content=`{table}`
         )'''.format(
+        fts_table=fts_table,
         table=table,
         column_list_wattrs=column_list_wattrs
     )
     db.executescript(sql_script_1)
 
-    cursor = db.cursor()
-    cursor.execute("SELECT name FROM sqlite_master WHERE type='table';")
-    tables = cursor.fetchall()
-    print(tables)
+    #cursor = db.cursor()
+    #cursor.execute("SELECT name FROM sqlite_master WHERE type='table';")
+    #tables = cursor.fetchall()
+    #print(tables)
 
     sql_script_2 ='''
-        CREATE TRIGGER IF NOT EXISTS `{table}_fts_insert` AFTER INSERT ON `{table}`
+        CREATE TRIGGER IF NOT EXISTS `{fts_table}_insert` AFTER INSERT ON `{table}`
         BEGIN
-            INSERT INTO `{table}_fts` (rowid, {column_list}) VALUES (new.rowid, {new_columns});
+            INSERT INTO `{fts_table}` (rowid, {column_list}) VALUES (new.rowid, {new_columns});
         END;
-        CREATE TRIGGER IF NOT EXISTS `{table}_fts_delete` AFTER DELETE ON `{table}`
+        CREATE TRIGGER IF NOT EXISTS `{fts_table}_delete` AFTER DELETE ON `{table}`
         BEGIN
-            INSERT INTO `{table}_fts` (`{table}_fts`, rowid, {column_list}) VALUES ('delete', old.rowid, {old_columns});
+            INSERT INTO `{fts_table}` (`{fts_table}`, rowid, {column_list}) VALUES ('delete', old.rowid, {old_columns});
         END;
         CREATE TRIGGER IF NOT EXISTS `{table}_fts_update` AFTER UPDATE ON `{table}`
         BEGIN
-            INSERT INTO `{table}_fts` (`{table}_fts`, rowid, {column_list}) VALUES ('delete', old.rowid, {old_columns});
-            INSERT INTO `{table}_fts` (rowid, {column_list}) VALUES (new.rowid, {new_columns});
+            INSERT INTO `{fts_table}` (`{table}_fts`, rowid, {column_list}) VALUES ('delete', old.rowid, {old_columns});
+            INSERT INTO `{fts_table}` (rowid, {column_list}) VALUES (new.rowid, {new_columns});
         END;
     '''.format(
+        fts_table=fts_table,
         table=table,
         column_list=column_list,
         new_columns=','.join(f'new.`{c}`' for c in columns),
@@ -96,18 +129,6 @@ def enable_fts(db: Connection, table: str, columns: List[str], col_attrs: dict):
     )
 
     db.executescript(sql_script_2)
-
-    # TODO: add support for other databases
-    sql_script_3='''SELECT `ftsdocumentsfilescontent_fts`.document_id,
-    `ftsdocumentfiles`.`file`,
-    `ftsdocumentsfilescontent`.`page`,
-    `ftsdocumentsfilescontent_fts`.`text`,
-    `ftsdocumentsfilescontent_fts`.`font`,
-    `ftsdocumentsfilescontent_fts`.`size`
-    FROM `ftsdocumentsfilescontent_fts` JOIN `ftsdocumentsfilescontent` ON `ftsdocumentsfilescontent`.rowid = `ftsdocumentsfilescontent_fts`.rowid
-    JOIN `ftsdocumentfiles` ON `ftsdocumentfiles`.id = `ftsdocumentsfilescontent`.document_id
-    '''.format(table=table)
-    db.executescript(sql_script_3)
 
     from fts_models_views import FTS_LEAN_VIEW, FTS_LEAN_VIEWView
 
@@ -124,178 +145,6 @@ def represent(table,paths):
         else:
             repr += str(ctable).replace("'","''")+" "
     return repr.strip()
-
-def vertical_overlap(box1,box2):
-    """
-    This function takes in two boxes in the form of dicts {"xlt":x1, "ylt":y1, "xrb":x2, "yrb":y2, "text":t} where (x1, y1) is the top-left corner, (x2, y2) is the bottom-right corner and t is the text.
-    It returns True if the boxes are overlapping vertically, False otherwise
-    simplify (box1["ylt"] <= box2["ylt"] and box1["yrb"] >= box2["ylt"]) or (box1["ylt"] <= box2["yrb"] and box1["yrb"] >= box2["yrb"]) yield to the following: box1["ylt"] <= box2["yrb"] and box1["yrb"] >= box2["ylt"]
-    """
-    if box1["ylt"] <= box2["yrb"] and box1["yrb"] >= box2["ylt"]:
-        return True
-    return False
-
-def horizontal_overlap(box1,box2):
-    """
-    This function takes in two boxes in the form of dicts {"xlt":x1, "ylt":y1, "xrb":x2, "yrb":y2, "text":t} where (x1, y1) is the top-left corner, (x2, y2) is the bottom-right corner and t is the text.
-    It returns True if the boxes are overlapping horizontally, False otherwise
-    simplify (box1["xlt"] <= box2["xlt"] and box1["xrb"] >= box2["xlt"]) or (box1["xlt"] <= box2["xrb"] and box1["xrb"] >= box2["xrb"]) yield to the following: box1["xlt"] <= box2["xrb"] and box1["xrb"] >= box2["xlt"]
-    """
-    if box1["xlt"] <= box2["xrb"] and box1["xrb"] >= box2["xlt"]:
-        return True
-    return False
-
-def englobe(current_box,box2):
-    """Enlrge the current box to englobe the box2"""
-    current_box["xlt"] = min(current_box["xlt"], box2["xlt"])
-    current_box["xrb"] = max(current_box["xrb"], box2["xrb"])
-    current_box["ylt"] = min(current_box["ylt"], box2["ylt"])
-    current_box["yrb"] = max(current_box["yrb"], box2["yrb"])
-
-def harmonize_font_size(current_box,box2):
-    """Harmonize the font size of the current box and the box2"""
-    current_box["size"] = min(current_box["size"], box2["size"])
-    if len(current_box["text"]) < len(box2["text"]):
-        current_box["font"] = box2["font"]
-
-def find_largest_connex_rectangles(boxes,ratio):
-    """
-    This function takes in a list of boxes in the form of dicts {"xlt":x1, "ylt":y1, "xrb":x2, "yrb":y2, "text":t, "page":p, "font":f, "size":s} 
-    where (x1, y1) is the top-left corner, (x2, y2) is the bottom-right corner and t is the text and p is the page number.
-    f is the font name and s is the font size.
-    A parameter epsilon is used to determine proximity of boxes. It is calculated as a ratio% of the height of the box.
-    The function returns a list of "largest rectangles". 
-    Each largest rectangle is a list of boxes that are connexe and with the same font and size.
-    The boxes are sorted from top to bottom, left to right
-    """
-    # Find the list of largest rectangles
-    largest_rectangles = []
-    for i, box1 in enumerate(boxes):
-        epsilon = ((box1["yrb"] - box1["ylt"])*ratio)/100 # ratio% of the height of the box
-        if 'visited' not in box1:
-            box1.update({"visited": True})
-            group = [box1]
-            current_box = box1
-            for j, box2 in enumerate(boxes):
-                if not 'visited' in box2:
-                    # Check if the boxes are adjacent from the horizontal perspective
-                    if ( (box2["xlt"]-current_box["xrb"]) < epsilon and # current_box is on the left of box2 all left boxes of box2 are already visited this expression is > 0
-                            (vertical_overlap(box2,current_box)) and # current_box and box2 are overlapping vertically
-                            # (box2["font"] == current_box["font"]) and # current_box and box2 have the same font
-                            ((box2["size"] == current_box["size"]) or# current_box and box2 have the same font size
-                            # the number of characters in last box is less than 3
-                            (len(group[-1]["text"]) < 3)
-                            )
-                        ):
-                        group.append(box2)
-                        box2.update({"visited": True})
-                        englobe(current_box,box2)
-                        # makes sure the size and font of the group are the same
-                        harmonize_font_size(current_box,box2)
-                    # Check if the boxes are adjacent from the vertical perspective
-                    elif abs(box2["ylt"] - (current_box["yrb"]) < epsilon and # box2 is on the top of current_box
-                            (horizontal_overlap(box2,current_box))  and # current_box and box2 are overlapping horizontally
-                            # (box2["font"] == current_box["font"]) and # current_box and box2 have the same font
-                            ((box2["size"] == current_box["size"]) or # current_box and box2 have the same font size
-                            # the number of characters in last box is less than 3
-                            (len(group[-1]["text"]) < 3)
-                            )
-                        ):
-                        group.append(box2)
-                        box2.update({"visited": True})
-                        englobe(current_box,box2)
-                        # makes sure the size and font of the group are the same
-                        harmonize_font_size(current_box,box2)
-            rec = [current_box["xlt"], current_box["ylt"], current_box["xrb"], current_box["yrb"]]
-            largest_rectangles.append({"page": boxes[0]["page"], "rec": rec,"group":sorted(group, key=lambda x: (x["ylt"],x["xlt"]))})
-    return largest_rectangles
-
-def flags_decomposer(flags):
-    """Make font flags human readable."""
-    l = {}
-    if flags & 2 ** 0:
-        l.update({"superscript": True})
-    if flags & 2 ** 1:
-        l.update({"italic": True})
-    if flags & 2 ** 2:
-        l.update({"serifed": True})
-    else:
-        l.update({"sans": True})
-    if flags & 2 ** 3:
-        l.update({"monospaced": True})
-    else:
-        l.update({"proportional": True})
-    if flags & 2 ** 4:
-        l.update({"bold": True})
-    return l
-
-# get bocks of text from pdf file on disk using fitz
-def read_doc(doc):
-    all_rectangles = []
-    if fts_config.PDF_BACKEND == "PyMuPDF":
-        for page in doc:
-            blocks = page.get_text("dict", flags=11)["blocks"]
-            # select blocks in the table
-            crop_blocks = []
-            for b in blocks:
-                for l in b["lines"]:
-                    for s in l["spans"]:
-                        if s["text"].strip() != "":
-                            block = {}
-                            block.update({"font": s["font"]})     # font name
-                            block.update({"style": flags_decomposer(s["flags"])})  # readable font flags
-                            block.update({"size": s["size"]})     # font size
-                            block.update({"color": s["color"]})   # font color
-                            block.update({"text": s["text"]})     # text
-                            block.update({"xlt": s["bbox"][0] })  # x left top
-                            block.update({"ylt": s["bbox"][1] })  # y left top
-                            block.update({"xrb": s["bbox"][2] })  # x right bottom
-                            block.update({"yrb": s["bbox"][3] })  # y right bottom
-                            block.update({"page": page.number })  # page number of the block
-                            if l["dir"] == (0, -1):
-                                block.update({"dir": 1})     # text direction 0=horizontal, 1=vertical                 
-                            crop_blocks.append(block)
-            sorted_crop_blocks = sorted(crop_blocks, key=lambda item: (item['ylt'],item['xlt']) )
-            all_rectangles.extend(find_largest_connex_rectangles(sorted_crop_blocks,RATIO))
-    elif fts_config.PDF_BACKEND == "pdfplumber":
-        for page in doc.pages:
-            if 'char' not in page.objects or len(page.objects['char'])==0:
-                continue
-            all_chars = sorted(page.objects['char'], key=lambda c: (page.height-c['y0'],c['x0']))
-            groups = []
-            for i,char in enumerate(all_chars):
-                if i==0:
-                    groups.append([char])
-                    j = 0
-                else:
-                    if (groups[-1][j]["y0"] == char["y0"]) and (
-                        groups[-1][j]["fontname"] == char["fontname"]) and (
-                        groups[-1][j]["size"] == char["size"]) and (
-                        (char["x0"]-groups[-1][j]["x1"])<0.75*(char["width"]+groups[-1][j]["width"])):
-                            groups[-1].append(char)
-                            j += 1
-                    else:
-                        groups.append([char])
-                        j = 0
-            crop_blocks = []
-            for group in groups:
-                l = ""
-                for i,char in enumerate(group):
-                    if i > 0:
-                        if (char["x0"]-group[i-1]["x1"])>0.1*(char["width"]+group[i-1]["width"]):
-                            l +=" "
-                    l += char["text"]
-                crop_blocks.append({"text":l,
-                            "xlt": group[0]["x0"],
-                            "ylt": page.height-group[0]["y1"],
-                            "xrb": group[-1]["x1"],
-                            "yrb": page.height-group[-1]["y0"],
-                            "font": group[0]["fontname"],
-                            "size": group[0]["size"],
-                            "page": page.page_number})                           
-            sorted_crop_blocks = sorted(crop_blocks, key=lambda item: (item['ylt'],item['xlt']) )
-            all_rectangles.extend(find_largest_connex_rectangles(sorted_crop_blocks,RATIO))
-    return all_rectangles
 
 # Models ===========================================================================================================================
 
@@ -315,27 +164,40 @@ class FTS_DocumentFiles(Model):
             + f'">{self.file_name()}</a>'
         )
 
-class FTS_DocumentsFilesContent(Model):
+class FTS_DocumentsFilesDivs(Model):
     __bind_key__ = fts_config.SCHEMA_FTS
-    __tablename__ = 'ftsdocumentsfilescontent'
+    __tablename__ = 'ftsdocumentsfilesdivs'
     __table_args__ = (
         ForeignKeyConstraint(
             ['document_id'],
             ['ftsdocumentfiles.id']
             ),
     )    
-    id = Column(Integer, primary_key=True, autoincrement=True, nullable=False, comment='''DocumentsFilesContent table's record unique id''')
-    document_id = Column(Integer, nullable=False, comment='''DB unique record identifier of the document''')
-    font = Column(String(255), nullable=False, comment='''Font name''')
-    size = Column(Float, nullable=False, comment='''Font size''')
-    text = Column(Text, nullable=False, comment='''Text''')
-    xlt = Column(Float, nullable=False, comment='''x left top''')
-    ylt = Column(Float, nullable=False, comment='''y left top''')
-    xrb = Column(Float, nullable=False, comment='''x right bottom''')
-    yrb = Column(Float, nullable=False, comment='''y right bottom''')
+    id = Column(Integer, primary_key=True, autoincrement=True, nullable=False, comment='''DocumentsFilesDivs table's record unique id''')
+    document_id = Column(Integer, nullable=False, comment='''document unique id (table FTS_DocumentFiles)''')
+    left = Column(Float, nullable=False, comment='''x left top''')
+    top = Column(Float, nullable=False, comment='''y left top''')
+    width = Column(Float, nullable=False, comment='''x right bottom''')
+    height = Column(Float, nullable=False, comment='''y right bottom''')
     page = Column(Integer, nullable=False, comment='''Page number of the block''')
-    documentfiles = relationship('FTS_DocumentFiles', backref='ftsdocumentsfilescontent', foreign_keys=[document_id])
-            
+    documentfiles = relationship('FTS_DocumentFiles', backref='ftsdocumentsfilesdivs', foreign_keys=[document_id])
+
+class FTS_DocumentsFilesSpans(Model):
+    __bind_key__ = fts_config.SCHEMA_FTS
+    __tablename__ = 'ftsdocumentsfilesspans'
+    __table_args__ = (
+        ForeignKeyConstraint(
+            ['div_id'],
+            ['ftsdocumentsfilesdivs.id']
+            ),
+    )    
+    id = Column(Integer, primary_key=True, autoincrement=True, nullable=False, comment='''DocumentsFilesContent table's record unique id''')
+    div_id = Column(Integer, nullable=False, comment='''DB unique record identifier of the document''')
+    font_family = Column(String(255), nullable=False, comment='''Font name''')
+    font_size = Column(Float, nullable=False, comment='''Font size''')
+    text = Column(Text, nullable=False, comment='''Text''')
+    documentfilesdivs = relationship('FTS_DocumentsFilesDivs', backref='ftsdocumentsfilesspans', foreign_keys=[div_id])
+          
 
 # Views ===========================================================================================================================================
 
@@ -350,41 +212,182 @@ class FTS_DocumentFilesView(ModelView):
     edit_columns = ['file']
     add_columns = [ 'file']
 
-class FTS_DocumentsFilesContentView(ModelView):
-    datamodel = SQLAInterface(FTS_DocumentsFilesContent)
+class FTS_DocumentsFilesDivsView(ModelView):
+    datamodel = SQLAInterface(FTS_DocumentsFilesDivs)
     label_columns = dict(
         id = 'Id',
         document_id = 'Document Id',
-        font = 'Font',
-        size = 'Size',
-        text = 'Text',
-        xlt = 'Xlt',
-        ylt = 'Ylt',
-        xrb = 'Xrb',
-        yrb = 'Yrb',
+        left = 'Left',
+        top = 'Top',
+        width = 'Width',
+        height = 'Height',
         page = 'Page'
         )
     description_columns = dict(
         id = 'DocumentFilesContent table\'s record unique id',
-        document_id = 'DB unique record identifier of the document',
-        font = 'Font name',
-        size = 'Font size',
-        text = 'Text',
-        xlt = 'x left top',
-        ylt = 'y left top',
-        xrb = 'x right bottom',
-        yrb = 'y right bottom',
+        document_id = 'document identifier (table FTS_DocumentFiles)',
+        left = 'x left top',
+        top = 'y left top',
+        width = 'div width',
+        height = 'div height',
         page = 'Page number of the block'
         )
-    list_columns = ['size', 'page', 'text']
-    show_columns = ['id', 'document_id', 'font', 'size',  'text', 'xlt', 'ylt', 'xrb', 'yrb', 'page']
-    add_columns = [ 'document_id', 'font', 'size', 'text', 'xlt', 'ylt', 'xrb', 'yrb', 'page']
-    edit_columns = [ 'document_id', 'font', 'size', 'text', 'xlt', 'ylt', 'xrb', 'yrb', 'page']
+    list_columns = ['document_id', 'page', 'left', 'top', 'width', 'height']
+    show_columns = ['id', 'document_id', 'page', 'left', 'top', 'width', 'height']
+    add_columns =  ['id', 'document_id', 'page', 'left', 'top', 'width', 'height']
+    edit_columns =  ['id', 'document_id', 'page', 'left', 'top', 'width', 'height']
+
+class FTS_DocumentsFilesSpansView(ModelView):
+    datamodel = SQLAInterface(FTS_DocumentsFilesSpans)
+    label_columns = dict(
+        id = 'Id',
+        div_id = 'Div Id',
+        font_family = 'Font Family',
+        font_size = 'Font Size',
+        text = 'Text'
+        )
+    description_columns = dict(
+        id = 'DocumentsFilesContent table\'s record unique id',
+        div_id = 'div identifier (table FTS_DocumentsFilesDivs)',
+        font_family = 'Font name',
+        font_size = 'Font size',
+        text = 'Text'
+        )
+    list_columns = ['font_family', 'font_size', 'text']
+    show_columns = ['id', 'div_id', 'font_family', 'font_size', 'text']
+    add_columns =  ['id', 'div_id', 'font_family', 'font_size', 'text']
+    edit_columns =  ['id', 'div_id', 'font_family', 'font_size', 'text']
+
+# Functions needing Models ===========================================================================================================================
+def convert_pdf_to_records(session, file):
+    """Save the converted pdf files to the database
+
+    :param session: SQLAlchemy session
+    :param path: path to the pdf file
+    :return: None
+
+    Summary:
+    1. convert pdf to html
+    2. Process the document to create records into the database
+        - save the document to the database
+        - find the page breaker template
+        - In between each page_breaker
+            - find the divs
+            - find the spans
+            - save the divs and spans to the database
+    """
+    from bs4 import BeautifulSoup
+    import re
+    path = os.path.join(fts_config.UPLOAD_FOLDER, file)
+    # convert pdf to html  ===================================================================================================
+    try:
+        logger.info("Converting pdf to html")
+        html_doc = convert_pdf_to_html(path)
+        logger.info("Converted pdf to html")
+    except Exception as e:
+        logger.error("Error converting pdf to html: ", e)
+        return
+    # save the document to the database
+    logger.info("Saving the document to the database")
+    fts_documentfiles = FTS_DocumentFiles(file=file)
+    session.add(fts_documentfiles)
+    session.commit()
+    soup = BeautifulSoup(html_doc, 'html.parser')
+    # find the first span with style width and height: it is the page breaker template
+    body = soup.find("body")
+    span = body.find("span") # this is the template
+    # parse the style attribute of the span for the height and width
+    # style example is style="position:absolute; border: gray 1px solid; left:0px; top:50px; width:595px; height:842px;"
+    # get the width and height
+    style = span["style"]
+    t_width = re.search("width:\s*(\d+)px", style).group(1)
+    t_page_height = re.search("height:\s*(\d+)px", style).group(1)
+    # code to identify the page breakers using beautifull soup
+    # the page breaker spans are the spans with the same height and width as the template
+    page = 1  # prepare the page number for the page records
+    div_number = 1 # prepare the div number for the div records
+    for span in body.find_all("span"):
+        # parse the style attribute of the span for the height and width
+        # style example is style="position:absolute; border: gray 1px solid; left:0px; top:50px; width:595px; height:842px;"
+        # get the width and height
+        style = span["style"]
+        if "width" in style:
+            width = re.search("width:\s*(\d+)px", style).group(1)
+            height = re.search("height:\s*(\d+)px", style).group(1)
+            if width == t_width and height == t_page_height:
+                # the page_records divs are all the divs embedding spans
+                # we can find the page_records divs, iterating from the next_sibilings of the page breaker, until the next page breaker (a span with the same height and width as the template)
+                # the page_records divs are all the divs embedding spans
+                starter = span.find_next_sibling()
+                while True:
+                    if starter is None:
+                        break
+                    # if the next sibling is a span with the same height and width as the template, we stop
+                    if starter.name == "span":
+                        # parse the style attribute of the span for the height and width
+                        # style example is style="position:absolute; border: gray 1px solid; left:0px; top:50px; width:595px; height:842px;"
+                        # get the width and height
+                        style = starter["style"]
+                        if "width" in style:
+                            width = re.search("width:(\d+)px", style).group(1)
+                            height = re.search("height:(\d+)px", style).group(1)
+                            if width == t_width and height == t_page_height:
+                                break
+                    # if the next sibling is a div, we add it to the page_records
+                    if starter.name == "div":
+                        # if the div has embedded spans, we add it to the page_records
+                        # get the spans
+                        spans = starter.find_all("span")
+                        if len(spans) > 0:
+                            # parse the style attribute of the div for the height and width, top and left
+                            # style="position:absolute; border: textbox 1px solid; writing-mode:lr-tb; left:325px; top:187px; width:223px; height:56px;"
+                            style = starter["style"]
+                            width = re.search("width:\s*(\d+)px", style).group(1)
+                            height = re.search("height:\s*(\d+)px", style).group(1)
+                            top = re.search("top:\s*(\d+)px", style).group(1)
+                            left = re.search("left:\s*(\d+)px", style).group(1)
+                            # save the page_record to the database
+                            page_record = FTS_DocumentsFilesDivs(
+                                page=page,
+                                width=width,
+                                height=height,
+                                top=top,
+                                left=left,
+                                document_id=fts_documentfiles.id
+                            )
+                            session.add(page_record)
+                            session.commit()
+                            # add the spans to the page_records_spans
+                            for span in spans:
+                                # add a reference to the page_record
+                                span.page_record = starter
+                                span.div_number = div_number
+                                div_number += 1
+                                # parse the style attribute of the span for the font-size, font-family
+                                # style="font-family: Arial-BoldMT; font-size:17px"
+                                style = span["style"]
+                                font_size = re.search("font-size:\s*(\d+)px", style).group(1)
+                                font_family = re.search("font-family:\s*(\w+)", style).group(1)
+                                # save the page_record_span to the database
+                                try:
+                                    page_record_span = FTS_DocumentsFilesSpans(
+                                        font_size=font_size,
+                                        font_family=font_family,
+                                        text=span.get_text(),
+                                        div_id=page_record.id)
+                                    session.add(page_record_span)
+                                    session.commit()
+                                except Exception as e:
+                                    logger.error("Error saving page_record_span: {}".format(e))
+                    starter = starter.find_next_sibling()
+                page += 1
+    logger.info("Document {} indexed".format(fts_documentfiles.id))
 
 # Menu ===========================================================================================================================================
 def fts_menus(appbuilder):
     appbuilder.add_view(FTS_DocumentFilesView,"DocumentsFiles",icon="fa-file",category="Full_Text_Search")
-    appbuilder.add_view(FTS_DocumentsFilesContentView,"DocumentsFilesContent",icon="fa-search",category="Full_Text_Search")
+    appbuilder.add_view(FTS_DocumentsFilesDivsView,"DocumentsFilesDivs",icon="fa-search",category="Full_Text_Search")
+    appbuilder.add_view(FTS_DocumentsFilesSpansView,"DocumentsFilesSpans",icon="fa-search",category="Full_Text_Search")
     appbuilder.add_view(FTS_LEAN_VIEWView,"Documents Full Text Search",icon="fa-binoculars",category="Documents")
 
 # FTSSearch ===========================================================================================================================================
@@ -422,106 +425,36 @@ class FTSSearch:
 
     def delete(self, documentfiles):
         doc = self.appbuilder.session.query(FTS_DocumentFiles).filter(FTS_DocumentFiles.file == documentfiles.file).first()
-        self.tasklist.append({'action': 'delete', 'documentfiles': doc.id})
+        if doc is not None:
+            self.tasklist.append({'action': 'delete', 'documentfiles': doc.id})
 
 def pdf_delete(id):
     engine = create_engine(fts_config.dbftsurl)
     Session = sessionmaker(engine)
     with Session() as session:
-        # delete all the records of FTS_DocumentsFilesContent
-        session.query(FTS_DocumentsFilesContent).filter(FTS_DocumentsFilesContent.document_id == id).delete()
-        session.commit()
-        # delete all the records of FTS_DocumentsFiles
-        session.query(FTS_DocumentFiles).filter(FTS_DocumentFiles.id == id).delete()
+        # find the FTS_Documents Files with the id
+        fts_document = session.query(FTS_DocumentFiles).filter(FTS_DocumentFiles.id == id).first()
+        # for each FTS_DocumentsFiles find all FTS_DocumentsFilesDivs
+        fts_documentsfiles = session.query(FTS_DocumentsFilesDivs).filter(FTS_DocumentsFilesDivs.document_id == id).all()
+        # find all FTS_DocumentsFilesSpans with the div_id
+        for fts_documentsfile in fts_documentsfiles:
+            fts_documentsfilesspans = session.query(FTS_DocumentsFilesSpans).filter(FTS_DocumentsFilesSpans.div_id == fts_documentsfile.id).all()
+            # delete all FTS_DocumentsFilesSpans
+            for fts_documentsfilesspan in fts_documentsfilesspans:
+                session.delete(fts_documentsfilesspan)
+            # delete all FTS_DocumentsFilesDivs
+            session.delete(fts_documentsfile)
+        # delete all FTS_DocumentsFiles
+        session.delete(fts_document)
+        # commit the changes
         session.commit()
 
 def pdf_to_documentsfilescontent(file):
     engine = create_engine(fts_config.dbftsurl)
     Session = sessionmaker(engine)
     with Session() as session:
-        fts_documentFiles = FTS_DocumentFiles(
-            file = file
-        )
-        session.add(fts_documentFiles)
-        session.commit()
-        if fts_config.PDF_BACKEND == "PyMuPDF":
-            import fitz
-            # read the document
-            doc = fitz.open(os.path.join(fts_config.UPLOAD_FOLDER,file))
-        elif fts_config.PDF_BACKEND == "pdfplumber":
-            import pdfplumber
-            # read the document
-            doc = pdfplumber.open(os.path.join(fts_config.UPLOAD_FOLDER,file))
-        else:
-            current_app.logger.error('PDF_BACKEND not supported: please review fts_config.py content') # ça sort pas!
-            return
-        # find the rectangles of the doc
-        # rectangles is a list of dictionaries with the following keys
-        # page,rec,group
-        # page is the page number
-        # rec is a rectangle (xlt,ylt,xrb,yrb)
-        # group is a list of boxes
-        # each box is a dictionary with the following keys
-        # font, size, text, xlt, ylt, xrb, yrb, page (style and visited are not used)
-        rectangles = read_doc(doc)
-        # all groups items have the same font, size
-        # for each group
-        #   remember the font, size and page
-        #   merge the text of the subgroup
-        #   get the xlt,ylt,xrb,yrb of the subgroup
-        #   insert the result into the FTS_DocumentsFilesContent table
-        for rectangle in rectangles:
-            page = rectangle["page"]
-            group = rectangle["group"]
-            # get the font, size and page of the first box of the group
-            font = group[0]["font"]
-            size = group[0]["size"]
-            page = group[0]["page"]
-            text = ""
-            xlt = 0
-            ylt = 0
-            xrb = 0
-            yrb = 0
-            for box in group:
-                # if the box is under the previous one, add a new line character else add a space
-                if group.index(box) > 0 and box["ylt"] > group[group.index(box)-1]["yrb"]:
-                    text += "\n"
-                else:
-                    text += " "
-                text += box["text"]+ " "
-                if xlt == 0:
-                    xlt = box["xlt"]
-                if ylt == 0:
-                    ylt = box["ylt"]
-                if xrb == 0:
-                    xrb = box["xrb"]
-                if yrb == 0:
-                    yrb = box["yrb"]
-                if box["xlt"] < xlt:
-                    xlt = box["xlt"]
-                if box["ylt"] < ylt:
-                    ylt = box["ylt"]
-                if box["xrb"] > xrb:
-                    xrb = box["xrb"]
-                if box["yrb"] > yrb:
-                    yrb = box["yrb"]
-            fts_documentsfilescontent = FTS_DocumentsFilesContent(
-                document_id = fts_documentFiles.id,
-                font = font,
-                size = size,
-                text = text,
-                xlt = xlt,
-                ylt = ylt,
-                xrb = xrb,
-                yrb = yrb,
-                page = page
-            )
-            try:
-                session.add(fts_documentsfilescontent)
-                session.commit()
-            except Exception as e:
-                current_app.logger.error('Error inserting into FTS_DocumentsFilesContent: '+str(e))
-                return
+        # convert the pdf to records
+        convert_pdf_to_records(session, file)
 
 def prepare_fts(appbuilder):
     engine = create_engine(fts_config.dbftsurl)
@@ -530,4 +463,8 @@ def prepare_fts(appbuilder):
         # get the raw connection
         connection = session.connection()
         # enable the FTS
-        enable_fts(connection.connection.dbapi_connection, 'ftsdocumentsfilescontent', ['document_id', 'page','text','font','size'], {'document_id': 'UNINDEXED', 'page': 'UNINDEXED', 'font': 'UNINDEXED', 'size': 'UNINDEXED'})
+        enable_fts( db=connection.connection.dbapi_connection, 
+                    content='ftsdocumentsfilesspans',
+                    fts='ftsdocumentsfilescontent_fts',
+                    columns=['div_id','text','font_family','font_size'], 
+                    col_attrs={'div_id': 'UNINDEXED', 'font_family': 'UNINDEXED', 'font_size': 'UNINDEXED'})
