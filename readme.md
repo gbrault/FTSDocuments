@@ -101,4 +101,8 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 - 2021-03-01: Initial version
 
+## Some software:
+
+https://soft.rubypdf.com/software/pdf2htmlex-windows-version
+
 

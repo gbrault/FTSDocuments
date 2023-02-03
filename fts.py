@@ -39,6 +39,7 @@ from flask_appbuilder.models.decorators import renders
 import re
 import logging
 import os
+import datetime
 
 logger = logging.getLogger(__name__)
 
@@ -152,7 +153,11 @@ class FTS_DocumentFiles(Model):
     __bind_key__ = fts_config.SCHEMA_FTS
     __tablename__ = 'ftsdocumentfiles'
     id = Column(Integer, primary_key=True, autoincrement=True, nullable=False, comment='''DocumentFiles table's record unique id''')
-    file = Column(FileColumn, nullable=False,comment='''Document File''')
+    file = Column(FileColumn, nullable=False,comment='''Document File name''')
+    # start index timestamp
+    start_index = Column(DateTime, nullable=False, comment='''Start index timestamp''')
+    # end index timestamp
+    end_index = Column(DateTime, nullable=False, comment='''End index timestamp''')
     def __repr__(self):
         return f"{represent(self, ['file_name'])}"  
     def file_name(self):
@@ -163,6 +168,8 @@ class FTS_DocumentFiles(Model):
             + url_for("FTS_DocumentFilesView.download", filename=str(self.file))
             + f'">{self.file_name()}</a>'
         )
+    def indexing_duration(self):
+        return self.end_index - self.start_index
 
 class FTS_DocumentsFilesDivs(Model):
     __bind_key__ = fts_config.SCHEMA_FTS
@@ -203,12 +210,15 @@ class FTS_DocumentsFilesSpans(Model):
 
 class FTS_DocumentFilesView(ModelView):
     datamodel = SQLAInterface(FTS_DocumentFiles)
-    list_columns = ['id', 'download']
+    list_columns = ['id', 'download','start_index','indexing_duration']
     label_columns = dict(
         id = 'Id',
-        file = 'File'
+        file = 'File',
+        start_index = 'Start Index',
+        end_index = 'End Index',
+        indexing_duration = 'Indexing Duration'
         )
-    show_columns = ['id', 'file']
+    show_columns = ['id', 'file','start_index','end_index','indexing_duration']
     edit_columns = ['file']
     add_columns = [ 'file']
 
@@ -280,6 +290,11 @@ def convert_pdf_to_records(session, file):
     import re
     path = os.path.join(fts_config.UPLOAD_FOLDER, file)
     # convert pdf to html  ===================================================================================================
+    logger.info("Saving the document to the database")
+    now = datetime.datetime.now()
+    fts_documentfiles = FTS_DocumentFiles(file=file, start_index=now, end_index=now)
+    session.add(fts_documentfiles)
+    session.commit()    
     try:
         logger.info("Converting pdf to html")
         html_doc = convert_pdf_to_html(path)
@@ -288,10 +303,6 @@ def convert_pdf_to_records(session, file):
         logger.error("Error converting pdf to html: ", e)
         return
     # save the document to the database
-    logger.info("Saving the document to the database")
-    fts_documentfiles = FTS_DocumentFiles(file=file)
-    session.add(fts_documentfiles)
-    session.commit()
     soup = BeautifulSoup(html_doc, 'html.parser')
     # find the first span with style width and height: it is the page breaker template
     body = soup.find("body")
@@ -381,6 +392,10 @@ def convert_pdf_to_records(session, file):
                                     logger.error("Error saving page_record_span: {}".format(e))
                     starter = starter.find_next_sibling()
                 page += 1
+    # update the document record
+    now = datetime.datetime.now()
+    fts_documentfiles.end_index=now
+    session.commit()
     logger.info("Document {} indexed".format(fts_documentfiles.id))
 
 # Menu ===========================================================================================================================================
@@ -408,7 +423,7 @@ class FTSSearch:
     def process_tasklist(self):
         while True:
             if len(self.tasklist) > 0:
-                task = self.tasklist.pop(0)
+                task = self.tasklist.pop(0) # first in first out
                 if task['action'] == 'index':
                     self.threadpool.submit(pdf_to_documentsfilescontent, task['documentfiles'])
                 if task['action'] == 'delete':
@@ -417,16 +432,37 @@ class FTSSearch:
                 time.sleep(1)
 
     def index(self, documentfiles):
+        # check if request already in tasklist
+        for task in self.tasklist:
+            if task['action'] == 'index' and task['documentfiles'] == documentfiles.file:
+                logger.info('Document already in tasklist for indexing')
+                return
         # check if the document is already indexed and flash a message and return if it is
-        if self.appbuilder.session.query(FTS_DocumentFiles).filter(FTS_DocumentFiles.file == documentfiles.file).first():
-            flash('Document already indexed (or indexing in progress)')
-            return        
+        file = self.appbuilder.session.query(FTS_DocumentFiles).filter(FTS_DocumentFiles.file == documentfiles.file).all()
+        if file is not None and len(file) > 0:
+            if file[0].end_index == file[0].start_index:
+                logger.info('Document is indexing wait till end of indexing)')
+                return
+            else:
+                logger.info('Reindexing the Document')
+                # reindexing the document, so delete the document index
+                self.tasklist.append({'action': 'delete', 'documentfiles': documentfiles.file})
+                # add the document to the tasklist for indexing
+                self.tasklist.append({'action': 'index', 'documentfiles': documentfiles.file})
+                return
+        # add the document to the tasklist for indexing
         self.tasklist.append({'action': 'index', 'documentfiles': documentfiles.file})
+        logger.info('Document added to tasklist for indexing')
 
     def delete(self, documentfiles):
-        doc = self.appbuilder.session.query(FTS_DocumentFiles).filter(FTS_DocumentFiles.file == documentfiles.file).first()
-        if doc is not None:
-            self.tasklist.append({'action': 'delete', 'documentfiles': doc.id})
+        # check if request already in tasklist
+        for task in self.tasklist:
+            if task['action'] == 'delete' and task['documentfiles'] == documentfiles.file:
+                logger.info('Document already in tasklist for deleting')
+                return
+        doc = self.appbuilder.session.query(FTS_DocumentFiles).filter(FTS_DocumentFiles.file == documentfiles.file).all()
+        if doc is not None and len(doc) > 0:
+            self.tasklist.append({'action': 'delete', 'documentfiles': doc[0].id})
 
 def pdf_delete(id):
     engine = create_engine(fts_config.dbftsurl)

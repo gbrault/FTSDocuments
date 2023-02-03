@@ -1,7 +1,7 @@
 import logging
 import fts_config # used by app.config.from_object("fts_config")
 import os
-from flask import Flask,  g, redirect, url_for, Markup, current_app
+from flask import Flask,  g, redirect, url_for, Markup, current_app, request
 from flask_appbuilder import AppBuilder, SQLA, Model, ModelView, CompactCRUDMixin
 from flask_appbuilder.models.mixins import AuditMixin, FileColumn
 from sqlalchemy import  (   event,
@@ -23,6 +23,7 @@ from sqlalchemy import  (   event,
 from sqlalchemy.orm import relationship, Session      
 from flask_appbuilder.filemanager import get_file_original_name 
 from flask_appbuilder.models.sqla.interface import SQLAInterface
+from flask_appbuilder.hooks import before_request
 
 # LOGGING =======================================================================================================================
 
@@ -125,6 +126,13 @@ class DocumentFilesView(ModelView):
     show_columns = ['file_name', 'description', 'download' ]
     add_columns = ['file', 'description',"document" ]
     edit_columns = ['description',"document" ]
+    @before_request(only=["add"])
+    def before_create(self):
+        if request.method == "POST": # if the request is a POST request
+            if self.datamodel.session.query(DocumentFiles).filter(DocumentFiles.file.endswith(request.files['file'].filename)).one_or_none():
+                flash("Document already exists","warning")
+                return redirect(url_for("DocumentFilesView.list"))
+        return None
 
 class DocumentView(CompactCRUDMixin,ModelView):
     datamodel = SQLAInterface(Document)
@@ -150,6 +158,13 @@ class DocumentView(CompactCRUDMixin,ModelView):
     related_views = [
             DocumentFilesView
     ]
+    @before_request(only=["add"])
+    def before_create(self):
+        if request.method == "POST": # if the request is a post
+            if self.datamodel.session.query(Document).filter(Document.name == request.form['name']).one_or_none():
+                flash("Document already exists","warning")
+                return redirect(url_for("DocumentView.list"))
+        return None
 
 # FTS ==========================================================================================================================
 from fts import *  # needs to be placed here as work done before is needed
