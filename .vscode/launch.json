@@ -5,6 +5,15 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "name": "fts_pdf2htmlEX",
+            "type": "python",
+            "request": "launch",
+            "program": "fts_pdf2htmlEX.py",
+            "console": "integratedTerminal",
+            "justMyCode": true,
+            "args": ["-f","corpus/penpa/CASTE-ING-2021072015"]
+        },
+        {
             "name": "Python: Flask",
             "type": "python",
             "request": "launch",

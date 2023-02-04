@@ -1,0 +1,43 @@
+{% extends 'appbuilder/baselayout.html' %}
+{% block tail_js %}
+    {{ super() }}
+    <script>
+    $(document).ready(function() {
+        // =====================
+        // this is the websocket connection
+        const socket = new WebSocket('ws://' + location.host + '/clock?href='+location.href);
+        // =====================
+        // this is the websocket event listener
+        socket.addEventListener('message', ev => {  // this is the websocket event listener
+            var msg = JSON.parse(ev.data);
+            if (msg.type === 'clock') {
+                if (document.getElementById('clock') === null){
+                    // if the clock span doesnt exist then create it 
+                    $('body > header > div > div.container').prepend('<span id="clock" style="font-size: 7px; color: white;"></span>');
+                }
+                document.getElementById('clock').innerHTML = msg.text;
+            } else if (msg.type === 'alert') {
+                showalert(msg.text,msg.alerttype)
+            } else {
+                console.log('<<<', ev.data);
+            }
+        });
+
+        socket.addEventListener('close', ev => {
+            console.log('<<< closed');
+        });
+        // =====================
+        // this is the function that will show the alert
+        function showalert(message,alerttype) {
+            // showalert("Invalid Login","alert-error")
+            var idx = Math.floor(Math.random() * 1000);
+            var alertdiv = "alertdiv_"+idx
+            $("body > div.container").prepend('<div id="' + alertdiv + '"" class="alert ' +  alerttype + '"><a class="close" data-dismiss="alert">×</a><span>'+message+'</span></div>')
+
+                setTimeout(function() { // this will automatically close the alert and remove this if the users doesnt close it in 10 secs
+                        $("#"+alertdiv).remove();
+                }, 10000);
+        }
+    });
+    </script>
+{% endblock %}

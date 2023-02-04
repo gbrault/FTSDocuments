@@ -1,5 +1,7 @@
 flask
 git+https://github.com/seadevfr/Flask-AppBuilder.git
 # pymupdf
-pdfminer.six[image]
+# pdfminer.six[image]
 beautifulsoup4
+cssutils
+flask-sock

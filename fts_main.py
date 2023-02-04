@@ -24,6 +24,11 @@ from sqlalchemy.orm import relationship, Session
 from flask_appbuilder.filemanager import get_file_original_name 
 from flask_appbuilder.models.sqla.interface import SQLAInterface
 from flask_appbuilder.hooks import before_request
+from flask_sock import Sock
+import json
+import time, datetime
+import threading
+from flask_login import AnonymousUserMixin
 
 # LOGGING =======================================================================================================================
 
@@ -37,8 +42,12 @@ app.config.from_object("fts_config")
 schema = app.config['SCHEMA']
 schema_fts = app.config['SCHEMA_FTS']
 db = SQLA(app)
-appbuilder = AppBuilder(app, db.session)
+appbuilder = AppBuilder(app, db.session, base_template='base.html')
 metadata_obj = db.metadata
+sock = Sock(app)
+
+listners = {} # dictionnary hodling the listners clients
+
 
 # MODELS =======================================================================================================================
 
@@ -216,4 +225,80 @@ def _do_orm_execute(orm_execute_state):
         for table in orm_execute_state.statement.froms:
             if table.name == 'ftsdocumentsfilescontent_fts':
                 break
+
+# WS ROUTES & MESSAGING =====================================================================================================================
+def send_time():
+    """Send the current time to all connected clients"""
+    while True:
+        time.sleep(1)
+        keys = list(listners.keys())
+        for key in keys:
+            try:
+                listners[key]["socket"].send(json.dumps({"type": "clock", "text": datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")}))
+            except:
+                del listners[key]
+
+def send_alert(username,message,alert_type="alert-info"):
+    """Send an alert to a user
+        - username: the username of the user to send the alert to
+        - message: the message to send
+        - alert_type: the type of alert (alert-primary, alert-secondary, alert-success, alert-info, alert-warning, alert-danger, alert-light, alert-dark)"""
+    for key, items in listners.items():
+        if username == "*" or items["user"].usrename == username:
+            try:
+                items["socket"].send(json.dumps({"type": "alert", "alerttype": alert_type, "text": message}))
+            except:
+                del listners[key]
+
+@sock.route('/clock')
+def clock(ws):
+    """Accepts a websocket connection
+        - checks if the user has access to the websocket
+        - adds the user and the socket to the list of listeners
+        - echo received messages back to the client (could be extended to take some actions on the server side)
+        - sends a welcome message if the href is '/'
+        - and sends the current time every second
+        - when closed break the echo loop
+        - the user will be removed by the clock from the list of listeners
+        - each time a user changes the page the websocket is closed and a new one is opened (so checking '/' is enough to know if the user is on the welcome page)"""
+    from urllib.parse import urlparse
+    show_welcome = False
+    if 'href' in request.values:
+        url = urlparse(request.values['href'])
+        if url.path == '/':
+            show_welcome = True
+    if isinstance(g.user, AnonymousUserMixin):
+        ws.send(json.dumps({"type": "log", "text": "Anonymous User has no access"}))
+        ws.close()
+        return
+    user = appbuilder.sm.find_user(username=g.user.username)
+    if user is None:
+        ws.send(json.dumps({"type": "log", "text": "User not found"}))
+        ws.close()
+        return
+    has_access = appbuilder.sm.has_access('can_this_form_post', 'ResetMyPasswordView') # if the guy can reset his password, he can access the websocket
+    if has_access:
+        #send a welcom message to the user if href path is '/' (show_welcome)
+        if show_welcome:
+                ws.send(json.dumps({"type": "alert", "text": f"Welcome to {app.config['APP_NAME']}", "alerttype" : "alert-success"}))
+        # create a unique key for the user,socket pair (the key is the current date-time)
+        key = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+        # add the user and the socket to the list of listeners with the above key
+        listners[key] = {"user": user, "socket": ws}
+    else:
+        # only user with a profile benefit from the websocket service
+        ws.send(json.dumps({"type": "log", "text": "User not allowed"}))
+        ws.close()
+        return
+    while True:
+        # this means the webserver thread is active till the websocket is closed (the user changes or close the page)
+        data = ws.receive()
+        if data == 'close':
+            break
+        ws.send(json.dumps({"type": "log", "text": data}))
+
+t = threading.Thread(target=send_time,args=())
+t.start()
+
+appbuilder.send_alert = send_alert
 

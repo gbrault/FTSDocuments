@@ -435,16 +435,16 @@ class FTSSearch:
         # check if request already in tasklist
         for task in self.tasklist:
             if task['action'] == 'index' and task['documentfiles'] == documentfiles.file:
-                logger.info('Document already in tasklist for indexing')
+                self.appbuilder.send_alert('Document already in tasklist for indexing',"alert-warning")
                 return
         # check if the document is already indexed and flash a message and return if it is
         file = self.appbuilder.session.query(FTS_DocumentFiles).filter(FTS_DocumentFiles.file == documentfiles.file).all()
         if file is not None and len(file) > 0:
             if file[0].end_index == file[0].start_index:
-                logger.info('Document is indexing wait till end of indexing)')
+                self.appbuilder.send_alert('Document is indexing wait till end of indexing','alert-warning')
                 return
             else:
-                logger.info('Reindexing the Document')
+                self.appbuilder.send_alert('Reindexing the Document','alert-info')
                 # reindexing the document, so delete the document index
                 self.tasklist.append({'action': 'delete', 'documentfiles': documentfiles.file})
                 # add the document to the tasklist for indexing
@@ -452,13 +452,13 @@ class FTSSearch:
                 return
         # add the document to the tasklist for indexing
         self.tasklist.append({'action': 'index', 'documentfiles': documentfiles.file})
-        logger.info('Document added to tasklist for indexing')
+        self.appbuilder.send_alert('Document added to tasklist for indexing','alert-info')
 
     def delete(self, documentfiles):
         # check if request already in tasklist
         for task in self.tasklist:
             if task['action'] == 'delete' and task['documentfiles'] == documentfiles.file:
-                logger.info('Document already in tasklist for deleting')
+                self.appbuilder.send_alert('Document already in tasklist for deleting','alert-warning')
                 return
         doc = self.appbuilder.session.query(FTS_DocumentFiles).filter(FTS_DocumentFiles.file == documentfiles.file).all()
         if doc is not None and len(doc) > 0:

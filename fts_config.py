@@ -15,3 +15,6 @@ UPLOAD_FOLDER = os.path.join(basedir,"fts-data")
 SQLALCHEMY_TRACK_MODIFICATIONS = False
 
 max_workers = 2 # the sqlite database is not thread safe
+
+SOCK_SERVER_OPTIONS={'ping_interval': 25}
+APP_NAME="FTS"
