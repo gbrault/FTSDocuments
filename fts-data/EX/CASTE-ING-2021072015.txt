@@ -1,0 +1,1834 @@
+Page 1
+  Cluster 0
+    1-1 - 665.21 - 1068.12 22.25 - ff1 - 24.0 - rgb(0, 0, 0) - [N°2021072015]
+  Cluster 1
+    1-2 - 196.02 - 929.13 59.34 - ff2 - 64.0 - rgb(255, 153, 0) - [RAPPORT DE CONTROLE TECHNIQUE]
+
+    =====
+    1-2 - 309.28 - 901.46 59.34 - ff2 - 64.0 - rgb(255, 153, 0) - [QUINQUENNAL]
+  Cluster 2
+    1-3 - 248.84 - 878.02 47.48 - ff1 - 51.2 - rgb(95, 95, 95) - [Suivant décret du 9 septembre 2004]
+
+    =====
+    1-3 - 273.75 - 855.89 47.48 - ff1 - 51.2 - rgb(95, 95, 95) - [Suivant arrêté du 7 août 2012]
+  Cluster 3
+    1-4 - 71.2 - 808.07 37.09 - ff1 - 40.0 - rgb(51, 51, 153) - [SITE]
+    1-4 - 71.2 - 792.47 37.09 - ff1 - 40.0 - rgb(0, 0, 0) - [CLAIR LOGIS]
+    1-4 - 71.2 - 776.87 37.09 - ff1 - 40.0 - rgb(0, 0, 0) - [18 RUE CHARLES BAUDELAIRE]
+    1-4 - 71.2 - 761.27 37.09 - ff1 - 40.0 - rgb(0, 0, 0) - [06100 NICE]
+
+    =====
+    1-4 - 396.68 - 808.07 37.09 - ff1 - 40.0 - rgb(51, 51, 153) - [CLIENT]
+    1-4 - 396.68 - 792.47 37.09 - ff1 - 40.0 - rgb(0, 0, 0) - [CROUZET & BREIL]
+    1-4 - 396.68 - 776.87 37.09 - ff1 - 40.0 - rgb(0, 0, 0) - [134 BOULEVARD GAMBETTA]
+    1-4 - 396.68 - 761.27 37.09 - ff1 - 40.0 - rgb(0, 0, 0) - [06045 NICE CEDEX 01]
+  Cluster 4
+    1-5 - 65.68 - 703.55 37.09 - ff1 - 40.0 - rgb(51, 51, 153) - [LOCALISATION DE L'INSTALLATION]
+  Cluster 5
+    1-6 - 218.4 - 593.49 63.05 - ff2 - 68.0 - rgb(51, 51, 153) - [18 RUE CHARLES BAUDELAIRE]
+
+    =====
+    1-6 - 287.22 - 622.88 63.05 - ff2 - 68.0 - rgb(51, 51, 153) - [Cage d'escalier : /]
+
+    =====
+    1-6 - 321.02 - 652.28 63.05 - ff2 - 68.0 - rgb(51, 51, 153) - [Bâtiment : /]
+
+    =====
+    1-6 - 322.79 - 564.1 63.05 - ff2 - 68.0 - rgb(51, 51, 153) - [06100 NICE]
+  Cluster 6
+    1-7 - 65.68 - 521.83 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [Numéro d'identification de l'installation : ][2298]
+  Cluster 7
+    1-8 - 65.68 - 460.56 37.09 - ff1 - 40.0 - rgb(51, 51, 153) - [Conclusion du rapport]
+  Cluster 8
+    1-9 - 205.01 - 425.03 44.51 - ff2 - 48.0 - rgb(51, 51, 153) - [L'obligation de contrôle est réputée satisfaite]
+  Cluster 9
+    1-10 - 61.45 - 379.82 37.09 - ff1 - 40.0 - rgb(51, 51, 153) - [Contrôle réalisé le ][20 juillet 2021 ][Date de commande]
+  Cluster 10
+    1-11 - 61.45 - 366.69 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [Par : ][Fares Abdedaim (Expert accrédité SGS N° CDP-ASC0089)][Le 22 décembre 2009]
+  Cluster 11
+    1-12 - 702.84 - 90.5 22.25 - ff1 - 24.0 - rgb(0, 0, 0) - [1/15]
+  Cluster 12
+    1-13 - 65.68 - 66.78 29.67 - ff1 - 32.0 - rgb(0, 45, 134) - [CASTE ING]
+    1-13 - 65.68 - 54.3 29.67 - ff1 - 32.0 - rgb(0, 45, 134) - [2, Rue Maurice Hartmann, CS 40099]
+    1-13 - 65.68 - 41.82 29.67 - ff1 - 32.0 - rgb(0, 45, 134) - [92137 Issy-les-Moulineaux Cedex]
+
+    =====
+    1-13 - 310.85 - 66.78 29.67 - ff1 - 32.0 - rgb(0, 45, 134) - [Tél. : 01.41.46.05.86.]
+    1-13 - 310.85 - 54.3 29.67 - ff1 - 32.0 - rgb(0, 45, 134) - [Fax : 01.55.95.36.81.]
+    1-13 - 310.85 - 41.82 29.67 - ff1 - 32.0 - rgb(0, 45, 134) - [www.caste-ing.com]
+
+    =====
+    1-13 - 465.72 - 66.78 29.67 - ff1 - 32.0 - rgb(0, 45, 134) - [SAS au capital de 485.000 €]
+    1-13 - 465.72 - 54.3 29.67 - ff1 - 32.0 - rgb(0, 45, 134) - [RCS Nanterre B 514 836 170]
+    1-13 - 465.72 - 41.82 29.67 - ff1 - 32.0 - rgb(0, 45, 134) - [SIRET 514 836 170 000 43 - APE 7112B]
+Page 2
+  Cluster 0
+    2-1 - 665.21 - 1068.12 22.25 - ff1 - 24.0 - rgb(0, 0, 0) - [N°2021072015]
+  Cluster 1
+    2-2 - 263.5 - 1037.9 37.09 - ff2 - 40.0 - rgb(51, 51, 153) - [SYNTHESE DU CONTROLE TECHNIQUE]
+  Cluster 2
+    2-3 - 65.68 - 1000.54 29.67 - ff1 - 32.0 - rgb(51, 51, 153) - [CONCLUSION DU CONTROLE][ ][ ]
+  Cluster 3
+    2-4 - 65.68 - 968.37 29.67 - ff1 - 32.0 - rgb(51, 51, 153) - [Échéance au 31/12/2010:][ ][Satisfaite]
+  Cluster 4
+    2-5 - 65.68 - 936.19 29.67 - ff1 - 32.0 - rgb(51, 51, 153) - [Échéance au 03/07/2014:][ ][Satisfaite]
+  Cluster 5
+    2-6 - 65.68 - 904.02 29.67 - ff1 - 32.0 - rgb(51, 51, 153) - [Échéance au 03/07/2018:][ ][Non concerné]
+  Cluster 6
+    2-7 - 65.68 - 871.84 29.67 - ff1 - 32.0 - rgb(51, 51, 153) - [La mise à niveau réglementaire exigée par les articles R125-1-2 &]
+    2-7 - 65.68 - 859.36 29.67 - ff1 - 32.0 - rgb(51, 51, 153) - [R125-1-4 du code de la construction et de l'habitation) est réalisée]
+    2-7 - 65.68 - 846.88 29.67 - ff1 - 32.0 - rgb(51, 51, 153) - [correctement, date d'échéance dépassée :]
+
+    =====
+    2-7 - 435.45 - 859.36 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [Oui]
+  Cluster 7
+    2-8 - 65.68 - 803.33 29.67 - ff1 - 32.0 - rgb(51, 51, 153) - [RÉFÉRENCES DU CONTROLE][ ][ ]
+  Cluster 8
+    2-9 - 65.68 - 771.16 29.67 - ff1 - 32.0 - rgb(51, 51, 153) - [Présence du prestataire de maintenance][ ][NON]
+  Cluster 9
+    2-10 - 65.68 - 727.61 29.67 - ff1 - 32.0 - rgb(51, 51, 153) - [LOCALISATION ET CONDITION D’ACCÈS AU SITE][ ][ ]
+  Cluster 10
+    2-11 - 65.68 - 695.43 29.67 - ff1 - 32.0 - rgb(51, 51, 153) - [Adresse postale][ ][18 RUE CHARLES BAUDELAIRE]
+  Cluster 11
+    2-12 - 65.68 - 663.26 29.67 - ff1 - 32.0 - rgb(51, 51, 153) - [Code postal - Ville][ ][06100 NICE]
+  Cluster 12
+    2-13 - 65.68 - 631.08 29.67 - ff1 - 32.0 - rgb(51, 51, 153) - [Résidence][ ][CLAIR LOGIS]
+  Cluster 13
+    2-14 - 65.68 - 598.91 29.67 - ff1 - 32.0 - rgb(51, 51, 153) - [Bâtiment][ ][/]
+  Cluster 14
+    2-15 - 65.68 - 566.73 29.67 - ff1 - 32.0 - rgb(51, 51, 153) - [Cage d'escalier][ ][/]
+  Cluster 15
+    2-16 - 65.68 - 534.56 29.67 - ff1 - 32.0 - rgb(51, 51, 153) - [Présence d'un(e) gardien/ne][ ][NON]
+  Cluster 16
+    2-17 - 65.68 - 502.38 29.67 - ff1 - 32.0 - rgb(51, 51, 153) - [Condition d'accès][ ][PAR INTERPHONIE]
+  Cluster 17
+    2-18 - 65.68 - 470.21 29.67 - ff1 - 32.0 - rgb(51, 51, 153) - [Emplacement du coffre à clefs][ ][/]
+  Cluster 18
+    2-19 - 65.68 - 438.03 29.67 - ff1 - 32.0 - rgb(51, 51, 153) - [Présence du prestataire de maintenance indispensable pour accéder à]
+    2-19 - 65.68 - 425.55 29.67 - ff1 - 32.0 - rgb(51, 51, 153) - [toutes les parties de l'installation et/ou réaliser les essais parachute]
+
+    =====
+    2-19 - 435.45 - 431.79 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [OUI]
+  Cluster 19
+    2-20 - 65.68 - 393.38 29.67 - ff1 - 32.0 - rgb(51, 51, 153) - [Observations][ ][/]
+  Cluster 20
+    2-21 - 65.68 - 349.83 29.67 - ff1 - 32.0 - rgb(51, 51, 153) - [EQUIPEMENT][ ][ ]
+  Cluster 21
+    2-22 - 65.68 - 317.65 29.67 - ff1 - 32.0 - rgb(51, 51, 153) - [Constructeur d'origine][ ][FALCONI]
+  Cluster 22
+    2-23 - 65.68 - 285.48 29.67 - ff1 - 32.0 - rgb(51, 51, 153) - [Numéro d'identification][ ][2298]
+  Cluster 23
+    2-24 - 65.68 - 253.3 29.67 - ff1 - 32.0 - rgb(51, 51, 153) - [Prestataire de maintenance][ ][ILEX]
+  Cluster 24
+    2-25 - 65.68 - 221.13 29.67 - ff1 - 32.0 - rgb(51, 51, 153) - [Type de bâtiment][ ][Habitation (1° à 3° famille)]
+  Cluster 25
+    2-26 - 702.84 - 90.5 22.25 - ff1 - 24.0 - rgb(0, 0, 0) - [2/15]
+  Cluster 26
+    2-27 - 65.68 - 66.78 29.67 - ff1 - 32.0 - rgb(0, 45, 134) - [CASTE ING]
+    2-27 - 65.68 - 54.3 29.67 - ff1 - 32.0 - rgb(0, 45, 134) - [2, Rue Maurice Hartmann, CS 40099]
+    2-27 - 65.68 - 41.82 29.67 - ff1 - 32.0 - rgb(0, 45, 134) - [92137 Issy-les-Moulineaux Cedex]
+
+    =====
+    2-27 - 310.85 - 66.78 29.67 - ff1 - 32.0 - rgb(0, 45, 134) - [Tél. : 01.41.46.05.86.]
+    2-27 - 310.85 - 54.3 29.67 - ff1 - 32.0 - rgb(0, 45, 134) - [Fax : 01.55.95.36.81.]
+    2-27 - 310.85 - 41.82 29.67 - ff1 - 32.0 - rgb(0, 45, 134) - [www.caste-ing.com]
+
+    =====
+    2-27 - 465.72 - 66.78 29.67 - ff1 - 32.0 - rgb(0, 45, 134) - [SAS au capital de 485.000 €]
+    2-27 - 465.72 - 54.3 29.67 - ff1 - 32.0 - rgb(0, 45, 134) - [RCS Nanterre B 514 836 170]
+    2-27 - 465.72 - 41.82 29.67 - ff1 - 32.0 - rgb(0, 45, 134) - [SIRET 514 836 170 000 43 - APE 7112B]
+Page 3
+  Cluster 0
+    3-1 - 665.21 - 1068.12 22.25 - ff1 - 24.0 - rgb(0, 0, 0) - [N°2021072015]
+  Cluster 1
+    3-2 - 263.5 - 1037.9 37.09 - ff2 - 40.0 - rgb(51, 51, 153) - [SYNTHESE DU CONTROLE TECHNIQUE]
+  Cluster 2
+    3-3 - 65.68 - 1000.54 29.67 - ff1 - 32.0 - rgb(51, 51, 153) - [DESCRIPTIF GENERAL][ ][ ]
+  Cluster 3
+    3-4 - 65.68 - 968.37 29.67 - ff1 - 32.0 - rgb(51, 51, 153) - [Nature de l'appareil][ ][Ascenseur]
+  Cluster 4
+    3-5 - 65.68 - 936.19 29.67 - ff1 - 32.0 - rgb(51, 51, 153) - [Energie][ ][Electrique]
+  Cluster 5
+    3-6 - 65.68 - 904.02 29.67 - ff1 - 32.0 - rgb(51, 51, 153) - [Année de mise en service][ ][1970]
+  Cluster 6
+    3-7 - 65.68 - 871.84 29.67 - ff1 - 32.0 - rgb(51, 51, 153) - [Appareil CE ?][ ][NON]
+  Cluster 7
+    3-8 - 65.68 - 839.67 29.67 - ff1 - 32.0 - rgb(51, 51, 153) - [Norme de conception (Electrique)][ ][NFP 82.201 ( 1965)]
+  Cluster 8
+    3-9 - 65.68 - 807.49 29.67 - ff1 - 32.0 - rgb(51, 51, 153) - [Charge nominale (kg)][ ][225]
+  Cluster 9
+    3-10 - 65.68 - 775.32 29.67 - ff1 - 32.0 - rgb(51, 51, 153) - [Vitesse nominale (m/s)][ ][0,70]
+  Cluster 10
+    3-11 - 65.68 - 743.14 29.67 - ff1 - 32.0 - rgb(51, 51, 153) - [Nombre de niveaux][ ][7]
+  Cluster 11
+    3-12 - 65.68 - 710.97 29.67 - ff1 - 32.0 - rgb(51, 51, 153) - [Nombre de niveaux desservis][ ][7]
+  Cluster 12
+    3-13 - 65.68 - 678.79 29.67 - ff1 - 32.0 - rgb(51, 51, 153) - [Désignation des niveaux desservis][ ][SS,RC,1,2,3,4,5]
+  Cluster 13
+    3-14 - 65.68 - 646.62 29.67 - ff1 - 32.0 - rgb(51, 51, 153) - [Contrôle et entrainement][ ][Microprocesseurs / variation de fréquence]
+  Cluster 14
+    3-15 - 65.68 - 603.07 29.67 - ff1 - 32.0 - rgb(51, 51, 153) - [Liste des documents présentés][ ][ ]
+  Cluster 15
+    3-16 - 65.68 - 570.89 29.67 - ff1 - 32.0 - rgb(51, 51, 153) - [Documents][ ][Carnet d'entretien]
+  Cluster 16
+    3-17 - 65.68 - 527.34 29.67 - ff1 - 32.0 - rgb(51, 51, 153) - [Site sensible][ ][ ]
+  Cluster 17
+    3-18 - 65.68 - 495.17 29.67 - ff1 - 32.0 - rgb(51, 51, 153) - [Le propriétaire a indiqué au contrôleur technique si l’ascenseur tombait]
+    3-18 - 65.68 - 482.69 29.67 - ff1 - 32.0 - rgb(51, 51, 153) - [sous la nécessité de prévenir les actes de malveillance portant atteinte au]
+    3-18 - 65.68 - 470.21 29.67 - ff1 - 32.0 - rgb(51, 51, 153) - [verrouillage de la porte palière.]
+
+    =====
+    3-18 - 435.45 - 482.69 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [NON]
+  Cluster 18
+    3-19 - 65.68 - 438.03 29.67 - ff1 - 32.0 - rgb(51, 51, 153) - [L'installation est assujettie à la nécessité de prévenir les actes de]
+    3-19 - 65.68 - 425.55 29.67 - ff1 - 32.0 - rgb(51, 51, 153) - [malveillance portant atteinte au verrouillage de la porte palière.]
+
+    =====
+    3-19 - 435.45 - 431.79 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [NON SIGNALE]
+  Cluster 19
+    3-20 - 702.84 - 90.5 22.25 - ff1 - 24.0 - rgb(0, 0, 0) - [3/15]
+  Cluster 20
+    3-21 - 65.68 - 66.78 29.67 - ff1 - 32.0 - rgb(0, 45, 134) - [CASTE ING]
+    3-21 - 65.68 - 54.3 29.67 - ff1 - 32.0 - rgb(0, 45, 134) - [2, Rue Maurice Hartmann, CS 40099]
+    3-21 - 65.68 - 41.82 29.67 - ff1 - 32.0 - rgb(0, 45, 134) - [92137 Issy-les-Moulineaux Cedex]
+
+    =====
+    3-21 - 310.85 - 66.78 29.67 - ff1 - 32.0 - rgb(0, 45, 134) - [Tél. : 01.41.46.05.86.]
+    3-21 - 310.85 - 54.3 29.67 - ff1 - 32.0 - rgb(0, 45, 134) - [Fax : 01.55.95.36.81.]
+    3-21 - 310.85 - 41.82 29.67 - ff1 - 32.0 - rgb(0, 45, 134) - [www.caste-ing.com]
+
+    =====
+    3-21 - 465.72 - 66.78 29.67 - ff1 - 32.0 - rgb(0, 45, 134) - [SAS au capital de 485.000 €]
+    3-21 - 465.72 - 54.3 29.67 - ff1 - 32.0 - rgb(0, 45, 134) - [RCS Nanterre B 514 836 170]
+    3-21 - 465.72 - 41.82 29.67 - ff1 - 32.0 - rgb(0, 45, 134) - [SIRET 514 836 170 000 43 - APE 7112B]
+Page 4
+  Cluster 0
+    4-1 - 665.21 - 1068.12 22.25 - ff1 - 24.0 - rgb(0, 0, 0) - [N°2021072015]
+  Cluster 1
+    4-2 - 263.5 - 1037.9 37.09 - ff2 - 40.0 - rgb(51, 51, 153) - [SYNTHESE DU CONTROLE TECHNIQUE]
+  Cluster 2
+    4-3 - 65.68 - 1000.54 29.67 - ff1 - 32.0 - rgb(51, 51, 153) - [Parties contrôlées][ ][ ]
+  Cluster 3
+    4-4 - 65.68 - 968.37 29.67 - ff1 - 32.0 - rgb(51, 51, 153) - [Gaine][ ][Oui]
+  Cluster 4
+    4-5 - 65.68 - 936.19 29.67 - ff1 - 32.0 - rgb(51, 51, 153) - [Cuvette][ ][Oui]
+  Cluster 5
+    4-6 - 65.68 - 904.02 29.67 - ff1 - 32.0 - rgb(51, 51, 153) - [Guidages][ ][Oui]
+  Cluster 6
+    4-7 - 65.68 - 871.84 29.67 - ff1 - 32.0 - rgb(51, 51, 153) - [Equipements paliers][ ][Oui]
+  Cluster 7
+    4-8 - 65.68 - 839.67 29.67 - ff1 - 32.0 - rgb(51, 51, 153) - [Portes palières][ ][Oui]
+  Cluster 8
+    4-9 - 65.68 - 807.49 29.67 - ff1 - 32.0 - rgb(51, 51, 153) - [Organes de suspension][ ][Oui]
+  Cluster 9
+    4-10 - 65.68 - 775.32 29.67 - ff1 - 32.0 - rgb(51, 51, 153) - [Cabine][ ][Oui]
+  Cluster 10
+    4-11 - 65.68 - 743.14 29.67 - ff1 - 32.0 - rgb(51, 51, 153) - [Organes de commande en cabine][ ][Oui]
+  Cluster 11
+    4-12 - 65.68 - 710.97 29.67 - ff1 - 32.0 - rgb(51, 51, 153) - [Toit de cabine][ ][Oui]
+  Cluster 12
+    4-13 - 65.68 - 678.79 29.67 - ff1 - 32.0 - rgb(51, 51, 153) - [Contrepoids - Organes de compensation][ ][Oui]
+  Cluster 13
+    4-14 - 65.68 - 646.62 29.67 - ff1 - 32.0 - rgb(51, 51, 153) - [Dispositifs de sécurité][ ][Oui]
+  Cluster 14
+    4-15 - 65.68 - 614.44 29.67 - ff1 - 32.0 - rgb(51, 51, 153) - [Locaux de machines][ ][Oui]
+  Cluster 15
+    4-16 - 65.68 - 582.27 29.67 - ff1 - 32.0 - rgb(51, 51, 153) - [Locaux de poulies][ ][Sans objet]
+  Cluster 16
+    4-17 - 65.68 - 550.09 29.67 - ff1 - 32.0 - rgb(51, 51, 153) - [Machine][ ][Oui]
+  Cluster 17
+    4-18 - 65.68 - 517.92 29.67 - ff1 - 32.0 - rgb(51, 51, 153) - [Electricité][ ][Oui]
+  Cluster 18
+    4-19 - 65.68 - 485.74 29.67 - ff1 - 32.0 - rgb(51, 51, 153) - [Toutes parties visitées][ ][Oui]
+  Cluster 19
+    4-20 - 65.68 - 453.57 29.67 - ff1 - 32.0 - rgb(51, 51, 153) - [Tous essais réalisés][ ][Oui]
+  Cluster 20
+    4-21 - 65.68 - 410.02 29.67 - ff1 - 32.0 - rgb(51, 51, 153) - [Essai du parachute][ ][ ]
+  Cluster 21
+    4-22 - 65.68 - 377.84 29.67 - ff1 - 32.0 - rgb(51, 51, 153) - [ASCENSEUR ELECTRIQUE: Parachute à accélération.][ ][Essai concluant]
+  Cluster 22
+    4-23 - 702.84 - 90.5 22.25 - ff1 - 24.0 - rgb(0, 0, 0) - [4/15]
+  Cluster 23
+    4-24 - 65.68 - 66.78 29.67 - ff1 - 32.0 - rgb(0, 45, 134) - [CASTE ING]
+    4-24 - 65.68 - 54.3 29.67 - ff1 - 32.0 - rgb(0, 45, 134) - [2, Rue Maurice Hartmann, CS 40099]
+    4-24 - 65.68 - 41.82 29.67 - ff1 - 32.0 - rgb(0, 45, 134) - [92137 Issy-les-Moulineaux Cedex]
+
+    =====
+    4-24 - 310.85 - 66.78 29.67 - ff1 - 32.0 - rgb(0, 45, 134) - [Tél. : 01.41.46.05.86.]
+    4-24 - 310.85 - 54.3 29.67 - ff1 - 32.0 - rgb(0, 45, 134) - [Fax : 01.55.95.36.81.]
+    4-24 - 310.85 - 41.82 29.67 - ff1 - 32.0 - rgb(0, 45, 134) - [www.caste-ing.com]
+
+    =====
+    4-24 - 465.72 - 66.78 29.67 - ff1 - 32.0 - rgb(0, 45, 134) - [SAS au capital de 485.000 €]
+    4-24 - 465.72 - 54.3 29.67 - ff1 - 32.0 - rgb(0, 45, 134) - [RCS Nanterre B 514 836 170]
+    4-24 - 465.72 - 41.82 29.67 - ff1 - 32.0 - rgb(0, 45, 134) - [SIRET 514 836 170 000 43 - APE 7112B]
+Page 5
+  Cluster 0
+    5-1 - 665.21 - 1068.12 22.25 - ff1 - 24.0 - rgb(0, 0, 0) - [N°2021072015]
+  Cluster 1
+    5-2 - 202.05 - 1037.9 37.09 - ff2 - 40.0 - rgb(51, 51, 153) - [LISTE DES CONTRÔLES ET CONDITIONS DE RÉALISATION]
+
+    =====
+    5-2 - 309.28 - 1020.61 37.09 - ff2 - 40.0 - rgb(51, 51, 153) - [Arrêté du 07 août 2012]
+  Cluster 2
+    5-3 - 83.99 - 912.63 29.67 - ff2 - 32.0 - rgb(0, 0, 0) - [Ref.Annexe]
+
+    =====
+    5-3 - 153.56 - 939.71 29.67 - ff2 - 32.0 - rgb(0, 0, 0) - [Parties contrôlées]
+
+    =====
+    5-3 - 317.69 - 892.79 29.67 - ff2 - 32.0 - rgb(0, 0, 0) - [Amélioration]
+
+    =====
+    5-3 - 327.53 - 973.93 29.67 - ff2 - 32.0 - rgb(0, 0, 0) - [NON CE][ ][CE]
+    5-3 - 327.53 - 890.81 29.67 - ff2 - 32.0 - rgb(0, 0, 0) - [de la sécurité]
+
+    =====
+    5-3 - 330.86 - 990.06 29.67 - ff2 - 32.0 - rgb(0, 0, 0) - [Type d'ascenseur][ ][Contrôle]
+
+    =====
+    5-3 - 366.44 - 897.67 29.67 - ff2 - 32.0 - rgb(0, 0, 0) - [Nature des]
+
+    =====
+    5-3 - 375.46 - 889.27 29.67 - ff2 - 32.0 - rgb(0, 0, 0) - [investigations]
+
+    =====
+    5-3 - 424.94 - 897.67 29.67 - ff2 - 32.0 - rgb(0, 0, 0) - [Nature des]
+
+    =====
+    5-3 - 433.96 - 889.27 29.67 - ff2 - 32.0 - rgb(0, 0, 0) - [investigations]
+
+    =====
+    5-3 - 473.69 - 931.66 29.67 - ff2 - 32.0 - rgb(0, 0, 0) - [C]
+
+    =====
+    5-3 - 512.69 - 927.5 29.67 - ff2 - 32.0 - rgb(0, 0, 0) - [VO]
+
+    =====
+    5-3 - 551.69 - 927.75 29.67 - ff2 - 32.0 - rgb(0, 0, 0) - [SO]
+
+    =====
+    5-3 - 590.86 - 958.43 29.67 - ff2 - 32.0 - rgb(0, 0, 0) - [(Ascenseurs non CE)]
+
+    =====
+    5-3 - 593.47 - 920.99 29.67 - ff2 - 32.0 - rgb(0, 0, 0) - [ARRETE 18/11/2004]
+    5-3 - 593.47 - 908.51 29.67 - ff2 - 32.0 - rgb(0, 0, 0) - [ARRETE 07/08/2012]
+
+    =====
+    5-3 - 598.11 - 945.95 29.67 - ff2 - 32.0 - rgb(0, 0, 0) - [DECRET 2004-964]
+    5-3 - 598.11 - 933.47 29.67 - ff2 - 32.0 - rgb(0, 0, 0) - [DECRET 2008-291]
+
+    =====
+    5-3 - 617.28 - 970.91 29.67 - ff2 - 32.0 - rgb(0, 0, 0) - [Echéances]
+  Cluster 3
+    5-4 - 481.79 - 913.56 22.25 - ff2 - 24.0 - rgb(0, 0, 0) - [(CORRECT)]
+
+    =====
+    5-4 - 520.79 - 890.1 22.25 - ff2 - 24.0 - rgb(0, 0, 0) - [(VOIR OBSERVATIONS)]
+
+    =====
+    5-4 - 559.79 - 908.21 22.25 - ff2 - 24.0 - rgb(0, 0, 0) - [(SANS OBJET)]
+  Cluster 4
+    5-5 - 55.25 - 844.37 29.67 - ff2 - 32.0 - rgb(0, 0, 0) - [Glossaire de la nature des investigations :]
+    5-5 - 55.25 - 825.34 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [(P) : Présence : ][Examen visuel consistant à s'assurer de l'existence des dispositifs déterminants pour la sécurité. Dispositif prévu par le]
+    5-5 - 55.25 - 811.51 25.59 - ff3 - 32.0 - rgb(0, 0, 0) - [fabricant mais dont la suppression est intervenue en cours d'exploitation.]
+    5-5 - 55.25 - 792.48 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [(R) : Réalisation : ][Vérification de la présence des dispositifs concernés, complétée par la vérification du respect de règles ou de prescriptions]
+    5-5 - 55.25 - 778.65 25.59 - ff3 - 32.0 - rgb(0, 0, 0) - [techniques et, s'il y a lieu, par des appréciations dimensionnelles.]
+    5-5 - 55.25 - 759.61 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [(E) : Etat de conservation : ][Examen visuel des parties visibles et accessibles sans démontage ni mise en œuvre de moyens d'investigation]
+    5-5 - 55.25 - 745.78 25.59 - ff3 - 32.0 - rgb(0, 0, 0) - [particuliers. Cet examen a pour objet de vérifier que les éléments examinés ne présentent pas de détériorations apparentes susceptibles]
+    5-5 - 55.25 - 731.95 25.59 - ff3 - 32.0 - rgb(0, 0, 0) - [d'être à l'origine de situations dangereuses.]
+    5-5 - 55.25 - 712.92 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [(F) : Fonctionnement : ][Vérification, à l'aide d'essais de fonctionnement, de la capacité des éléments examinés à accomplir la fonction]
+    5-5 - 55.25 - 699.09 25.59 - ff3 - 32.0 - rgb(0, 0, 0) - [requise.]
+  Cluster 5
+    5-6 - 65.68 - 659.99 29.67 - ff1 - 32.0 - rgb(51, 51, 153) - [1][ ][GAINE][ ][ ][ ][ ][ ][ ]
+  Cluster 6
+    5-7 - 65.68 - 621.58 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [1.1][ ][Parois de protection][ ][I-4][ ][P/E][ ][E][ ][C][ ][ ][ ][ ]
+
+    =====
+    5-7 - 613.84 - 615.34 29.67 - ff1 - 32.0 - rgb(51, 51, 153) - [31-déc.-2010]
+
+    =====
+    5-7 - 631.35 - 627.82 29.67 - ff1 - 32.0 - rgb(51, 51, 153) - [Avant]
+  Cluster 7
+    5-8 - 65.68 - 576.92 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [1.2]
+
+    =====
+    5-8 - 114.36 - 583.16 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [Panneaux, portes, portillons (visite]
+    5-8 - 114.36 - 570.68 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [ou secours)]
+
+    =====
+    5-8 - 312.31 - 576.92 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [I-9][ ][P/R/E/F][ ][R/E/F][ ][ ][ ][ ][ ][SO]
+
+    =====
+    5-8 - 613.84 - 570.68 29.67 - ff1 - 32.0 - rgb(51, 51, 153) - [31-déc.-2010]
+
+    =====
+    5-8 - 631.35 - 583.16 29.67 - ff1 - 32.0 - rgb(51, 51, 153) - [Avant]
+  Cluster 8
+    5-9 - 65.68 - 538.51 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [1.3][ ][Garde pieds, seuils][ ][E][ ][E][ ][C][ ][ ][ ][ ]
+  Cluster 9
+    5-10 - 65.68 - 506.33 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [1.4][ ][Moyen d'accès à la cuvette][ ][P/E][ ][E][ ][ ][ ][VO][ ][ ]
+  Cluster 10
+    5-11 - 65.68 - 467.92 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [1.5][ ][Eclairage gaine][ ][I-7][ ][P/E/F][ ][E/F][ ][C][ ][ ][ ][ ]
+
+    =====
+    5-11 - 613.84 - 461.68 29.67 - ff1 - 32.0 - rgb(51, 51, 153) - [31-déc.-2010]
+
+    =====
+    5-11 - 631.35 - 474.16 29.67 - ff1 - 32.0 - rgb(51, 51, 153) - [Avant]
+  Cluster 11
+    5-12 - 65.68 - 418.13 29.67 - ff1 - 32.0 - rgb(51, 51, 153) - [2][ ][CUVETTE][ ][ ][ ][ ][ ][ ]
+  Cluster 12
+    5-13 - 65.68 - 379.71 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [2.1]
+
+    =====
+    5-13 - 114.36 - 385.95 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [Etat général et équipement]
+    5-13 - 114.36 - 373.47 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [électrique]
+
+    =====
+    5-13 - 364.15 - 379.71 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [E][ ][E][ ][C][ ][ ][ ][ ]
+  Cluster 13
+    5-14 - 65.68 - 335.06 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [2.2][ ][Dispositif d'arrêt][ ][I-7][ ][P/E/F][ ][E/F][ ][C][ ][ ][ ][ ]
+
+    =====
+    5-14 - 613.84 - 328.82 29.67 - ff1 - 32.0 - rgb(51, 51, 153) - [31-déc.-2010]
+
+    =====
+    5-14 - 631.35 - 341.3 29.67 - ff1 - 32.0 - rgb(51, 51, 153) - [Avant]
+  Cluster 14
+    5-15 - 65.68 - 290.4 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [2.3][ ][Dispositif de demande de secours][ ][II-2][ ][P/E/F][ ][E/F][ ][C][ ][ ][ ][ ]
+
+    =====
+    5-15 - 615.4 - 284.16 29.67 - ff1 - 32.0 - rgb(255, 102, 0) - [03-juil.-2014]
+
+    =====
+    5-15 - 631.35 - 296.64 29.67 - ff1 - 32.0 - rgb(255, 102, 0) - [Avant]
+  Cluster 15
+    5-16 - 65.68 - 239.51 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [2.4]
+
+    =====
+    5-16 - 114.36 - 245.75 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [Refermeture porte palière (pêne]
+    5-16 - 114.36 - 233.27 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [carré)]
+
+    =====
+    5-16 - 312.31 - 251.99 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [I-1]
+    5-16 - 312.31 - 227.03 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [I-7]
+
+    =====
+    5-16 - 313.63 - 239.51 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [et]
+
+    =====
+    5-16 - 355.48 - 239.51 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [P/E/F][ ][E/F][ ][C][ ][ ][ ][ ]
+
+    =====
+    5-16 - 613.84 - 233.27 29.67 - ff1 - 32.0 - rgb(51, 51, 153) - [31-déc.-2010]
+
+    =====
+    5-16 - 631.35 - 245.75 29.67 - ff1 - 32.0 - rgb(51, 51, 153) - [Avant]
+  Cluster 16
+    5-17 - 65.68 - 194.85 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [2.5][ ][Amortisseurs, socle, butées][ ][P/R/E/F][ ][R/E/F][ ][C][ ][ ][ ][ ]
+  Cluster 17
+    5-18 - 65.68 - 156.44 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [2.6][ ][Eclairage cuvette][ ][I-7][ ][E/F][ ][E/F][ ][C][ ][ ][ ][ ]
+
+    =====
+    5-18 - 613.84 - 150.2 29.67 - ff1 - 32.0 - rgb(51, 51, 153) - [31-déc.-2010]
+
+    =====
+    5-18 - 631.35 - 162.68 29.67 - ff1 - 32.0 - rgb(51, 51, 153) - [Avant]
+  Cluster 18
+    5-19 - 702.84 - 90.5 22.25 - ff1 - 24.0 - rgb(0, 0, 0) - [5/15]
+  Cluster 19
+    5-20 - 65.68 - 66.78 29.67 - ff1 - 32.0 - rgb(0, 45, 134) - [CASTE ING]
+    5-20 - 65.68 - 54.3 29.67 - ff1 - 32.0 - rgb(0, 45, 134) - [2, Rue Maurice Hartmann, CS 40099]
+    5-20 - 65.68 - 41.82 29.67 - ff1 - 32.0 - rgb(0, 45, 134) - [92137 Issy-les-Moulineaux Cedex]
+
+    =====
+    5-20 - 310.85 - 66.78 29.67 - ff1 - 32.0 - rgb(0, 45, 134) - [Tél. : 01.41.46.05.86.]
+    5-20 - 310.85 - 54.3 29.67 - ff1 - 32.0 - rgb(0, 45, 134) - [Fax : 01.55.95.36.81.]
+    5-20 - 310.85 - 41.82 29.67 - ff1 - 32.0 - rgb(0, 45, 134) - [www.caste-ing.com]
+
+    =====
+    5-20 - 465.72 - 66.78 29.67 - ff1 - 32.0 - rgb(0, 45, 134) - [SAS au capital de 485.000 €]
+    5-20 - 465.72 - 54.3 29.67 - ff1 - 32.0 - rgb(0, 45, 134) - [RCS Nanterre B 514 836 170]
+    5-20 - 465.72 - 41.82 29.67 - ff1 - 32.0 - rgb(0, 45, 134) - [SIRET 514 836 170 000 43 - APE 7112B]
+Page 6
+  Cluster 0
+    6-1 - 665.21 - 1068.12 22.25 - ff1 - 24.0 - rgb(0, 0, 0) - [N°2021072015]
+  Cluster 1
+    6-2 - 202.05 - 1037.9 37.09 - ff2 - 40.0 - rgb(51, 51, 153) - [LISTE DES CONTRÔLES ET CONDITIONS DE RÉALISATION]
+
+    =====
+    6-2 - 309.28 - 1020.61 37.09 - ff2 - 40.0 - rgb(51, 51, 153) - [Arrêté du 07 août 2012]
+  Cluster 2
+    6-3 - 83.99 - 912.63 29.67 - ff2 - 32.0 - rgb(0, 0, 0) - [Ref.Annexe]
+
+    =====
+    6-3 - 153.56 - 939.71 29.67 - ff2 - 32.0 - rgb(0, 0, 0) - [Parties contrôlées]
+
+    =====
+    6-3 - 317.69 - 892.79 29.67 - ff2 - 32.0 - rgb(0, 0, 0) - [Amélioration]
+
+    =====
+    6-3 - 327.53 - 973.93 29.67 - ff2 - 32.0 - rgb(0, 0, 0) - [NON CE][ ][CE]
+    6-3 - 327.53 - 890.81 29.67 - ff2 - 32.0 - rgb(0, 0, 0) - [de la sécurité]
+
+    =====
+    6-3 - 330.86 - 990.06 29.67 - ff2 - 32.0 - rgb(0, 0, 0) - [Type d'ascenseur][ ][Contrôle]
+
+    =====
+    6-3 - 366.44 - 897.67 29.67 - ff2 - 32.0 - rgb(0, 0, 0) - [Nature des]
+
+    =====
+    6-3 - 375.46 - 889.27 29.67 - ff2 - 32.0 - rgb(0, 0, 0) - [investigations]
+
+    =====
+    6-3 - 424.94 - 897.67 29.67 - ff2 - 32.0 - rgb(0, 0, 0) - [Nature des]
+
+    =====
+    6-3 - 433.96 - 889.27 29.67 - ff2 - 32.0 - rgb(0, 0, 0) - [investigations]
+
+    =====
+    6-3 - 473.69 - 931.66 29.67 - ff2 - 32.0 - rgb(0, 0, 0) - [C]
+
+    =====
+    6-3 - 512.69 - 927.5 29.67 - ff2 - 32.0 - rgb(0, 0, 0) - [VO]
+
+    =====
+    6-3 - 551.69 - 927.75 29.67 - ff2 - 32.0 - rgb(0, 0, 0) - [SO]
+
+    =====
+    6-3 - 590.86 - 958.43 29.67 - ff2 - 32.0 - rgb(0, 0, 0) - [(Ascenseurs non CE)]
+
+    =====
+    6-3 - 593.47 - 920.99 29.67 - ff2 - 32.0 - rgb(0, 0, 0) - [ARRETE 18/11/2004]
+    6-3 - 593.47 - 908.51 29.67 - ff2 - 32.0 - rgb(0, 0, 0) - [ARRETE 07/08/2012]
+
+    =====
+    6-3 - 598.11 - 945.95 29.67 - ff2 - 32.0 - rgb(0, 0, 0) - [DECRET 2004-964]
+    6-3 - 598.11 - 933.47 29.67 - ff2 - 32.0 - rgb(0, 0, 0) - [DECRET 2008-291]
+
+    =====
+    6-3 - 617.28 - 970.91 29.67 - ff2 - 32.0 - rgb(0, 0, 0) - [Echéances]
+  Cluster 3
+    6-4 - 481.79 - 913.56 22.25 - ff2 - 24.0 - rgb(0, 0, 0) - [(CORRECT)]
+
+    =====
+    6-4 - 520.79 - 890.1 22.25 - ff2 - 24.0 - rgb(0, 0, 0) - [(VOIR OBSERVATIONS)]
+
+    =====
+    6-4 - 559.79 - 908.21 22.25 - ff2 - 24.0 - rgb(0, 0, 0) - [(SANS OBJET)]
+  Cluster 4
+    6-5 - 65.68 - 834.71 29.67 - ff1 - 32.0 - rgb(51, 51, 153) - [3][ ][GUIDAGE][ ][ ][ ][ ][ ][ ]
+  Cluster 5
+    6-6 - 65.68 - 802.54 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [3.1][ ][Eléments de guidage][ ][E][ ][E][ ][ ][ ][VO][ ][ ]
+  Cluster 6
+    6-7 - 65.68 - 758.99 29.67 - ff1 - 32.0 - rgb(51, 51, 153) - [4][ ][EQUIPEMENT DES PALIERS][ ][ ][ ][ ][ ][ ]
+  Cluster 7
+    6-8 - 65.68 - 720.57 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [4.1]
+
+    =====
+    6-8 - 114.36 - 726.81 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [Signalisation présence cabine, sens]
+    6-8 - 114.36 - 714.33 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [de déplacement]
+
+    =====
+    6-8 - 364.15 - 720.57 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [F][ ][F][ ][C][ ][ ][ ][ ]
+  Cluster 8
+    6-9 - 65.68 - 682.16 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [4.2][ ][Affichage (déplacement de la cabine) P/E/F E/F C    ]
+  Cluster 9
+    6-10 - 65.68 - 649.98 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [4.3][ ][Manoeuvre Pompiers][ ][P/E/F][ ][E/F][ ][ ][ ][ ][ ][SO]
+  Cluster 10
+    6-11 - 65.68 - 617.81 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [4.4][ ][Organes de commande avec voyant][ ][P/E/F][ ][E/F][ ][C][ ][ ][ ][ ]
+  Cluster 11
+    6-12 - 65.68 - 574.26 29.67 - ff1 - 32.0 - rgb(51, 51, 153) - [5][ ][PORTES PALIERES][ ][ ][ ][ ][ ][ ]
+  Cluster 12
+    6-13 - 65.68 - 523.36 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [5.1]
+
+    =====
+    6-13 - 114.36 - 542.08 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [Serrures, dispositifs de verrouillage,]
+    6-13 - 114.36 - 529.6 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [contrôle électrique, efficacité,]
+    6-13 - 114.36 - 517.12 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [inaccessibilité, protection contre les]
+    6-13 - 114.36 - 504.64 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [projections.]
+
+    =====
+    6-13 - 312.31 - 535.84 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [I-1]
+    6-13 - 312.31 - 510.88 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [I-4]
+
+    =====
+    6-13 - 313.63 - 523.36 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [et]
+
+    =====
+    6-13 - 355.48 - 523.36 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [R/E/F][ ][R/E/F][ ][C][ ][ ][ ][ ]
+
+    =====
+    6-13 - 613.84 - 517.12 29.67 - ff1 - 32.0 - rgb(51, 51, 153) - [31-déc.-2010]
+
+    =====
+    6-13 - 631.35 - 529.6 29.67 - ff1 - 32.0 - rgb(51, 51, 153) - [Avant]
+  Cluster 13
+    6-14 - 65.68 - 466.23 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [5.2]
+
+    =====
+    6-14 - 114.36 - 472.47 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [Condamnation électrique - contrôle]
+    6-14 - 114.36 - 459.99 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [de fermeture]
+
+    =====
+    6-14 - 355.48 - 466.23 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [R/E/F][ ][R/E/F][ ][C][ ][ ][ ][ ]
+  Cluster 14
+    6-15 - 65.68 - 415.33 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [5.3][ ][Déverrouillage de secours]
+
+    =====
+    6-15 - 312.31 - 427.81 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [I-1]
+    6-15 - 312.31 - 402.85 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [I-2]
+
+    =====
+    6-15 - 313.63 - 415.33 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [et]
+
+    =====
+    6-15 - 360.01 - 415.33 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [P/F][ ][F][ ][C][ ][ ][ ][ ]
+
+    =====
+    6-15 - 613.84 - 409.09 29.67 - ff1 - 32.0 - rgb(51, 51, 153) - [31-déc.-2010]
+
+    =====
+    6-15 - 631.35 - 421.57 29.67 - ff1 - 32.0 - rgb(51, 51, 153) - [Avant]
+  Cluster 15
+    6-16 - 65.68 - 364.44 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [5.4]
+
+    =====
+    6-16 - 114.36 - 370.68 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [Signal sonore et lumineux (site]
+    6-16 - 114.36 - 358.2 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [sensible)]
+
+    =====
+    6-16 - 312.31 - 364.44 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [I-2][ ][P/E/F][ ][E/F][ ][ ][ ][ ][ ][SO]
+
+    =====
+    6-16 - 613.84 - 358.2 29.67 - ff1 - 32.0 - rgb(51, 51, 153) - [31-déc.-2010]
+
+    =====
+    6-16 - 631.35 - 370.68 29.67 - ff1 - 32.0 - rgb(51, 51, 153) - [Avant]
+  Cluster 16
+    6-17 - 65.68 - 319.78 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [5.5]
+
+    =====
+    6-17 - 114.36 - 326.02 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [Eléments constitutifs des portes]
+    6-17 - 114.36 - 313.54 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [(vitrage)]
+
+    =====
+    6-17 - 310.85 - 319.78 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [II-3][ ][P/E][ ][E][ ][ ][ ][VO][ ][ ]
+
+    =====
+    6-17 - 615.4 - 313.54 29.67 - ff1 - 32.0 - rgb(255, 102, 0) - [03-juil.-2014]
+
+    =====
+    6-17 - 631.35 - 326.02 29.67 - ff1 - 32.0 - rgb(255, 102, 0) - [Avant]
+  Cluster 17
+    6-18 - 702.84 - 90.5 22.25 - ff1 - 24.0 - rgb(0, 0, 0) - [6/15]
+  Cluster 18
+    6-19 - 65.68 - 66.78 29.67 - ff1 - 32.0 - rgb(0, 45, 134) - [CASTE ING]
+    6-19 - 65.68 - 54.3 29.67 - ff1 - 32.0 - rgb(0, 45, 134) - [2, Rue Maurice Hartmann, CS 40099]
+    6-19 - 65.68 - 41.82 29.67 - ff1 - 32.0 - rgb(0, 45, 134) - [92137 Issy-les-Moulineaux Cedex]
+
+    =====
+    6-19 - 310.85 - 66.78 29.67 - ff1 - 32.0 - rgb(0, 45, 134) - [Tél. : 01.41.46.05.86.]
+    6-19 - 310.85 - 54.3 29.67 - ff1 - 32.0 - rgb(0, 45, 134) - [Fax : 01.55.95.36.81.]
+    6-19 - 310.85 - 41.82 29.67 - ff1 - 32.0 - rgb(0, 45, 134) - [www.caste-ing.com]
+
+    =====
+    6-19 - 465.72 - 66.78 29.67 - ff1 - 32.0 - rgb(0, 45, 134) - [SAS au capital de 485.000 €]
+    6-19 - 465.72 - 54.3 29.67 - ff1 - 32.0 - rgb(0, 45, 134) - [RCS Nanterre B 514 836 170]
+    6-19 - 465.72 - 41.82 29.67 - ff1 - 32.0 - rgb(0, 45, 134) - [SIRET 514 836 170 000 43 - APE 7112B]
+Page 7
+  Cluster 0
+    7-1 - 665.21 - 1068.12 22.25 - ff1 - 24.0 - rgb(0, 0, 0) - [N°2021072015]
+  Cluster 1
+    7-2 - 202.05 - 1037.9 37.09 - ff2 - 40.0 - rgb(51, 51, 153) - [LISTE DES CONTRÔLES ET CONDITIONS DE RÉALISATION]
+
+    =====
+    7-2 - 309.28 - 1020.61 37.09 - ff2 - 40.0 - rgb(51, 51, 153) - [Arrêté du 07 août 2012]
+  Cluster 2
+    7-3 - 83.99 - 912.63 29.67 - ff2 - 32.0 - rgb(0, 0, 0) - [Ref.Annexe]
+
+    =====
+    7-3 - 153.56 - 939.71 29.67 - ff2 - 32.0 - rgb(0, 0, 0) - [Parties contrôlées]
+
+    =====
+    7-3 - 317.69 - 892.79 29.67 - ff2 - 32.0 - rgb(0, 0, 0) - [Amélioration]
+
+    =====
+    7-3 - 327.53 - 973.93 29.67 - ff2 - 32.0 - rgb(0, 0, 0) - [NON CE][ ][CE]
+    7-3 - 327.53 - 890.81 29.67 - ff2 - 32.0 - rgb(0, 0, 0) - [de la sécurité]
+
+    =====
+    7-3 - 330.86 - 990.06 29.67 - ff2 - 32.0 - rgb(0, 0, 0) - [Type d'ascenseur][ ][Contrôle]
+
+    =====
+    7-3 - 366.44 - 897.67 29.67 - ff2 - 32.0 - rgb(0, 0, 0) - [Nature des]
+
+    =====
+    7-3 - 375.46 - 889.27 29.67 - ff2 - 32.0 - rgb(0, 0, 0) - [investigations]
+
+    =====
+    7-3 - 424.94 - 897.67 29.67 - ff2 - 32.0 - rgb(0, 0, 0) - [Nature des]
+
+    =====
+    7-3 - 433.96 - 889.27 29.67 - ff2 - 32.0 - rgb(0, 0, 0) - [investigations]
+
+    =====
+    7-3 - 473.69 - 931.66 29.67 - ff2 - 32.0 - rgb(0, 0, 0) - [C]
+
+    =====
+    7-3 - 512.69 - 927.5 29.67 - ff2 - 32.0 - rgb(0, 0, 0) - [VO]
+
+    =====
+    7-3 - 551.69 - 927.75 29.67 - ff2 - 32.0 - rgb(0, 0, 0) - [SO]
+
+    =====
+    7-3 - 590.86 - 958.43 29.67 - ff2 - 32.0 - rgb(0, 0, 0) - [(Ascenseurs non CE)]
+
+    =====
+    7-3 - 593.47 - 920.99 29.67 - ff2 - 32.0 - rgb(0, 0, 0) - [ARRETE 18/11/2004]
+    7-3 - 593.47 - 908.51 29.67 - ff2 - 32.0 - rgb(0, 0, 0) - [ARRETE 07/08/2012]
+
+    =====
+    7-3 - 598.11 - 945.95 29.67 - ff2 - 32.0 - rgb(0, 0, 0) - [DECRET 2004-964]
+    7-3 - 598.11 - 933.47 29.67 - ff2 - 32.0 - rgb(0, 0, 0) - [DECRET 2008-291]
+
+    =====
+    7-3 - 617.28 - 970.91 29.67 - ff2 - 32.0 - rgb(0, 0, 0) - [Echéances]
+  Cluster 3
+    7-4 - 481.79 - 913.56 22.25 - ff2 - 24.0 - rgb(0, 0, 0) - [(CORRECT)]
+
+    =====
+    7-4 - 520.79 - 890.1 22.25 - ff2 - 24.0 - rgb(0, 0, 0) - [(VOIR OBSERVATIONS)]
+
+    =====
+    7-4 - 559.79 - 908.21 22.25 - ff2 - 24.0 - rgb(0, 0, 0) - [(SANS OBJET)]
+  Cluster 4
+    7-5 - 65.68 - 834.71 29.67 - ff1 - 32.0 - rgb(51, 51, 153) - [6][ ][ORGANES DE SUSPENSION][ ][ ][ ][ ][ ][ ]
+  Cluster 5
+    7-6 - 65.68 - 802.54 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [6.1][ ][Caractéristiques][ ][R][ ][R][ ][C][ ][ ][ ][ ]
+  Cluster 6
+    7-7 - 65.68 - 770.36 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [6.2][ ][Etat général][ ][E][ ][E][ ][C][ ][ ][ ][ ]
+  Cluster 7
+    7-8 - 65.68 - 731.95 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [6.3]
+
+    =====
+    7-8 - 114.36 - 738.19 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [Attaches sur toit de cabine ou en]
+    7-8 - 114.36 - 725.71 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [gaine.]
+
+    =====
+    7-8 - 360.01 - 731.95 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [R/E][ ][R/E][ ][C][ ][ ][ ][ ]
+  Cluster 8
+    7-9 - 65.68 - 687.29 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [6.4][ ][Poulies, pignons, protecteurs][ ][II-6][ ][P/E][ ][E][ ][ ][ ][ ][ ][SO]
+
+    =====
+    7-9 - 615.4 - 681.05 29.67 - ff1 - 32.0 - rgb(255, 102, 0) - [03-juil.-2014]
+
+    =====
+    7-9 - 631.35 - 693.53 29.67 - ff1 - 32.0 - rgb(255, 102, 0) - [Avant]
+  Cluster 9
+    7-10 - 65.68 - 642.64 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [6.5]
+
+    =====
+    7-10 - 114.36 - 648.88 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [Vérin(s) en gaine (Ascenseur]
+    7-10 - 114.36 - 636.4 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [hydraulique)]
+
+    =====
+    7-10 - 364.15 - 642.64 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [E][ ][E][ ][ ][ ][ ][ ][SO]
+  Cluster 10
+    7-11 - 65.68 - 604.22 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [6.6][ ][Affichage][ ][P/E][ ][E][ ][ ][ ][ ][ ][SO]
+  Cluster 11
+    7-12 - 702.84 - 90.5 22.25 - ff1 - 24.0 - rgb(0, 0, 0) - [7/15]
+  Cluster 12
+    7-13 - 65.68 - 66.78 29.67 - ff1 - 32.0 - rgb(0, 45, 134) - [CASTE ING]
+    7-13 - 65.68 - 54.3 29.67 - ff1 - 32.0 - rgb(0, 45, 134) - [2, Rue Maurice Hartmann, CS 40099]
+    7-13 - 65.68 - 41.82 29.67 - ff1 - 32.0 - rgb(0, 45, 134) - [92137 Issy-les-Moulineaux Cedex]
+
+    =====
+    7-13 - 310.85 - 66.78 29.67 - ff1 - 32.0 - rgb(0, 45, 134) - [Tél. : 01.41.46.05.86.]
+    7-13 - 310.85 - 54.3 29.67 - ff1 - 32.0 - rgb(0, 45, 134) - [Fax : 01.55.95.36.81.]
+    7-13 - 310.85 - 41.82 29.67 - ff1 - 32.0 - rgb(0, 45, 134) - [www.caste-ing.com]
+
+    =====
+    7-13 - 465.72 - 66.78 29.67 - ff1 - 32.0 - rgb(0, 45, 134) - [SAS au capital de 485.000 €]
+    7-13 - 465.72 - 54.3 29.67 - ff1 - 32.0 - rgb(0, 45, 134) - [RCS Nanterre B 514 836 170]
+    7-13 - 465.72 - 41.82 29.67 - ff1 - 32.0 - rgb(0, 45, 134) - [SIRET 514 836 170 000 43 - APE 7112B]
+Page 8
+  Cluster 0
+    8-1 - 665.21 - 1068.12 22.25 - ff1 - 24.0 - rgb(0, 0, 0) - [N°2021072015]
+  Cluster 1
+    8-2 - 202.05 - 1037.9 37.09 - ff2 - 40.0 - rgb(51, 51, 153) - [LISTE DES CONTRÔLES ET CONDITIONS DE RÉALISATION]
+
+    =====
+    8-2 - 309.28 - 1020.61 37.09 - ff2 - 40.0 - rgb(51, 51, 153) - [Arrêté du 07 août 2012]
+  Cluster 2
+    8-3 - 83.99 - 912.63 29.67 - ff2 - 32.0 - rgb(0, 0, 0) - [Ref.Annexe]
+
+    =====
+    8-3 - 153.56 - 939.71 29.67 - ff2 - 32.0 - rgb(0, 0, 0) - [Parties contrôlées]
+
+    =====
+    8-3 - 317.69 - 892.79 29.67 - ff2 - 32.0 - rgb(0, 0, 0) - [Amélioration]
+
+    =====
+    8-3 - 327.53 - 973.93 29.67 - ff2 - 32.0 - rgb(0, 0, 0) - [NON CE][ ][CE]
+    8-3 - 327.53 - 890.81 29.67 - ff2 - 32.0 - rgb(0, 0, 0) - [de la sécurité]
+
+    =====
+    8-3 - 330.86 - 990.06 29.67 - ff2 - 32.0 - rgb(0, 0, 0) - [Type d'ascenseur][ ][Contrôle]
+
+    =====
+    8-3 - 366.44 - 897.67 29.67 - ff2 - 32.0 - rgb(0, 0, 0) - [Nature des]
+
+    =====
+    8-3 - 375.46 - 889.27 29.67 - ff2 - 32.0 - rgb(0, 0, 0) - [investigations]
+
+    =====
+    8-3 - 424.94 - 897.67 29.67 - ff2 - 32.0 - rgb(0, 0, 0) - [Nature des]
+
+    =====
+    8-3 - 433.96 - 889.27 29.67 - ff2 - 32.0 - rgb(0, 0, 0) - [investigations]
+
+    =====
+    8-3 - 473.69 - 931.66 29.67 - ff2 - 32.0 - rgb(0, 0, 0) - [C]
+
+    =====
+    8-3 - 512.69 - 927.5 29.67 - ff2 - 32.0 - rgb(0, 0, 0) - [VO]
+
+    =====
+    8-3 - 551.69 - 927.75 29.67 - ff2 - 32.0 - rgb(0, 0, 0) - [SO]
+
+    =====
+    8-3 - 590.86 - 958.43 29.67 - ff2 - 32.0 - rgb(0, 0, 0) - [(Ascenseurs non CE)]
+
+    =====
+    8-3 - 593.47 - 920.99 29.67 - ff2 - 32.0 - rgb(0, 0, 0) - [ARRETE 18/11/2004]
+    8-3 - 593.47 - 908.51 29.67 - ff2 - 32.0 - rgb(0, 0, 0) - [ARRETE 07/08/2012]
+
+    =====
+    8-3 - 598.11 - 945.95 29.67 - ff2 - 32.0 - rgb(0, 0, 0) - [DECRET 2004-964]
+    8-3 - 598.11 - 933.47 29.67 - ff2 - 32.0 - rgb(0, 0, 0) - [DECRET 2008-291]
+
+    =====
+    8-3 - 617.28 - 970.91 29.67 - ff2 - 32.0 - rgb(0, 0, 0) - [Echéances]
+  Cluster 3
+    8-4 - 481.79 - 913.56 22.25 - ff2 - 24.0 - rgb(0, 0, 0) - [(CORRECT)]
+
+    =====
+    8-4 - 520.79 - 890.1 22.25 - ff2 - 24.0 - rgb(0, 0, 0) - [(VOIR OBSERVATIONS)]
+
+    =====
+    8-4 - 559.79 - 908.21 22.25 - ff2 - 24.0 - rgb(0, 0, 0) - [(SANS OBJET)]
+  Cluster 4
+    8-5 - 65.68 - 834.71 29.67 - ff1 - 32.0 - rgb(51, 51, 153) - [7][ ][CABINE][ ][ ][ ][ ][ ][ ]
+  Cluster 5
+    8-6 - 65.68 - 802.54 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [7.1][ ][Eléments constitutifs cabine][ ][E][ ][E][ ][C][ ][ ][ ][ ]
+  Cluster 6
+    8-7 - 65.68 - 770.36 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [7.2][ ][Porte ou trappes de secours][ ][E/F][ ][E/F][ ][ ][ ][ ][ ][SO]
+  Cluster 7
+    8-8 - 65.68 - 738.19 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [7.3][ ][Face de service (jeux)][ ][R][ ][R][ ][C][ ][ ][ ][ ]
+  Cluster 8
+    8-9 - 65.68 - 699.77 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [7.4]
+
+    =====
+    8-9 - 114.36 - 706.01 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [Baie de cabine sans porte (dispositif]
+    8-9 - 114.36 - 693.53 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [équivalent)]
+
+    =====
+    8-9 - 350.66 - 699.77 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [P/R/E/F][ ][R/E/F][ ][ ][ ][ ][ ][SO]
+  Cluster 9
+    8-10 - 65.68 - 655.12 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [7.5][ ][Porte cabine (protection du passage)][ ][I-3][ ][P/E/F][ ][E/F][ ][C][ ][ ][ ][ ]
+
+    =====
+    8-10 - 613.84 - 648.88 29.67 - ff1 - 32.0 - rgb(51, 51, 153) - [31-déc.-2010]
+
+    =====
+    8-10 - 631.35 - 661.36 29.67 - ff1 - 32.0 - rgb(51, 51, 153) - [Avant]
+  Cluster 10
+    8-11 - 65.68 - 610.46 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [7.6][ ][Verrouillage porte cabine][ ][I-6][ ][P/R/E/F][ ][R/E/F][ ][ ][ ][ ][ ][SO]
+
+    =====
+    8-11 - 613.84 - 604.22 29.67 - ff1 - 32.0 - rgb(51, 51, 153) - [31-déc.-2010]
+
+    =====
+    8-11 - 631.35 - 616.7 29.67 - ff1 - 32.0 - rgb(51, 51, 153) - [Avant]
+  Cluster 11
+    8-12 - 65.68 - 565.81 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [7.7]
+
+    =====
+    8-12 - 114.36 - 572.05 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [Contrôle de la fermeture de la porte]
+    8-12 - 114.36 - 559.57 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [cabine]
+
+    =====
+    8-12 - 355.48 - 565.81 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [P/E/F][ ][E/F][ ][C][ ][ ][ ][ ]
+  Cluster 12
+    8-13 - 65.68 - 527.39 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [7.8][ ][Eclairage normal cabine][ ][E/F][ ][E/F][ ][ ][ ][VO][ ][ ]
+  Cluster 13
+    8-14 - 65.68 - 495.22 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [7.9][ ][Ventilation cabine][ ][E][ ][E][ ][C][ ][ ][ ][ ]
+  Cluster 14
+    8-15 - 65.68 - 463.04 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [7.10][ ][Affichage cabine][ ][P/E][ ][E][ ][C][ ][ ][ ][ ]
+  Cluster 15
+    8-16 - 65.68 - 424.63 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [7.11][ ][Eclairage secours cabine][ ][II-2][ ][P/E/F][ ][E/F][ ][C][ ][ ][ ][ ]
+
+    =====
+    8-16 - 615.4 - 418.39 29.67 - ff1 - 32.0 - rgb(255, 102, 0) - [03-juil.-2014]
+
+    =====
+    8-16 - 631.35 - 430.87 29.67 - ff1 - 32.0 - rgb(255, 102, 0) - [Avant]
+  Cluster 16
+    8-17 - 65.68 - 379.97 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [7.12][ ][Garde pieds cabine][ ][I-6][ ][P/E/F][ ][E/F][ ][C][ ][ ][ ][ ]
+
+    =====
+    8-17 - 613.84 - 373.73 29.67 - ff1 - 32.0 - rgb(51, 51, 153) - [31-déc.-2010]
+
+    =====
+    8-17 - 631.35 - 386.21 29.67 - ff1 - 32.0 - rgb(51, 51, 153) - [Avant]
+  Cluster 17
+    8-18 - 65.68 - 323.94 29.67 - ff1 - 32.0 - rgb(51, 51, 153) - [8]
+
+    =====
+    8-18 - 114.36 - 330.18 29.67 - ff1 - 32.0 - rgb(51, 51, 153) - [ORGANES DE COMMANDES EN]
+    8-18 - 114.36 - 317.7 29.67 - ff1 - 32.0 - rgb(51, 51, 153) - [CABINE]
+
+    =====
+    8-18 - 473.69 - 323.94 29.67 - ff1 - 32.0 - rgb(51, 51, 153) - [ ][ ][ ][ ][ ]
+  Cluster 18
+    8-19 - 65.68 - 285.53 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [8.1][ ][Organes de commande][ ][E/F][ ][E/F][ ][C][ ][ ][ ][ ]
+  Cluster 19
+    8-20 - 65.68 - 253.35 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [8.2][ ][Dispositif d'arrêt en cabine][ ][P/E/F][ ][E/F][ ][ ][ ][ ][ ][SO]
+  Cluster 20
+    8-21 - 65.68 - 214.94 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [8.3]
+
+    =====
+    8-21 - 114.36 - 221.18 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [Dispositif de réouverture porte]
+    8-21 - 114.36 - 208.7 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [cabine]
+
+    =====
+    8-21 - 355.48 - 214.94 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [P/E/F][ ][E/F][ ][C][ ][ ][ ][ ]
+  Cluster 21
+    8-22 - 65.68 - 170.28 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [8.4][ ][Dispositif de demande de secours][ ][II-2][ ][P/R/E/F][ ][R/E/F][ ][C][ ][ ][ ][ ]
+
+    =====
+    8-22 - 615.4 - 164.04 29.67 - ff1 - 32.0 - rgb(255, 102, 0) - [03-juil.-2014]
+
+    =====
+    8-22 - 631.35 - 176.52 29.67 - ff1 - 32.0 - rgb(255, 102, 0) - [Avant]
+  Cluster 22
+    8-23 - 702.84 - 90.5 22.25 - ff1 - 24.0 - rgb(0, 0, 0) - [8/15]
+  Cluster 23
+    8-24 - 65.68 - 66.78 29.67 - ff1 - 32.0 - rgb(0, 45, 134) - [CASTE ING]
+    8-24 - 65.68 - 54.3 29.67 - ff1 - 32.0 - rgb(0, 45, 134) - [2, Rue Maurice Hartmann, CS 40099]
+    8-24 - 65.68 - 41.82 29.67 - ff1 - 32.0 - rgb(0, 45, 134) - [92137 Issy-les-Moulineaux Cedex]
+
+    =====
+    8-24 - 310.85 - 66.78 29.67 - ff1 - 32.0 - rgb(0, 45, 134) - [Tél. : 01.41.46.05.86.]
+    8-24 - 310.85 - 54.3 29.67 - ff1 - 32.0 - rgb(0, 45, 134) - [Fax : 01.55.95.36.81.]
+    8-24 - 310.85 - 41.82 29.67 - ff1 - 32.0 - rgb(0, 45, 134) - [www.caste-ing.com]
+
+    =====
+    8-24 - 465.72 - 66.78 29.67 - ff1 - 32.0 - rgb(0, 45, 134) - [SAS au capital de 485.000 €]
+    8-24 - 465.72 - 54.3 29.67 - ff1 - 32.0 - rgb(0, 45, 134) - [RCS Nanterre B 514 836 170]
+    8-24 - 465.72 - 41.82 29.67 - ff1 - 32.0 - rgb(0, 45, 134) - [SIRET 514 836 170 000 43 - APE 7112B]
+Page 9
+  Cluster 0
+    9-1 - 665.21 - 1068.12 22.25 - ff1 - 24.0 - rgb(0, 0, 0) - [N°2021072015]
+  Cluster 1
+    9-2 - 202.05 - 1037.9 37.09 - ff2 - 40.0 - rgb(51, 51, 153) - [LISTE DES CONTRÔLES ET CONDITIONS DE RÉALISATION]
+
+    =====
+    9-2 - 309.28 - 1020.61 37.09 - ff2 - 40.0 - rgb(51, 51, 153) - [Arrêté du 07 août 2012]
+  Cluster 2
+    9-3 - 83.99 - 912.63 29.67 - ff2 - 32.0 - rgb(0, 0, 0) - [Ref.Annexe]
+
+    =====
+    9-3 - 153.56 - 939.71 29.67 - ff2 - 32.0 - rgb(0, 0, 0) - [Parties contrôlées]
+
+    =====
+    9-3 - 317.69 - 892.79 29.67 - ff2 - 32.0 - rgb(0, 0, 0) - [Amélioration]
+
+    =====
+    9-3 - 327.53 - 973.93 29.67 - ff2 - 32.0 - rgb(0, 0, 0) - [NON CE][ ][CE]
+    9-3 - 327.53 - 890.81 29.67 - ff2 - 32.0 - rgb(0, 0, 0) - [de la sécurité]
+
+    =====
+    9-3 - 330.86 - 990.06 29.67 - ff2 - 32.0 - rgb(0, 0, 0) - [Type d'ascenseur][ ][Contrôle]
+
+    =====
+    9-3 - 366.44 - 897.67 29.67 - ff2 - 32.0 - rgb(0, 0, 0) - [Nature des]
+
+    =====
+    9-3 - 375.46 - 889.27 29.67 - ff2 - 32.0 - rgb(0, 0, 0) - [investigations]
+
+    =====
+    9-3 - 424.94 - 897.67 29.67 - ff2 - 32.0 - rgb(0, 0, 0) - [Nature des]
+
+    =====
+    9-3 - 433.96 - 889.27 29.67 - ff2 - 32.0 - rgb(0, 0, 0) - [investigations]
+
+    =====
+    9-3 - 473.69 - 931.66 29.67 - ff2 - 32.0 - rgb(0, 0, 0) - [C]
+
+    =====
+    9-3 - 512.69 - 927.5 29.67 - ff2 - 32.0 - rgb(0, 0, 0) - [VO]
+
+    =====
+    9-3 - 551.69 - 927.75 29.67 - ff2 - 32.0 - rgb(0, 0, 0) - [SO]
+
+    =====
+    9-3 - 590.86 - 958.43 29.67 - ff2 - 32.0 - rgb(0, 0, 0) - [(Ascenseurs non CE)]
+
+    =====
+    9-3 - 593.47 - 920.99 29.67 - ff2 - 32.0 - rgb(0, 0, 0) - [ARRETE 18/11/2004]
+    9-3 - 593.47 - 908.51 29.67 - ff2 - 32.0 - rgb(0, 0, 0) - [ARRETE 07/08/2012]
+
+    =====
+    9-3 - 598.11 - 945.95 29.67 - ff2 - 32.0 - rgb(0, 0, 0) - [DECRET 2004-964]
+    9-3 - 598.11 - 933.47 29.67 - ff2 - 32.0 - rgb(0, 0, 0) - [DECRET 2008-291]
+
+    =====
+    9-3 - 617.28 - 970.91 29.67 - ff2 - 32.0 - rgb(0, 0, 0) - [Echéances]
+  Cluster 3
+    9-4 - 481.79 - 913.56 22.25 - ff2 - 24.0 - rgb(0, 0, 0) - [(CORRECT)]
+
+    =====
+    9-4 - 520.79 - 890.1 22.25 - ff2 - 24.0 - rgb(0, 0, 0) - [(VOIR OBSERVATIONS)]
+
+    =====
+    9-4 - 559.79 - 908.21 22.25 - ff2 - 24.0 - rgb(0, 0, 0) - [(SANS OBJET)]
+  Cluster 4
+    9-5 - 65.68 - 834.71 29.67 - ff1 - 32.0 - rgb(51, 51, 153) - [9][ ][TOIT DE CABINE][ ][ ][ ][ ][ ][ ]
+  Cluster 5
+    9-6 - 65.68 - 796.3 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [9.1][ ][Dispositif d'arrêt du toit de cabine][ ][I-7][ ][P/R/E/F][ ][R/E/F][ ][C][ ][ ][ ][ ]
+
+    =====
+    9-6 - 613.84 - 790.06 29.67 - ff1 - 32.0 - rgb(51, 51, 153) - [31-déc.-2010]
+
+    =====
+    9-6 - 631.35 - 802.54 29.67 - ff1 - 32.0 - rgb(51, 51, 153) - [Avant]
+  Cluster 6
+    9-7 - 65.68 - 751.64 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [9.2][ ][Manœuvre d'inspection][ ][I-7][ ][P/E/F][ ][E/F][ ][C][ ][ ][ ][ ]
+
+    =====
+    9-7 - 613.84 - 745.4 29.67 - ff1 - 32.0 - rgb(51, 51, 153) - [31-déc.-2010]
+
+    =====
+    9-7 - 631.35 - 757.88 29.67 - ff1 - 32.0 - rgb(51, 51, 153) - [Avant]
+  Cluster 7
+    9-8 - 65.68 - 713.23 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [9.3][ ][Balustrades][ ][E/F][ ][E/F][ ][ ][ ][VO][ ][ ]
+  Cluster 8
+    9-9 - 65.68 - 674.81 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [9.4]
+
+    =====
+    9-9 - 114.36 - 681.05 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [Dispositif de demande de secours]
+    9-9 - 114.36 - 668.57 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [sur toit de cabine]
+
+    =====
+    9-9 - 310.85 - 674.81 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [II-2][ ][P/E/F][ ][E/F][ ][C][ ][ ][ ][ ]
+
+    =====
+    9-9 - 615.4 - 668.57 29.67 - ff1 - 32.0 - rgb(255, 102, 0) - [03-juil.-2014]
+
+    =====
+    9-9 - 631.35 - 681.05 29.67 - ff1 - 32.0 - rgb(255, 102, 0) - [Avant]
+  Cluster 9
+    9-10 - 65.68 - 618.78 29.67 - ff1 - 32.0 - rgb(51, 51, 153) - [10]
+
+    =====
+    9-10 - 114.36 - 625.02 29.67 - ff1 - 32.0 - rgb(51, 51, 153) - [CONTREPOIDS - ORGANE DE]
+    9-10 - 114.36 - 612.54 29.67 - ff1 - 32.0 - rgb(51, 51, 153) - [COMPENSATION]
+
+    =====
+    9-10 - 473.69 - 618.78 29.67 - ff1 - 32.0 - rgb(51, 51, 153) - [ ][ ][ ][ ][ ]
+  Cluster 10
+    9-11 - 65.68 - 580.37 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [10.1][ ][Elements constitutifs du contrepoids][ ][E][ ][E][ ][ ][ ][VO][ ][ ]
+  Cluster 11
+    9-12 - 65.68 - 548.19 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [10.2][ ][Organes de compensation][ ][E][ ][E][ ][ ][ ][ ][ ][SO]
+  Cluster 12
+    9-13 - 702.84 - 90.5 22.25 - ff1 - 24.0 - rgb(0, 0, 0) - [9/15]
+  Cluster 13
+    9-14 - 65.68 - 66.78 29.67 - ff1 - 32.0 - rgb(0, 45, 134) - [CASTE ING]
+    9-14 - 65.68 - 54.3 29.67 - ff1 - 32.0 - rgb(0, 45, 134) - [2, Rue Maurice Hartmann, CS 40099]
+    9-14 - 65.68 - 41.82 29.67 - ff1 - 32.0 - rgb(0, 45, 134) - [92137 Issy-les-Moulineaux Cedex]
+
+    =====
+    9-14 - 310.85 - 66.78 29.67 - ff1 - 32.0 - rgb(0, 45, 134) - [Tél. : 01.41.46.05.86.]
+    9-14 - 310.85 - 54.3 29.67 - ff1 - 32.0 - rgb(0, 45, 134) - [Fax : 01.55.95.36.81.]
+    9-14 - 310.85 - 41.82 29.67 - ff1 - 32.0 - rgb(0, 45, 134) - [www.caste-ing.com]
+
+    =====
+    9-14 - 465.72 - 66.78 29.67 - ff1 - 32.0 - rgb(0, 45, 134) - [SAS au capital de 485.000 €]
+    9-14 - 465.72 - 54.3 29.67 - ff1 - 32.0 - rgb(0, 45, 134) - [RCS Nanterre B 514 836 170]
+    9-14 - 465.72 - 41.82 29.67 - ff1 - 32.0 - rgb(0, 45, 134) - [SIRET 514 836 170 000 43 - APE 7112B]
+Page 10
+  Cluster 0
+    10-1 - 665.21 - 1068.12 22.25 - ff1 - 24.0 - rgb(0, 0, 0) - [N°2021072015]
+  Cluster 1
+    10-2 - 202.05 - 1037.9 37.09 - ff2 - 40.0 - rgb(51, 51, 153) - [LISTE DES CONTRÔLES ET CONDITIONS DE RÉALISATION]
+
+    =====
+    10-2 - 309.28 - 1020.61 37.09 - ff2 - 40.0 - rgb(51, 51, 153) - [Arrêté du 07 août 2012]
+  Cluster 2
+    10-3 - 83.99 - 912.63 29.67 - ff2 - 32.0 - rgb(0, 0, 0) - [Ref.Annexe]
+
+    =====
+    10-3 - 153.56 - 939.71 29.67 - ff2 - 32.0 - rgb(0, 0, 0) - [Parties contrôlées]
+
+    =====
+    10-3 - 317.69 - 892.79 29.67 - ff2 - 32.0 - rgb(0, 0, 0) - [Amélioration]
+
+    =====
+    10-3 - 327.53 - 973.93 29.67 - ff2 - 32.0 - rgb(0, 0, 0) - [NON CE][ ][CE]
+    10-3 - 327.53 - 890.81 29.67 - ff2 - 32.0 - rgb(0, 0, 0) - [de la sécurité]
+
+    =====
+    10-3 - 330.86 - 990.06 29.67 - ff2 - 32.0 - rgb(0, 0, 0) - [Type d'ascenseur][ ][Contrôle]
+
+    =====
+    10-3 - 366.44 - 897.67 29.67 - ff2 - 32.0 - rgb(0, 0, 0) - [Nature des]
+
+    =====
+    10-3 - 375.46 - 889.27 29.67 - ff2 - 32.0 - rgb(0, 0, 0) - [investigations]
+
+    =====
+    10-3 - 424.94 - 897.67 29.67 - ff2 - 32.0 - rgb(0, 0, 0) - [Nature des]
+
+    =====
+    10-3 - 433.96 - 889.27 29.67 - ff2 - 32.0 - rgb(0, 0, 0) - [investigations]
+
+    =====
+    10-3 - 473.69 - 931.66 29.67 - ff2 - 32.0 - rgb(0, 0, 0) - [C]
+
+    =====
+    10-3 - 512.69 - 927.5 29.67 - ff2 - 32.0 - rgb(0, 0, 0) - [VO]
+
+    =====
+    10-3 - 551.69 - 927.75 29.67 - ff2 - 32.0 - rgb(0, 0, 0) - [SO]
+
+    =====
+    10-3 - 590.86 - 958.43 29.67 - ff2 - 32.0 - rgb(0, 0, 0) - [(Ascenseurs non CE)]
+
+    =====
+    10-3 - 593.47 - 920.99 29.67 - ff2 - 32.0 - rgb(0, 0, 0) - [ARRETE 18/11/2004]
+    10-3 - 593.47 - 908.51 29.67 - ff2 - 32.0 - rgb(0, 0, 0) - [ARRETE 07/08/2012]
+
+    =====
+    10-3 - 598.11 - 945.95 29.67 - ff2 - 32.0 - rgb(0, 0, 0) - [DECRET 2004-964]
+    10-3 - 598.11 - 933.47 29.67 - ff2 - 32.0 - rgb(0, 0, 0) - [DECRET 2008-291]
+
+    =====
+    10-3 - 617.28 - 970.91 29.67 - ff2 - 32.0 - rgb(0, 0, 0) - [Echéances]
+  Cluster 3
+    10-4 - 481.79 - 913.56 22.25 - ff2 - 24.0 - rgb(0, 0, 0) - [(CORRECT)]
+
+    =====
+    10-4 - 520.79 - 890.1 22.25 - ff2 - 24.0 - rgb(0, 0, 0) - [(VOIR OBSERVATIONS)]
+
+    =====
+    10-4 - 559.79 - 908.21 22.25 - ff2 - 24.0 - rgb(0, 0, 0) - [(SANS OBJET)]
+  Cluster 4
+    10-5 - 65.68 - 834.71 29.67 - ff1 - 32.0 - rgb(51, 51, 153) - [11][ ][DISPOSITIF DE SECURITE][ ][ ][ ][ ][ ][ ]
+  Cluster 5
+    10-6 - 65.68 - 796.3 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [11.1]
+
+    =====
+    10-6 - 114.36 - 802.54 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [Parachute cabine ascenseurs]
+    10-6 - 114.36 - 790.06 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [électriques]
+
+    =====
+    10-6 - 312.31 - 796.3 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [I-5][ ][P/R/E/F][ ][R/E/F][ ][C][ ][ ][ ][ ]
+
+    =====
+    10-6 - 613.84 - 790.06 29.67 - ff1 - 32.0 - rgb(51, 51, 153) - [31-déc.-2010]
+
+    =====
+    10-6 - 631.35 - 802.54 29.67 - ff1 - 32.0 - rgb(51, 51, 153) - [Avant]
+  Cluster 6
+    10-7 - 65.68 - 757.88 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [11.2][ ][Parachute contrepoids][ ][P/R/E][ ][R/E][ ][ ][ ][ ][ ][SO]
+  Cluster 7
+    10-8 - 65.68 - 719.47 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [11.3][ ][Limiteur de vitesse][ ][I-5][ ][R/E/F][ ][R/E/F][ ][ ][ ][VO][ ][ ]
+
+    =====
+    10-8 - 613.84 - 713.23 29.67 - ff1 - 32.0 - rgb(51, 51, 153) - [31-déc.-2010]
+
+    =====
+    10-8 - 631.35 - 725.71 29.67 - ff1 - 32.0 - rgb(51, 51, 153) - [Avant]
+  Cluster 8
+    10-9 - 65.68 - 674.81 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [11.4]
+
+    =====
+    10-9 - 114.36 - 681.05 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [Dispositif s'opposant à la vitesse]
+    10-9 - 114.36 - 668.57 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [excessive en montée]
+
+    =====
+    10-9 - 309.28 - 674.81 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [III-2][ ][P/E][ ][E][ ][ ][ ][ ][ ][SO]
+  Cluster 9
+    10-10 - 65.68 - 623.92 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [11.5]
+
+    =====
+    10-10 - 114.36 - 636.4 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [Dispositif de verrouillage de la]
+    10-10 - 114.36 - 623.92 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [cabine pour les opérations de]
+    10-10 - 114.36 - 611.44 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [maintenance]
+
+    =====
+    10-10 - 355.48 - 623.92 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [P/E/F][ ][E/F][ ][ ][ ][ ][ ][SO]
+  Cluster 10
+    10-11 - 65.68 - 573.02 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [11.6]
+
+    =====
+    10-11 - 114.36 - 579.26 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [Butée ou limiteur cabine]
+    10-11 - 114.36 - 566.78 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [(Maintenance)]
+
+    =====
+    10-11 - 355.48 - 573.02 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [P/E/F][ ][E/F][ ][ ][ ][ ][ ][SO]
+  Cluster 11
+    10-12 - 65.68 - 528.37 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [11.7]
+
+    =====
+    10-12 - 114.36 - 534.61 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [Dispositif de contrôle de rupture ou]
+    10-12 - 114.36 - 522.13 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [de mou de suspente]
+
+    =====
+    10-12 - 360.01 - 528.37 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [E/F][ ][E/F][ ][ ][ ][ ][ ][SO]
+  Cluster 12
+    10-13 - 65.68 - 489.95 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [11.8][ ][Organe de liaison (position cabine)][ ][E/F][ ][E/F][ ][C][ ][ ][ ][ ]
+  Cluster 13
+    10-14 - 65.68 - 457.78 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [11.9][ ][Hors course en manoeuvre normale][ ][E/F][ ][E/F][ ][C][ ][ ][ ][ ]
+  Cluster 14
+    10-15 - 65.68 - 419.36 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [11.10][ ][Limiteur de course inspection][ ][I-7][ ][P/E/F][ ][E/F][ ][C][ ][ ][ ][ ]
+
+    =====
+    10-15 - 613.84 - 413.12 29.67 - ff1 - 32.0 - rgb(51, 51, 153) - [31-déc.-2010]
+
+    =====
+    10-15 - 631.35 - 425.6 29.67 - ff1 - 32.0 - rgb(51, 51, 153) - [Avant]
+  Cluster 15
+    10-16 - 65.68 - 374.71 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [11.11]
+
+    =====
+    10-16 - 114.36 - 380.95 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [Parachute et limiteur de vitesse pour]
+    10-16 - 114.36 - 368.47 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [ascenseurs hydrauliques]
+
+    =====
+    10-16 - 310.85 - 374.71 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [II-4][ ][P/R/E/F][ ][R/E/F][ ][ ][ ][ ][ ][SO]
+
+    =====
+    10-16 - 615.4 - 368.47 29.67 - ff1 - 32.0 - rgb(255, 102, 0) - [03-juil.-2014]
+
+    =====
+    10-16 - 631.35 - 380.95 29.67 - ff1 - 32.0 - rgb(255, 102, 0) - [Avant]
+  Cluster 16
+    10-17 - 65.68 - 330.05 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [11.12]
+
+    =====
+    10-17 - 114.36 - 336.29 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [Dispositif d'opposant à la dérive]
+    10-17 - 114.36 - 323.81 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [pour les ascenseurs hydrauliques]
+
+    =====
+    10-17 - 310.85 - 330.05 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [II-4][ ][P/R/E][ ][R/E][ ][ ][ ][ ][ ][SO]
+
+    =====
+    10-17 - 615.4 - 323.81 29.67 - ff1 - 32.0 - rgb(255, 102, 0) - [03-juil.-2014]
+
+    =====
+    10-17 - 631.35 - 336.29 29.67 - ff1 - 32.0 - rgb(255, 102, 0) - [Avant]
+  Cluster 17
+    10-18 - 698.38 - 90.5 22.25 - ff1 - 24.0 - rgb(0, 0, 0) - [10/15]
+  Cluster 18
+    10-19 - 65.68 - 66.78 29.67 - ff1 - 32.0 - rgb(0, 45, 134) - [CASTE ING]
+    10-19 - 65.68 - 54.3 29.67 - ff1 - 32.0 - rgb(0, 45, 134) - [2, Rue Maurice Hartmann, CS 40099]
+    10-19 - 65.68 - 41.82 29.67 - ff1 - 32.0 - rgb(0, 45, 134) - [92137 Issy-les-Moulineaux Cedex]
+
+    =====
+    10-19 - 310.85 - 66.78 29.67 - ff1 - 32.0 - rgb(0, 45, 134) - [Tél. : 01.41.46.05.86.]
+    10-19 - 310.85 - 54.3 29.67 - ff1 - 32.0 - rgb(0, 45, 134) - [Fax : 01.55.95.36.81.]
+    10-19 - 310.85 - 41.82 29.67 - ff1 - 32.0 - rgb(0, 45, 134) - [www.caste-ing.com]
+
+    =====
+    10-19 - 465.72 - 66.78 29.67 - ff1 - 32.0 - rgb(0, 45, 134) - [SAS au capital de 485.000 €]
+    10-19 - 465.72 - 54.3 29.67 - ff1 - 32.0 - rgb(0, 45, 134) - [RCS Nanterre B 514 836 170]
+    10-19 - 465.72 - 41.82 29.67 - ff1 - 32.0 - rgb(0, 45, 134) - [SIRET 514 836 170 000 43 - APE 7112B]
+Page 11
+  Cluster 0
+    11-1 - 665.21 - 1068.12 22.25 - ff1 - 24.0 - rgb(0, 0, 0) - [N°2021072015]
+  Cluster 1
+    11-2 - 202.05 - 1037.9 37.09 - ff2 - 40.0 - rgb(51, 51, 153) - [LISTE DES CONTRÔLES ET CONDITIONS DE RÉALISATION]
+
+    =====
+    11-2 - 309.28 - 1020.61 37.09 - ff2 - 40.0 - rgb(51, 51, 153) - [Arrêté du 07 août 2012]
+  Cluster 2
+    11-3 - 83.99 - 912.63 29.67 - ff2 - 32.0 - rgb(0, 0, 0) - [Ref.Annexe]
+
+    =====
+    11-3 - 153.56 - 939.71 29.67 - ff2 - 32.0 - rgb(0, 0, 0) - [Parties contrôlées]
+
+    =====
+    11-3 - 317.69 - 892.79 29.67 - ff2 - 32.0 - rgb(0, 0, 0) - [Amélioration]
+
+    =====
+    11-3 - 327.53 - 973.93 29.67 - ff2 - 32.0 - rgb(0, 0, 0) - [NON CE][ ][CE]
+    11-3 - 327.53 - 890.81 29.67 - ff2 - 32.0 - rgb(0, 0, 0) - [de la sécurité]
+
+    =====
+    11-3 - 330.86 - 990.06 29.67 - ff2 - 32.0 - rgb(0, 0, 0) - [Type d'ascenseur][ ][Contrôle]
+
+    =====
+    11-3 - 366.44 - 897.67 29.67 - ff2 - 32.0 - rgb(0, 0, 0) - [Nature des]
+
+    =====
+    11-3 - 375.46 - 889.27 29.67 - ff2 - 32.0 - rgb(0, 0, 0) - [investigations]
+
+    =====
+    11-3 - 424.94 - 897.67 29.67 - ff2 - 32.0 - rgb(0, 0, 0) - [Nature des]
+
+    =====
+    11-3 - 433.96 - 889.27 29.67 - ff2 - 32.0 - rgb(0, 0, 0) - [investigations]
+
+    =====
+    11-3 - 473.69 - 931.66 29.67 - ff2 - 32.0 - rgb(0, 0, 0) - [C]
+
+    =====
+    11-3 - 512.69 - 927.5 29.67 - ff2 - 32.0 - rgb(0, 0, 0) - [VO]
+
+    =====
+    11-3 - 551.69 - 927.75 29.67 - ff2 - 32.0 - rgb(0, 0, 0) - [SO]
+
+    =====
+    11-3 - 590.86 - 958.43 29.67 - ff2 - 32.0 - rgb(0, 0, 0) - [(Ascenseurs non CE)]
+
+    =====
+    11-3 - 593.47 - 920.99 29.67 - ff2 - 32.0 - rgb(0, 0, 0) - [ARRETE 18/11/2004]
+    11-3 - 593.47 - 908.51 29.67 - ff2 - 32.0 - rgb(0, 0, 0) - [ARRETE 07/08/2012]
+
+    =====
+    11-3 - 598.11 - 945.95 29.67 - ff2 - 32.0 - rgb(0, 0, 0) - [DECRET 2004-964]
+    11-3 - 598.11 - 933.47 29.67 - ff2 - 32.0 - rgb(0, 0, 0) - [DECRET 2008-291]
+
+    =====
+    11-3 - 617.28 - 970.91 29.67 - ff2 - 32.0 - rgb(0, 0, 0) - [Echéances]
+  Cluster 3
+    11-4 - 481.79 - 913.56 22.25 - ff2 - 24.0 - rgb(0, 0, 0) - [(CORRECT)]
+
+    =====
+    11-4 - 520.79 - 890.1 22.25 - ff2 - 24.0 - rgb(0, 0, 0) - [(VOIR OBSERVATIONS)]
+
+    =====
+    11-4 - 559.79 - 908.21 22.25 - ff2 - 24.0 - rgb(0, 0, 0) - [(SANS OBJET)]
+  Cluster 4
+    11-5 - 65.68 - 834.71 29.67 - ff1 - 32.0 - rgb(51, 51, 153) - [12][ ][LOCAUX DES MACHINES][ ][ ][ ][ ][ ][ ]
+  Cluster 5
+    11-6 - 65.68 - 796.3 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [12.1][ ][Accès aux locaux des machines][ ][I-8][ ][R/E][ ][R/E][ ][ ][ ][VO][ ][ ]
+
+    =====
+    11-6 - 613.84 - 790.06 29.67 - ff1 - 32.0 - rgb(51, 51, 153) - [31-déc.-2010]
+
+    =====
+    11-6 - 631.35 - 802.54 29.67 - ff1 - 32.0 - rgb(51, 51, 153) - [Avant]
+  Cluster 6
+    11-7 - 65.68 - 757.88 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [12.2][ ][Sol - Ventilation - Manutention][ ][R/E][ ][R/E][ ][ ][ ][VO][ ][ ]
+  Cluster 7
+    11-8 - 65.68 - 719.47 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [12.3][ ][Accès intérieur machinerie (massif)][ ][I-8][ ][P/E][ ][E][ ][ ][ ][VO][ ][ ]
+
+    =====
+    11-8 - 613.84 - 713.23 29.67 - ff1 - 32.0 - rgb(51, 51, 153) - [31-déc.-2010]
+
+    =====
+    11-8 - 631.35 - 725.71 29.67 - ff1 - 32.0 - rgb(51, 51, 153) - [Avant]
+  Cluster 8
+    11-9 - 65.68 - 674.81 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [12.4][ ][Interrupteur Force][ ][II-5][ ][R/E/F][ ][R/E/F][ ][C][ ][ ][ ][ ]
+
+    =====
+    11-9 - 615.4 - 668.57 29.67 - ff1 - 32.0 - rgb(255, 102, 0) - [03-juil.-2014]
+
+    =====
+    11-9 - 631.35 - 681.05 29.67 - ff1 - 32.0 - rgb(255, 102, 0) - [Avant]
+  Cluster 9
+    11-10 - 65.68 - 630.16 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [12.5][ ][Eclairage normal machinerie][ ][II-7][ ][P/R/E/F][ ][R/E/F][ ][ ][ ][VO][ ][ ]
+
+    =====
+    11-10 - 615.4 - 623.92 29.67 - ff1 - 32.0 - rgb(255, 102, 0) - [03-juil.-2014]
+
+    =====
+    11-10 - 631.35 - 636.4 29.67 - ff1 - 32.0 - rgb(255, 102, 0) - [Avant]
+  Cluster 10
+    11-11 - 65.68 - 585.5 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [12.6]
+
+    =====
+    11-11 - 119.54 - 591.74 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [Interrupteur d'arrêt (stop) local des]
+    11-11 - 119.54 - 579.26 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [poulies]
+
+    =====
+    11-11 - 312.31 - 585.5 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [I-7][ ][R/E/F][ ][R/E/F][ ][ ][ ][ ][ ][SO]
+
+    =====
+    11-11 - 613.84 - 579.26 29.67 - ff1 - 32.0 - rgb(51, 51, 153) - [31-déc.-2010]
+
+    =====
+    11-11 - 631.35 - 591.74 29.67 - ff1 - 32.0 - rgb(51, 51, 153) - [Avant]
+  Cluster 11
+    11-12 - 65.68 - 547.09 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [12bis.2][ ][Sol local poulies][ ][R/E][ ][R/E][ ][ ][ ][ ][ ][SO]
+  Cluster 12
+    11-13 - 65.68 - 514.91 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [12bis.5][ ][Eclairage normal et de secours][ ][II-7][ ][P/R/E/F][ ][R/E/F][ ][ ][ ][ ][ ][SO]
+  Cluster 13
+    11-14 - 65.68 - 471.36 29.67 - ff1 - 32.0 - rgb(51, 51, 153) - [13][ ][Machine][ ][ ][ ][ ][ ][ ]
+  Cluster 14
+    11-15 - 65.68 - 439.19 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [13.1][ ][Mécanismes][ ][E/F][ ][E/F][ ][ ][ ][VO][ ][ ]
+  Cluster 15
+    11-16 - 65.68 - 407.01 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [13.2][ ][Manoeuvre de secours manuelle][ ][R/E/F][ ][R/E/F][ ][ ][ ][VO][ ][ ]
+  Cluster 16
+    11-17 - 65.68 - 374.84 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [13.3][ ][Manoeuvre électrique de rappel][ ][R/E/F][ ][R/E/F][ ][C][ ][ ][ ][ ]
+  Cluster 17
+    11-18 - 65.68 - 336.42 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [13.4]
+
+    =====
+    11-18 - 119.54 - 342.66 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [Protection des organes mobiles de]
+    11-18 - 119.54 - 330.18 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [transmission]
+
+    =====
+    11-18 - 310.85 - 336.42 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [II-6][ ][P/E][ ][E][ ][C][ ][ ][ ][ ]
+
+    =====
+    11-18 - 615.4 - 330.18 29.67 - ff1 - 32.0 - rgb(255, 102, 0) - [03-juil.-2014]
+
+    =====
+    11-18 - 631.35 - 342.66 29.67 - ff1 - 32.0 - rgb(255, 102, 0) - [Avant]
+  Cluster 18
+    11-19 - 65.68 - 291.77 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [13.5]
+
+    =====
+    11-19 - 119.54 - 298.01 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [Précision d'arrêt (Installation avant]
+    11-19 - 119.54 - 285.53 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [01/01/1983) Echéance 2014]
+
+    =====
+    11-19 - 310.85 - 291.77 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [II-1][ ][P/R/F][ ][R/F][ ][C][ ][ ][ ][ ]
+
+    =====
+    11-19 - 615.4 - 285.53 29.67 - ff1 - 32.0 - rgb(255, 102, 0) - [03-juil.-2014]
+
+    =====
+    11-19 - 631.35 - 298.01 29.67 - ff1 - 32.0 - rgb(255, 102, 0) - [Avant]
+  Cluster 19
+    11-20 - 65.68 - 247.11 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [13bis.4]
+
+    =====
+    11-20 - 119.54 - 253.35 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [Protection des organes mobiles de]
+    11-20 - 119.54 - 240.87 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [transmission]
+
+    =====
+    11-20 - 310.85 - 247.11 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [II-6][ ][P/E][ ][E][ ][ ][ ][ ][ ][SO]
+  Cluster 20
+    11-21 - 698.38 - 90.5 22.25 - ff1 - 24.0 - rgb(0, 0, 0) - [11/15]
+  Cluster 21
+    11-22 - 65.68 - 66.78 29.67 - ff1 - 32.0 - rgb(0, 45, 134) - [CASTE ING]
+    11-22 - 65.68 - 54.3 29.67 - ff1 - 32.0 - rgb(0, 45, 134) - [2, Rue Maurice Hartmann, CS 40099]
+    11-22 - 65.68 - 41.82 29.67 - ff1 - 32.0 - rgb(0, 45, 134) - [92137 Issy-les-Moulineaux Cedex]
+
+    =====
+    11-22 - 310.85 - 66.78 29.67 - ff1 - 32.0 - rgb(0, 45, 134) - [Tél. : 01.41.46.05.86.]
+    11-22 - 310.85 - 54.3 29.67 - ff1 - 32.0 - rgb(0, 45, 134) - [Fax : 01.55.95.36.81.]
+    11-22 - 310.85 - 41.82 29.67 - ff1 - 32.0 - rgb(0, 45, 134) - [www.caste-ing.com]
+
+    =====
+    11-22 - 465.72 - 66.78 29.67 - ff1 - 32.0 - rgb(0, 45, 134) - [SAS au capital de 485.000 €]
+    11-22 - 465.72 - 54.3 29.67 - ff1 - 32.0 - rgb(0, 45, 134) - [RCS Nanterre B 514 836 170]
+    11-22 - 465.72 - 41.82 29.67 - ff1 - 32.0 - rgb(0, 45, 134) - [SIRET 514 836 170 000 43 - APE 7112B]
+Page 12
+  Cluster 0
+    12-1 - 665.21 - 1068.12 22.25 - ff1 - 24.0 - rgb(0, 0, 0) - [N°2021072015]
+  Cluster 1
+    12-2 - 202.05 - 1037.9 37.09 - ff2 - 40.0 - rgb(51, 51, 153) - [LISTE DES CONTRÔLES ET CONDITIONS DE RÉALISATION]
+
+    =====
+    12-2 - 309.28 - 1020.61 37.09 - ff2 - 40.0 - rgb(51, 51, 153) - [Arrêté du 07 août 2012]
+  Cluster 2
+    12-3 - 83.99 - 912.63 29.67 - ff2 - 32.0 - rgb(0, 0, 0) - [Ref.Annexe]
+
+    =====
+    12-3 - 153.56 - 939.71 29.67 - ff2 - 32.0 - rgb(0, 0, 0) - [Parties contrôlées]
+
+    =====
+    12-3 - 317.69 - 892.79 29.67 - ff2 - 32.0 - rgb(0, 0, 0) - [Amélioration]
+
+    =====
+    12-3 - 327.53 - 973.93 29.67 - ff2 - 32.0 - rgb(0, 0, 0) - [NON CE][ ][CE]
+    12-3 - 327.53 - 890.81 29.67 - ff2 - 32.0 - rgb(0, 0, 0) - [de la sécurité]
+
+    =====
+    12-3 - 330.86 - 990.06 29.67 - ff2 - 32.0 - rgb(0, 0, 0) - [Type d'ascenseur][ ][Contrôle]
+
+    =====
+    12-3 - 366.44 - 897.67 29.67 - ff2 - 32.0 - rgb(0, 0, 0) - [Nature des]
+
+    =====
+    12-3 - 375.46 - 889.27 29.67 - ff2 - 32.0 - rgb(0, 0, 0) - [investigations]
+
+    =====
+    12-3 - 424.94 - 897.67 29.67 - ff2 - 32.0 - rgb(0, 0, 0) - [Nature des]
+
+    =====
+    12-3 - 433.96 - 889.27 29.67 - ff2 - 32.0 - rgb(0, 0, 0) - [investigations]
+
+    =====
+    12-3 - 473.69 - 931.66 29.67 - ff2 - 32.0 - rgb(0, 0, 0) - [C]
+
+    =====
+    12-3 - 512.69 - 927.5 29.67 - ff2 - 32.0 - rgb(0, 0, 0) - [VO]
+
+    =====
+    12-3 - 551.69 - 927.75 29.67 - ff2 - 32.0 - rgb(0, 0, 0) - [SO]
+
+    =====
+    12-3 - 590.86 - 958.43 29.67 - ff2 - 32.0 - rgb(0, 0, 0) - [(Ascenseurs non CE)]
+
+    =====
+    12-3 - 593.47 - 920.99 29.67 - ff2 - 32.0 - rgb(0, 0, 0) - [ARRETE 18/11/2004]
+    12-3 - 593.47 - 908.51 29.67 - ff2 - 32.0 - rgb(0, 0, 0) - [ARRETE 07/08/2012]
+
+    =====
+    12-3 - 598.11 - 945.95 29.67 - ff2 - 32.0 - rgb(0, 0, 0) - [DECRET 2004-964]
+    12-3 - 598.11 - 933.47 29.67 - ff2 - 32.0 - rgb(0, 0, 0) - [DECRET 2008-291]
+
+    =====
+    12-3 - 617.28 - 970.91 29.67 - ff2 - 32.0 - rgb(0, 0, 0) - [Echéances]
+  Cluster 3
+    12-4 - 481.79 - 913.56 22.25 - ff2 - 24.0 - rgb(0, 0, 0) - [(CORRECT)]
+
+    =====
+    12-4 - 520.79 - 890.1 22.25 - ff2 - 24.0 - rgb(0, 0, 0) - [(VOIR OBSERVATIONS)]
+
+    =====
+    12-4 - 559.79 - 908.21 22.25 - ff2 - 24.0 - rgb(0, 0, 0) - [(SANS OBJET)]
+  Cluster 4
+    12-5 - 65.68 - 834.71 29.67 - ff1 - 32.0 - rgb(51, 51, 153) - [14][ ][ELECTRICITE][ ][ ][ ][ ][ ][ ]
+  Cluster 5
+    12-6 - 65.68 - 796.3 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [14.1]
+
+    =====
+    12-6 - 114.36 - 802.54 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [Interconnexion des masses]
+    12-6 - 114.36 - 790.06 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [métalliques, circuits de terre]
+
+    =====
+    12-6 - 310.85 - 796.3 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [II-5][ ][P/E][ ][E][ ][C][ ][ ][ ][ ]
+
+    =====
+    12-6 - 615.4 - 790.06 29.67 - ff1 - 32.0 - rgb(255, 102, 0) - [03-juil.-2014]
+
+    =====
+    12-6 - 631.35 - 802.54 29.67 - ff1 - 32.0 - rgb(255, 102, 0) - [Avant]
+  Cluster 6
+    12-7 - 65.68 - 751.64 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [14.2]
+
+    =====
+    12-7 - 114.36 - 757.88 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [Etat général des éléments]
+    12-7 - 114.36 - 745.4 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [constitutifs]
+
+    =====
+    12-7 - 310.85 - 751.64 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [II-5][ ][P/E][ ][E][ ][C][ ][ ][ ][ ]
+
+    =====
+    12-7 - 615.4 - 745.4 29.67 - ff1 - 32.0 - rgb(255, 102, 0) - [03-juil.-2014]
+
+    =====
+    12-7 - 631.35 - 757.88 29.67 - ff1 - 32.0 - rgb(255, 102, 0) - [Avant]
+  Cluster 7
+    12-8 - 65.68 - 706.99 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [14.3]
+
+    =====
+    12-8 - 114.36 - 713.23 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [Protection contre les contacts]
+    12-8 - 114.36 - 700.75 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [directs]
+
+    =====
+    12-8 - 310.85 - 706.99 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [II-5][ ][P/E][ ][E][ ][C][ ][ ][ ][ ]
+
+    =====
+    12-8 - 615.4 - 700.75 29.67 - ff1 - 32.0 - rgb(255, 102, 0) - [03-juil.-2014]
+
+    =====
+    12-8 - 631.35 - 713.23 29.67 - ff1 - 32.0 - rgb(255, 102, 0) - [Avant]
+  Cluster 8
+    12-9 - 698.38 - 90.5 22.25 - ff1 - 24.0 - rgb(0, 0, 0) - [12/15]
+  Cluster 9
+    12-10 - 65.68 - 66.78 29.67 - ff1 - 32.0 - rgb(0, 45, 134) - [CASTE ING]
+    12-10 - 65.68 - 54.3 29.67 - ff1 - 32.0 - rgb(0, 45, 134) - [2, Rue Maurice Hartmann, CS 40099]
+    12-10 - 65.68 - 41.82 29.67 - ff1 - 32.0 - rgb(0, 45, 134) - [92137 Issy-les-Moulineaux Cedex]
+
+    =====
+    12-10 - 310.85 - 66.78 29.67 - ff1 - 32.0 - rgb(0, 45, 134) - [Tél. : 01.41.46.05.86.]
+    12-10 - 310.85 - 54.3 29.67 - ff1 - 32.0 - rgb(0, 45, 134) - [Fax : 01.55.95.36.81.]
+    12-10 - 310.85 - 41.82 29.67 - ff1 - 32.0 - rgb(0, 45, 134) - [www.caste-ing.com]
+
+    =====
+    12-10 - 465.72 - 66.78 29.67 - ff1 - 32.0 - rgb(0, 45, 134) - [SAS au capital de 485.000 €]
+    12-10 - 465.72 - 54.3 29.67 - ff1 - 32.0 - rgb(0, 45, 134) - [RCS Nanterre B 514 836 170]
+    12-10 - 465.72 - 41.82 29.67 - ff1 - 32.0 - rgb(0, 45, 134) - [SIRET 514 836 170 000 43 - APE 7112B]
+Page 13
+  Cluster 0
+    13-1 - 665.21 - 1068.12 22.25 - ff1 - 24.0 - rgb(0, 0, 0) - [N°2021072015]
+  Cluster 1
+    13-2 - 71.2 - 1020.61 37.09 - ff2 - 40.0 - rgb(51, 51, 153) - [ARTICLES R. 125-1-2 ET R. 125-1-3 DU CODE DE LA CONSTRUCTION ET DE L’HABITATION (Autres]
+
+    =====
+    13-2 - 83.99 - 1037.9 37.09 - ff2 - 40.0 - rgb(51, 51, 153) - [DESCRIPTIF DES NON-CONFORMITE AU DECRET DU 24 AOUT 2000 (Installations CE) OU AUX]
+
+    =====
+    13-2 - 343.45 - 1003.32 37.09 - ff2 - 40.0 - rgb(51, 51, 153) - [installations)]
+  Cluster 2
+    13-3 - 55.25 - 973.35 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [Les observations ci-dessous décrites correspondent, pour les ascenseurs installés après le 27 août 2000, au respect des exigences]
+    13-3 - 55.25 - 959.52 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [essentielles de sécurité prévues à l'article 3 du décret n° 2000-810 du 24 août 2000 relatif à la mise sur le marché des ascenseurs et, pour]
+    13-3 - 55.25 - 945.69 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [les autres ascenseurs, à la mise en œuvre des dispositifs ou des mesures équivalentes prévues aux articles R. 125-1-2 et R. 125-1-3]
+
+    =====
+    13-3 - 65.68 - 916.98 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [Sans observations]
+  Cluster 3
+    13-4 - 698.38 - 90.5 22.25 - ff1 - 24.0 - rgb(0, 0, 0) - [13/15]
+  Cluster 4
+    13-5 - 65.68 - 66.78 29.67 - ff1 - 32.0 - rgb(0, 45, 134) - [CASTE ING]
+    13-5 - 65.68 - 54.3 29.67 - ff1 - 32.0 - rgb(0, 45, 134) - [2, Rue Maurice Hartmann, CS 40099]
+    13-5 - 65.68 - 41.82 29.67 - ff1 - 32.0 - rgb(0, 45, 134) - [92137 Issy-les-Moulineaux Cedex]
+
+    =====
+    13-5 - 310.85 - 66.78 29.67 - ff1 - 32.0 - rgb(0, 45, 134) - [Tél. : 01.41.46.05.86.]
+    13-5 - 310.85 - 54.3 29.67 - ff1 - 32.0 - rgb(0, 45, 134) - [Fax : 01.55.95.36.81.]
+    13-5 - 310.85 - 41.82 29.67 - ff1 - 32.0 - rgb(0, 45, 134) - [www.caste-ing.com]
+
+    =====
+    13-5 - 465.72 - 66.78 29.67 - ff1 - 32.0 - rgb(0, 45, 134) - [SAS au capital de 485.000 €]
+    13-5 - 465.72 - 54.3 29.67 - ff1 - 32.0 - rgb(0, 45, 134) - [RCS Nanterre B 514 836 170]
+    13-5 - 465.72 - 41.82 29.67 - ff1 - 32.0 - rgb(0, 45, 134) - [SIRET 514 836 170 000 43 - APE 7112B]
+Page 14
+  Cluster 0
+    14-1 - 665.21 - 1068.12 22.25 - ff1 - 24.0 - rgb(0, 0, 0) - [N°2021072015]
+  Cluster 1
+    14-2 - 83.99 - 1037.9 37.09 - ff2 - 40.0 - rgb(51, 51, 153) - [ANOMALIES PORTANT SUR LE RESPECT DES ARTICLES R. 125-2 A R. 125-2-6 DU CODE DE LA]
+
+    =====
+    14-2 - 93.76 - 1020.61 37.09 - ff2 - 40.0 - rgb(51, 51, 153) - [CONSTRUCTION ET DE L’HABITATION ET SUR TOUT DEFAUT PRESENTANT UN DANGER OU]
+
+    =====
+    14-2 - 180.25 - 1003.32 37.09 - ff2 - 40.0 - rgb(51, 51, 153) - [PORTANT ATTEINTE AU BON FONCTIONNEMENT DE L'APPAREIL]
+  Cluster 2
+    14-3 - 55.25 - 973.35 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [Les observations ci-dessous décrites correspondent, pour toutes les installations au respect de leurs conditions d'entretien ayant pour objet]
+    14-3 - 55.25 - 959.52 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [d'assurer le bon fonctionnement et de maintenir le niveau de sécurité ainsi qu'à l'identification de tout défaut présentant un danger pour la]
+    14-3 - 55.25 - 945.69 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [sécurité des personnes ou portant atteinte au bon fonctionnement de l'appareil.]
+  Cluster 3
+    14-4 - 83.99 - 913.47 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [N°]
+  Cluster 4
+    14-5 - 232.8 - 912.56 37.09 - ff1 - 40.0 - rgb(0, 0, 0) - [Anomalies présentant un danger pour la sécurité des personnes]
+  Cluster 5
+    14-6 - 65.68 - 879.28 29.67 - ff2 - 32.0 - rgb(51, 51, 153) - [GAINE]
+    14-6 - 65.68 - 859.98 29.67 - ff1 - 32.0 - rgb(51, 51, 153) - [1.4.5][ ][Absence de moyens d'accès en cuvette (échelons anti dérapant et crosse). RISQUE DE CHUTE  ]
+  Cluster 6
+    14-7 - 65.68 - 829.3 29.67 - ff2 - 32.0 - rgb(51, 51, 153) - [GUIDAGE]
+    14-7 - 65.68 - 809.99 29.67 - ff1 - 32.0 - rgb(51, 51, 153) - [3.1.12][ ][Fils guides du contrepoids détendus. RISQUE DE HEURT CABINE / CONTREPOIDS M]
+  Cluster 7
+    14-8 - 65.68 - 779.31 29.67 - ff2 - 32.0 - rgb(51, 51, 153) - [PORTES PALIERES]
+    14-8 - 65.68 - 760.01 29.67 - ff1 - 32.0 - rgb(51, 51, 153) - [5.5.15][ ][Attester de l'épaisseur des regards vitrés. RISQUE DE CISAILLEMENT M]
+  Cluster 8
+    14-9 - 65.68 - 729.33 29.67 - ff2 - 32.0 - rgb(51, 51, 153) - [CABINE]
+    14-9 - 65.68 - 703.78 29.67 - ff1 - 32.0 - rgb(51, 51, 153) - [7.8.15]
+
+    =====
+    14-9 - 134.25 - 710.02 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [Absence ou mauvaise réalisation des protections mécaniques sur les luminaires de la cabine. RISQUE]
+    14-9 - 134.25 - 697.54 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [D'ELECTRISATION]
+
+    =====
+    14-9 - 698.38 - 703.78 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [ ]
+  Cluster 9
+    14-10 - 65.68 - 666.86 29.67 - ff2 - 32.0 - rgb(51, 51, 153) - [TOIT DE CABINE]
+    14-10 - 65.68 - 647.56 29.67 - ff1 - 32.0 - rgb(51, 51, 153) - [9.3.8][ ][Absence de balustrades sur le toit de cabine. RISQUE DE CHUTE  ]
+  Cluster 10
+    14-11 - 65.68 - 616.88 29.67 - ff2 - 32.0 - rgb(51, 51, 153) - [CONTREPOIDS - ORGANE DE COMPENSATION]
+    14-11 - 65.68 - 597.57 29.67 - ff1 - 32.0 - rgb(51, 51, 153) - [10.1.7][ ][Gueuses du contrepoids mal fixées. RISQUE DE DESOLIDARISATION M]
+  Cluster 11
+    14-12 - 65.68 - 566.89 29.67 - ff2 - 32.0 - rgb(51, 51, 153) - [DISPOSITIF DE SECURITE]
+    14-12 - 65.68 - 547.59 29.67 - ff1 - 32.0 - rgb(51, 51, 153) - [11.3.22][ ][Absence de flèche pour indiquer le sens de prise du limiteur de vitesse. RISQUE DE CONFUSION M]
+  Cluster 12
+    14-13 - 65.68 - 516.91 29.67 - ff2 - 32.0 - rgb(51, 51, 153) - [LOCAUX DES MACHINES]
+    14-13 - 65.68 - 491.36 29.67 - ff1 - 32.0 - rgb(51, 51, 153) - [12.1.5]
+    14-13 - 65.68 - 465.82 29.67 - ff1 - 32.0 - rgb(51, 51, 153) - [12.2.11][ ][Absence d'indication de la charge admissible sur le ou les moyens de manutention. RISQUE DE CHUTE D’OBJET  ]
+    14-13 - 65.68 - 446.51 29.67 - ff1 - 32.0 - rgb(51, 51, 153) - [12.3.7][ ][Absence de crosse de rétablissement sur le massif du treuil. RISQUE DE CHUTE  ]
+    14-13 - 65.68 - 427.21 29.67 - ff1 - 32.0 - rgb(51, 51, 153) - [12.3.8][ ][Absence de matériau anti-dérapant sur les échelons d'accès au massif du treuil. RISQUE DE CHUTE  ]
+    14-13 - 65.68 - 407.9 29.67 - ff1 - 32.0 - rgb(51, 51, 153) - [12.5.14][ ][Il manque un dispositif d'éclairage secours en machinerie. RISQUE DE CHUTE, HAPPEMENT  ]
+
+    =====
+    14-13 - 134.25 - 497.6 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [Fiche descriptive des risques suivant décret 2008-1325 absente ou non mise à jour. NON MISE A JOUR DES]
+    14-13 - 134.25 - 485.12 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [RISQUES]
+
+    =====
+    14-13 - 698.38 - 491.36 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [M]
+  Cluster 13
+    14-14 - 65.68 - 377.22 29.67 - ff2 - 32.0 - rgb(51, 51, 153) - [MACHINE]
+    14-14 - 65.68 - 351.68 29.67 - ff1 - 32.0 - rgb(51, 51, 153) - [13.1.9]
+    14-14 - 65.68 - 319.89 29.67 - ff1 - 32.0 - rgb(51, 51, 153) - [13.1.12]
+    14-14 - 65.68 - 294.35 29.67 - ff1 - 32.0 - rgb(51, 51, 153) - [13.2.12][ ][Repérage des niveaux d'arrêts de la cabine sur les câbles non réalisé ou effacé. RISQUE DE CONFUSION M]
+
+    =====
+    14-14 - 134.25 - 357.92 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [Le groupe de traction n'est pas équipé d'un système de freinage à double action (redondance). RISQUE DE]
+    14-14 - 134.25 - 345.44 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [DEVIRAGE]
+    14-14 - 134.25 - 326.13 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [La poulie de traction du groupe de traction est usée, glissement important. RISQUE DE CHUTE SUR IMPRECISION]
+    14-14 - 134.25 - 313.65 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [D’ARRET]
+
+    =====
+    14-14 - 698.38 - 351.68 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [ ]
+    14-14 - 698.38 - 319.89 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [M]
+  Cluster 14
+    14-15 - 137.22 - 265.64 25.59 - ff4 - 32.0 - rgb(0, 0, 0) - [M : Signale des points à la charge du prestataire dans le cadre de son contrat de maintenance]
+  Cluster 15
+    14-16 - 698.38 - 90.5 22.25 - ff1 - 24.0 - rgb(0, 0, 0) - [14/15]
+  Cluster 16
+    14-17 - 65.68 - 66.78 29.67 - ff1 - 32.0 - rgb(0, 45, 134) - [CASTE ING]
+    14-17 - 65.68 - 54.3 29.67 - ff1 - 32.0 - rgb(0, 45, 134) - [2, Rue Maurice Hartmann, CS 40099]
+    14-17 - 65.68 - 41.82 29.67 - ff1 - 32.0 - rgb(0, 45, 134) - [92137 Issy-les-Moulineaux Cedex]
+
+    =====
+    14-17 - 310.85 - 66.78 29.67 - ff1 - 32.0 - rgb(0, 45, 134) - [Tél. : 01.41.46.05.86.]
+    14-17 - 310.85 - 54.3 29.67 - ff1 - 32.0 - rgb(0, 45, 134) - [Fax : 01.55.95.36.81.]
+    14-17 - 310.85 - 41.82 29.67 - ff1 - 32.0 - rgb(0, 45, 134) - [www.caste-ing.com]
+
+    =====
+    14-17 - 465.72 - 66.78 29.67 - ff1 - 32.0 - rgb(0, 45, 134) - [SAS au capital de 485.000 €]
+    14-17 - 465.72 - 54.3 29.67 - ff1 - 32.0 - rgb(0, 45, 134) - [RCS Nanterre B 514 836 170]
+    14-17 - 465.72 - 41.82 29.67 - ff1 - 32.0 - rgb(0, 45, 134) - [SIRET 514 836 170 000 43 - APE 7112B]
+Page 15
+  Cluster 0
+    15-1 - 665.21 - 1068.12 22.25 - ff1 - 24.0 - rgb(0, 0, 0) - [N°2021072015]
+  Cluster 1
+    15-2 - 61.45 - 1003.66 37.09 - ff2 - 40.0 - rgb(0, 0, 0) - [1. MODALITES]
+
+    =====
+    15-2 - 218.4 - 1037.9 37.09 - ff2 - 40.0 - rgb(51, 51, 153) - [MODALITE ET CONDUITE DU CONTROLE TECHNIQUE]
+  Cluster 2
+    15-3 - 55.25 - 971.28 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [Le présent contrôle technique porte limitativement sur les parties visibles et accessibles de l'installation sans démontage.]
+    15-3 - 55.25 - 957.45 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [Sont donc notamment exclues les vérifications suivantes : ]
+
+    =====
+    15-3 - 63.03 - 943.61 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [Installations électriques en amont du tableau d'alimentation général de l'ascenseur, communément dénommé tableau DTU,]
+    15-3 - 63.03 - 929.78 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [Solidité des ouvrages dans lesquels l'ascenseur est installé, même s'ils ont été exécutés spécialement pour celui-ci,]
+    15-3 - 63.03 - 915.95 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [Dispositions spécifiques à la protection incendie et à la résistance ou réaction au feu des éléments constitutifs.]
+  Cluster 3
+    15-4 - 55.25 - 945.07 11.51 - ff5 - 12.8 - rgb(0, 0, 0) - [●]
+  Cluster 4
+    15-5 - 55.25 - 931.24 11.51 - ff5 - 12.8 - rgb(0, 0, 0) - [●]
+  Cluster 5
+    15-6 - 55.25 - 917.41 11.51 - ff5 - 12.8 - rgb(0, 0, 0) - [●]
+  Cluster 6
+    15-7 - 61.45 - 868.75 37.09 - ff2 - 40.0 - rgb(0, 0, 0) - [2. CONDUITE DU CONTROLE TECHNIQUE]
+  Cluster 7
+    15-8 - 55.25 - 836.36 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [Le contrôle technique vise à permettre :]
+    15-8 - 55.25 - 725.71 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [Ce contrôle est sanctionné par un rapport établi conformément à l'article 4 de l'arrêté du 07 aout 2012.]
+
+    =====
+    15-8 - 63.03 - 822.53 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [De vérifier que les appareils auxquels s'applique le décret n° 2000-810 du 24 août 2000 relatif à la mise sur le marché des ascenseurs]
+    15-8 - 63.03 - 808.7 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [sont équipés des dispositifs prévus par ce décret et que ceux-ci sont en bon état;]
+    15-8 - 63.03 - 794.87 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [De vérifier que les appareils qui n'entrent pas dans le champ d'application du décret du 24 août 2000 susmentionné, sont équipés des]
+    15-8 - 63.03 - 781.04 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [dispositifs de sécurité prévus par les articles R. 125-1-1 et R. 125-1-2 et que ces dispositifs sont en bon état, ou que les mesures]
+    15-8 - 63.03 - 767.2 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [équivalentes ou prévues à l'article R. 125-1-3 sont effectivement mises en œuvre;]
+    15-8 - 63.03 - 753.37 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [De repérer tout défaut présentant un danger pour la sécurité des personnes ou portant atteinte au bon fonctionnement de l'appareil.]
+  Cluster 8
+    15-9 - 55.25 - 823.99 11.51 - ff5 - 12.8 - rgb(0, 0, 0) - [●]
+  Cluster 9
+    15-10 - 55.25 - 796.32 11.51 - ff5 - 12.8 - rgb(0, 0, 0) - [●]
+  Cluster 10
+    15-11 - 55.25 - 754.83 11.51 - ff5 - 12.8 - rgb(0, 0, 0) - [●]
+  Cluster 11
+    15-12 - 61.45 - 692.34 37.09 - ff2 - 40.0 - rgb(0, 0, 0) - [3. CONTENU DU RAPPORT DE CONTROLE TECHNIQUE]
+  Cluster 12
+    15-13 - 55.25 - 659.95 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [Le rapport de contrôle technique indique les points suivants :]
+
+    =====
+    15-13 - 63.03 - 646.12 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [Une mention indiquant si les documents exigibles dans le cadre de la mise sur le marché sont présents (Appareils CE);]
+    15-13 - 63.03 - 632.29 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [Une mention indiquant s'ils satisfont aux dispositions du décret du 24 août 2000 susvisé (Appareils CE);]
+    15-13 - 63.03 - 618.46 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [Une mention indiquant si la mise à niveau réglementaire exigée par les articles R. 125-1-2 à R. 125-1-4 du code de la construction et de]
+    15-13 - 63.03 - 604.63 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [l'habitation est réalisée correctement lorsque la date limite prévue pour cette mise à niveau est dépassée (Appareils non CE);]
+    15-13 - 63.03 - 590.79 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [Une mention indiquant la présence ou l'absence du dossier technique comportant les caractéristiques de l'ensemble de l'installation et de]
+    15-13 - 63.03 - 576.96 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [la notice d'instructions nécessaire à l'entretien (Appareils non CE);]
+    15-13 - 63.03 - 563.13 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [La liste des documents mis à disposition du contrôleur technique (Tous);]
+    15-13 - 63.03 - 549.3 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [Le récapitulatif des points de contrôle mentionnés en annexe du présent arrêté présentant une anomalie (Tous). Ce récapitulatif décrit]
+    15-13 - 63.03 - 535.47 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [cette anomalie, le danger qu'elle représente et, le cas échéant, indique la nécessité de mise à l'arrêt de l'appareil.]
+  Cluster 13
+    15-14 - 55.25 - 647.58 11.51 - ff5 - 12.8 - rgb(0, 0, 0) - [●]
+  Cluster 14
+    15-15 - 55.25 - 633.75 11.51 - ff5 - 12.8 - rgb(0, 0, 0) - [●]
+  Cluster 15
+    15-16 - 55.25 - 619.91 11.51 - ff5 - 12.8 - rgb(0, 0, 0) - [●]
+  Cluster 16
+    15-17 - 55.25 - 592.25 11.51 - ff5 - 12.8 - rgb(0, 0, 0) - [●]
+  Cluster 17
+    15-18 - 55.25 - 564.59 11.51 - ff5 - 12.8 - rgb(0, 0, 0) - [●]
+  Cluster 18
+    15-19 - 55.25 - 550.75 11.51 - ff5 - 12.8 - rgb(0, 0, 0) - [●]
+  Cluster 19
+    15-20 - 61.45 - 488.26 37.09 - ff2 - 40.0 - rgb(0, 0, 0) - [4. REFERENTIEL DE CONTROLE]
+  Cluster 20
+    15-21 - 55.25 - 457.34 11.51 - ff5 - 12.8 - rgb(0, 0, 0) - [●]
+  Cluster 21
+    15-22 - 63.03 - 455.88 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [Décret n° 2000-810 du 24 août 2000 relatif à la mise sur le marché des ascenseurs]
+    15-22 - 63.03 - 442.05 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [Loi n° 2003-590 dite « URBANISME & HABITAT » du 02 juillet 2003 et plus particulièrement son article 79-2]
+    15-22 - 63.03 - 428.22 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [Décret (modifié) n° 2004-964 du 09 septembre 2004 relatif à la sécurité des ascenseurs et modifiant le code de la construction et de]
+    15-22 - 63.03 - 414.38 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [l'habitation]
+    15-22 - 63.03 - 400.55 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [Arrêté du 18 novembre 2004 relatif aux travaux de sécurité à réaliser dans les installations d'ascenseurs]
+    15-22 - 63.03 - 386.72 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [Arrêté du 13 décembre 2004 relatif aux critères de compétence des personnes réalisant des contrôles techniques dans les installations]
+    15-22 - 63.03 - 372.89 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [d'ascenseurs]
+    15-22 - 63.03 - 359.06 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [Arrêté du 15 juin 2005 modifiant l'arrêté du 13 décembre 2004 relatif aux critères de compétence des personnes réalisant des contrôles]
+    15-22 - 63.03 - 345.22 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [techniques dans les installations d'ascenseurs]
+    15-22 - 63.03 - 331.39 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [Arrêté du 1er août 2006 modifiant l'arrêté du 18 novembre 2004 relatif aux travaux de sécurité à réaliser dans les installations]
+    15-22 - 63.03 - 317.56 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [d'ascenseurs]
+    15-22 - 63.03 - 303.73 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [Décret n° 2008-291 du 28 mars 2008 modifiant le décret n° 2004-964 du 9 septembre 2004 relatif à la sécurité des ascenseurs et le code]
+    15-22 - 63.03 - 289.9 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [de la construction et de l'habitation]
+    15-22 - 63.03 - 276.06 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [Décret n° 2008-1325 du 15 décembre 2008 relatif à la sécurité des ascenseurs sur les lieux de travail et à la sécurité des travailleurs 1]
+    15-22 - 63.03 - 262.23 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [intervenant sur ces équipements]
+    15-22 - 63.03 - 248.4 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [Arrêté du 29 août 2008 modifiant l'arrêté du 18 novembre 2004 et l'arrêté du 1er août 2006 relatifs aux travaux de sécurité à réaliser]
+    15-22 - 63.03 - 234.57 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [dans les installations d'ascenseurs]
+    15-22 - 63.03 - 220.74 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [Décret no 2012-674 du 7 mai 2012 relatif à l'entretien et au contrôle technique des ascenseurs]
+    15-22 - 63.03 - 206.9 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [Arrêté du 7 août 2012 relatif aux contrôles techniques à réaliser dans les installations d'ascenseurs]
+    15-22 - 63.03 - 193.07 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [Décret du 23 juillet 2013 Relatif au délai d’exécution et au champ d’application des travaux de sécurité sur les installations d’ascenseurs]
+    15-22 - 63.03 - 179.24 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [Arrêté du 20 août 2013 Modifiant l’arrêté du 18 novembre 2004 relatif aux travaux de sécurité à réaliser dans les installations]
+    15-22 - 63.03 - 165.41 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [d’ascenseurs]
+    15-22 - 63.03 - 151.58 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [Décret n° 2014-1230 du 21 octobre 2014 relatif aux travaux de sécurité sur les installations d'ascenseurs]
+    15-22 - 63.03 - 137.74 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [Arrêté du 10 décembre 2014 modifiant l'arrêté du 18 novembre 2004 modifié relatif aux travaux de sécurité à réaliser dans les]
+    15-22 - 63.03 - 123.91 29.67 - ff1 - 32.0 - rgb(0, 0, 0) - [installations d'ascenseurs]
+  Cluster 22
+    15-23 - 55.25 - 443.5 11.51 - ff5 - 12.8 - rgb(0, 0, 0) - [●]
+  Cluster 23
+    15-24 - 55.25 - 429.67 11.51 - ff5 - 12.8 - rgb(0, 0, 0) - [●]
+  Cluster 24
+    15-25 - 55.25 - 402.01 11.51 - ff5 - 12.8 - rgb(0, 0, 0) - [●]
+  Cluster 25
+    15-26 - 55.25 - 388.18 11.51 - ff5 - 12.8 - rgb(0, 0, 0) - [●]
+  Cluster 26
+    15-27 - 55.25 - 360.51 11.51 - ff5 - 12.8 - rgb(0, 0, 0) - [●]
+  Cluster 27
+    15-28 - 55.25 - 332.85 11.51 - ff5 - 12.8 - rgb(0, 0, 0) - [●]
+  Cluster 28
+    15-29 - 55.25 - 305.18 11.51 - ff5 - 12.8 - rgb(0, 0, 0) - [●]
+  Cluster 29
+    15-30 - 55.25 - 277.52 11.51 - ff5 - 12.8 - rgb(0, 0, 0) - [●]
+  Cluster 30
+    15-31 - 55.25 - 249.86 11.51 - ff5 - 12.8 - rgb(0, 0, 0) - [●]
+  Cluster 31
+    15-32 - 55.25 - 222.19 11.51 - ff5 - 12.8 - rgb(0, 0, 0) - [●]
+  Cluster 32
+    15-33 - 55.25 - 208.36 11.51 - ff5 - 12.8 - rgb(0, 0, 0) - [●]
+  Cluster 33
+    15-34 - 55.25 - 194.53 11.51 - ff5 - 12.8 - rgb(0, 0, 0) - [●]
+  Cluster 34
+    15-35 - 55.25 - 180.7 11.51 - ff5 - 12.8 - rgb(0, 0, 0) - [●]
+  Cluster 35
+    15-36 - 55.25 - 153.03 11.51 - ff5 - 12.8 - rgb(0, 0, 0) - [●]
+  Cluster 36
+    15-37 - 55.25 - 139.2 11.51 - ff5 - 12.8 - rgb(0, 0, 0) - [●]
+  Cluster 37
+    15-38 - 698.38 - 90.5 22.25 - ff1 - 24.0 - rgb(0, 0, 0) - [15/15]
+  Cluster 38
+    15-39 - 65.68 - 66.78 29.67 - ff1 - 32.0 - rgb(0, 45, 134) - [CASTE ING]
+    15-39 - 65.68 - 54.3 29.67 - ff1 - 32.0 - rgb(0, 45, 134) - [2, Rue Maurice Hartmann, CS 40099]
+    15-39 - 65.68 - 41.82 29.67 - ff1 - 32.0 - rgb(0, 45, 134) - [92137 Issy-les-Moulineaux Cedex]
+
+    =====
+    15-39 - 310.85 - 66.78 29.67 - ff1 - 32.0 - rgb(0, 45, 134) - [Tél. : 01.41.46.05.86.]
+    15-39 - 310.85 - 54.3 29.67 - ff1 - 32.0 - rgb(0, 45, 134) - [Fax : 01.55.95.36.81.]
+    15-39 - 310.85 - 41.82 29.67 - ff1 - 32.0 - rgb(0, 45, 134) - [www.caste-ing.com]
+
+    =====
+    15-39 - 465.72 - 66.78 29.67 - ff1 - 32.0 - rgb(0, 45, 134) - [SAS au capital de 485.000 €]
+    15-39 - 465.72 - 54.3 29.67 - ff1 - 32.0 - rgb(0, 45, 134) - [RCS Nanterre B 514 836 170]
+    15-39 - 465.72 - 41.82 29.67 - ff1 - 32.0 - rgb(0, 45, 134) - [SIRET 514 836 170 000 43 - APE 7112B]

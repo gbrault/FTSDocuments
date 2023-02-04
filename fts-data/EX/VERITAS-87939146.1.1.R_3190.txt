@@ -1,0 +1,795 @@
+Page 1
+  Cluster 0
+    1-1 - 44.15 - 904.14 39.72 - ff1 - 44.0 - rgb(0, 0, 0) - [Bureau Veritas Exploitation SAS]
+
+    =====
+    1-1 - 423.2 - 904.14 39.72 - ff1 - 44.0 - rgb(0, 0, 0) - [A l'attention de CHATEAU DE VILLIERS LE]
+    1-1 - 423.2 - 888.16 39.72 - ff1 - 44.0 - rgb(0, 0, 0) - [MAHIEU]
+  Cluster 1
+    1-2 - 44.15 - 888.3 26.24 - ff2 - 36.0 - rgb(0, 0, 0) - [OSNY]
+    1-2 - 44.15 - 875.23 26.24 - ff2 - 36.0 - rgb(0, 0, 0) - [Immeuble «Le Louisiane»]
+    1-2 - 44.15 - 862.16 26.24 - ff2 - 36.0 - rgb(0, 0, 0) - [10 chaussée Jules César]
+    1-2 - 44.15 - 849.1 26.24 - ff2 - 36.0 - rgb(0, 0, 0) - [ZA des Beaux Soleils]
+    1-2 - 44.15 - 836.02 26.24 - ff2 - 36.0 - rgb(0, 0, 0) - [BP 338]
+    1-2 - 44.15 - 822.95 26.24 - ff2 - 36.0 - rgb(0, 0, 0) - [95526 CERGY-PONTOISE   Cedex France]
+    1-2 - 44.15 - 809.87 26.24 - ff2 - 36.0 - rgb(0, 0, 0) - [Téléphone : 01 30 31 93 40]
+    1-2 - 44.15 - 796.81 26.24 - ff2 - 36.0 - rgb(0, 0, 0) - [Mail : anthony.din@bureauveritas.com]
+
+    =====
+    1-2 - 423.2 - 870.82 26.24 - ff2 - 36.0 - rgb(0, 0, 0) - [CHATEAU DE VILLIERS LE MAHIEU]
+    1-2 - 423.2 - 857.74 26.24 - ff2 - 36.0 - rgb(0, 0, 0) - [CHATEAU DE VILLIERS LE MAHIEU]
+    1-2 - 423.2 - 844.67 26.24 - ff2 - 36.0 - rgb(0, 0, 0) - [78770        VILLIERS LE MAHIEU]
+  Cluster 2
+    1-3 - 44.15 - 703.81 65.0 - ff1 - 72.0 - rgb(0, 0, 0) - [Rapport de contrôle technique quinquennal d'une]
+    1-3 - 44.15 - 677.66 65.0 - ff1 - 72.0 - rgb(0, 0, 0) - [installation d'ascenseur non soumis au marquage]
+    1-3 - 44.15 - 651.52 65.0 - ff1 - 72.0 - rgb(0, 0, 0) - [CE]
+  Cluster 3
+    1-4 - 40.57 - 556.13 36.11 - ff1 - 40.0 - rgb(0, 0, 0) - [ Intervention du ][15/07/2020   ]
+  Cluster 4
+    1-5 - 44.15 - 526.14 32.5 - ff1 - 36.0 - rgb(0, 0, 0) - [Coordonnées du site : ]
+    1-5 - 44.15 - 513.07 32.5 - ff1 - 36.0 - rgb(0, 0, 0) - [Nom du site : ][CHATEAU DE VILLIERS LE MAHIEU]
+
+    =====
+    1-5 - 423.2 - 526.14 32.5 - ff1 - 36.0 - rgb(0, 0, 0) - [Lieu d'intervention : ]
+    1-5 - 423.2 - 513.07 26.24 - ff2 - 36.0 - rgb(0, 0, 0) - [CHATEAU DE VILLIERS LE MAHIEU]
+    1-5 - 423.2 - 499.99 26.24 - ff2 - 36.0 - rgb(0, 0, 0) - [78770        VILLIERS LE MAHIEU]
+  Cluster 5
+    1-6 - 44.15 - 501.18 28.89 - ff1 - 32.0 - rgb(0, 0, 0) - [Latitude : ][1.7768]
+    1-6 - 44.15 - 489.55 28.89 - ff1 - 32.0 - rgb(0, 0, 0) - [Longitude : ][48.8544]
+  Cluster 6
+    1-7 - 44.15 - 442.53 32.5 - ff1 - 36.0 - rgb(0, 0, 0) - [Numéro d'affaire : ][8793914]
+    1-7 - 44.15 - 429.45 32.5 - ff1 - 36.0 - rgb(0, 0, 0) - [Référence du rapport : ][8793914/6.1.1.R]
+    1-7 - 44.15 - 416.39 32.5 - ff1 - 36.0 - rgb(0, 0, 0) - [Rédigé le : ][27/07/2020]
+    1-7 - 44.15 - 403.31 32.5 - ff1 - 36.0 - rgb(0, 0, 0) - [Par : ][Anthony DIN]
+  Cluster 7
+    1-8 - 44.15 - 391.42 23.33 - ff2 - 32.0 - rgb(0, 0, 0) - [Ce document a été validé par son auteur]
+  Cluster 8
+    1-9 - 44.15 - 261.09 26.24 - ff2 - 36.0 - rgb(0, 0, 0) - [Ce rapport contient 1 fiche]
+  Cluster 9
+    1-10 - 426.37 - 203.74 36.11 - ff1 - 40.0 - rgb(0, 0, 0) - [Accréditation Cofrac n° 3-1335,inspection]
+  Cluster 10
+    1-11 - 426.37 - 191.57 23.33 - ff2 - 32.0 - rgb(0, 0, 0) - [Liste des sites accrédités et portée disponible sur www.cofrac.fr]
+  Cluster 11
+    1-12 - 51.58 - 47.96 17.5 - ff2 - 24.0 - rgb(0, 0, 0) - [Bureau Veritas Exploitation SAS - Société par Actions Simplifiée au capital social de 36 315 000 euros Siège social - 8 cours du Triangle de l'Arche - 92800 PUTEAUX - RCS Nanterre B 790 184 675]
+Page 2
+  Cluster 0
+    2-1 - 328.7 - 985.65 43.34 - ff1 - 48.0 - rgb(0, 0, 0) - [Préambule]
+  Cluster 1
+    2-2 - 62.66 - 944.11 23.33 - ff2 - 32.0 - rgb(0, 0, 0) - [Bureau Veritas a le plaisir de vous remettre le rapport de vérification du ou des ascenseurs décrits ci-après.]
+    2-2 - 62.66 - 924.68 23.33 - ff2 - 32.0 - rgb(0, 0, 0) - [Ce rapport comprend une fiche par ascenseurs, dans laquelle sont mentionnés la réglementation prise en référence, l’identifiant de]
+    2-2 - 62.66 - 913.07 23.33 - ff2 - 32.0 - rgb(0, 0, 0) - [l’équipement, les caractéristiques techniques essentielles, les éventuelles actions à entreprendre et le contenu de la prestation effectuée par]
+    2-2 - 62.66 - 901.45 23.33 - ff2 - 32.0 - rgb(0, 0, 0) - [Bureau Veritas, à l’aide des moyens mis à sa disposition.]
+    2-2 - 62.66 - 889.82 23.33 - ff2 - 32.0 - rgb(0, 0, 0) - [Chaque ascenseur peut être soumis à plusieurs réglementations, ce rapport ne concerne que la règlementation du contrôle technique (arrêté]
+    2-2 - 62.66 - 878.2 23.33 - ff2 - 32.0 - rgb(0, 0, 0) - [du 7 Aout 2012).]
+  Cluster 2
+    2-3 - 62.66 - 864.42 26.66 - ff3 - 40.0 - rgb(0, 0, 0) - [ ]
+  Cluster 3
+    2-4 - 62.66 - 831.9 34.99 - ff2 - 48.0 - rgb(0, 0, 0) - [Rappels sur les obligations du propriétaire]
+  Cluster 4
+    2-5 - 62.66 - 811.36 23.33 - ff2 - 32.0 - rgb(0, 0, 0) - [Pour la réalisation des vérifications, le propriétaire doit mettre à disposition de Bureau Veritas les équipements concernés, clairement]
+    2-5 - 62.66 - 799.75 23.33 - ff2 - 32.0 - rgb(0, 0, 0) - [identifiés, pendant le temps nécessaire, ainsi que les moyens permettant d’accéder aux différentes parties de ces équipements. Il assure la]
+    2-5 - 62.66 - 788.12 23.33 - ff2 - 32.0 - rgb(0, 0, 0) - [présence du personnel nécessaire à la conduite, aux examens et essais de ces équipements et met à disposition tous les documents utiles]
+    2-5 - 62.66 - 776.5 23.33 - ff2 - 32.0 - rgb(0, 0, 0) - [à la réalisation du contrôle technique.]
+    2-5 - 62.66 - 764.88 23.33 - ff2 - 32.0 - rgb(0, 0, 0) - [Par ailleurs, Bureau Veritas ne peut être tenu pour responsable des dommages provoqués lors de la vérification par ][][les essais de]
+    2-5 - 62.66 - 753.27 23.33 - ff2 - 32.0 - rgb(0, 0, 0) - [fonctionnement, ceux-ci ayant pour objectif de vérifier l’absence d’anomalie dans le fonctionnement de l’appareil.]
+  Cluster 5
+    2-6 - 62.66 - 739.3 29.16 - ff2 - 40.0 - rgb(0, 0, 0) - [ ]
+  Cluster 6
+    2-7 - 62.66 - 727.13 23.33 - ff2 - 32.0 - rgb(0, 0, 0) - [Le propriétaire doit indiquer au contrôleur technique si l’ascenseur tombe sous la nécessité de prévenir les actes de malveillance portant]
+    2-7 - 62.66 - 715.51 23.33 - ff2 - 32.0 - rgb(0, 0, 0) - [atteinte au verrouillage de la porte palière. Si aucune information n’est fournie à Bureau Veritas, ce point n’a pas été traité lors cette visite.]
+  Cluster 7
+    2-8 - 62.66 - 701.53 29.16 - ff2 - 40.0 - rgb(0, 0, 0) - [ ]
+  Cluster 8
+    2-9 - 62.66 - 689.36 23.33 - ff2 - 32.0 - rgb(0, 0, 0) - [L’obligation de contrôle technique n’est réputée satisfaite que lorsque toutes les parties de l’installation d’ascenseur ont été soumises]
+    2-9 - 62.66 - 677.74 23.33 - ff2 - 32.0 - rgb(0, 0, 0) - [intégralement aux examens et essais. Si cette obligation n’est pas satisfaite, une information sur le rapport rappelle la nécessité de refaire la]
+    2-9 - 62.66 - 666.12 23.33 - ff2 - 32.0 - rgb(0, 0, 0) - [totalité du contrôle technique.]
+  Cluster 9
+    2-10 - 62.66 - 652.16 29.16 - ff2 - 40.0 - rgb(0, 0, 0) - [ ]
+  Cluster 10
+    2-11 - 62.66 - 639.99 23.33 - ff2 - 32.0 - rgb(0, 0, 0) - [Pour répondre à l’article R.125.2.6 du CCH, si Bureau Veritas constate que l’ascenseur contrôlé ne respecte pas les exigences essentielles]
+    2-11 - 62.66 - 628.37 23.33 - ff2 - 32.0 - rgb(0, 0, 0) - [mentionnées à l’article R. 125-2-13, une copie de ce rapport sera transmise au ministre chargé de la construction.]
+  Cluster 11
+    2-12 - 62.66 - 614.39 29.16 - ff2 - 40.0 - rgb(0, 0, 0) - [ ]
+  Cluster 12
+    2-13 - 62.66 - 581.93 34.99 - ff2 - 48.0 - rgb(0, 0, 0) - [Actions à mener]
+  Cluster 13
+    2-14 - 62.66 - 561.39 23.33 - ff2 - 32.0 - rgb(0, 0, 0) - [Sur la base de l’ensemble des informations en sa possession et notamment des « avis généraux » du présent rapport, le propriétaire décide]
+    2-14 - 62.66 - 549.77 23.33 - ff2 - 32.0 - rgb(0, 0, 0) - [ou non du maintien en service de chaque ascenseur.]
+    2-14 - 62.66 - 538.15 23.33 - ff2 - 32.0 - rgb(0, 0, 0) - [De plus, le cas échéant le propriétaire doit remédier aux écarts ou défectuosités constatés lors de la vérification.]
+  Cluster 14
+    2-15 - 62.66 - 524.19 29.16 - ff2 - 40.0 - rgb(0, 0, 0) - [ ]
+  Cluster 15
+    2-16 - 62.66 - 512.02 23.33 - ff2 - 32.0 - rgb(0, 0, 0) - [Le propriétaire doit consigner la vérification ayant fait l’objet du présent rapport dans les documents en sa possession constitués le cas]
+    2-16 - 62.66 - 500.4 23.33 - ff2 - 32.0 - rgb(0, 0, 0) - [échéant du registre de sécurité de l’établissement et/ou du livret d’entretien. ]
+    2-16 - 62.66 - 477.15 23.33 - ff2 - 32.0 - rgb(0, 0, 0) - [La définition de cette symbolique est précisée dans le tableau joint.]
+  Cluster 16
+    2-17 - 64.45 - 49.92 17.5 - ff2 - 24.0 - rgb(0, 0, 0) - [Rapport TM  – V 2][ ][rapport n° : 8793914/6.1.1.R]
+    2-17 - 64.45 - 37.6 17.5 - ff2 - 24.0 - rgb(0, 0, 0) - [Copyright  BUREAU VERITAS]
+  Cluster 17
+    2-18 - 116.06 - 1.66 17.5 - ff2 - 24.0 - rgb(0, 0, 0) - [page  2/9]
+Page 3
+  Cluster 0
+    3-1 - 62.66 - 991.17 43.34 - ff1 - 48.0 - rgb(0, 0, 0) - [Personne(s) rencontrée(s)]
+  Cluster 1
+    3-2 - 62.66 - 955.04 23.33 - ff2 - 32.0 - rgb(0, 0, 0) - [A notre arrivée sur le site nous avons été accueillis par : M. ZAPATA PIERRE.]
+  Cluster 2
+    3-3 - 62.66 - 915.32 43.34 - ff1 - 48.0 - rgb(0, 0, 0) - [Équipement(s) objet(s) du présent rapport]
+  Cluster 3
+    3-4 - 66.22 - 866.64 36.11 - ff1 - 40.0 - rgb(0, 0, 0) - [NON CE ][: 1]
+
+    =====
+    3-4 - 94.03 - 844.97 29.16 - ff2 - 40.0 - rgb(0, 0, 0) - [Fiche n° 1 :][ ][Bâtiment annexe]
+
+    =====
+    3-4 - 172.42 - 822.64 29.16 - ff2 - 40.0 - rgb(0, 0, 0) - [Marque: CFA   Type: Ascenseur Hydraulique   n°série: 94N00334.01  n°interne: 3190]
+    3-4 - 172.42 - 800.31 36.11 - ff2 - 40.0 - rgb(0, 0, 0) - [Avis général :][ Non satisfaisant ][: Les vérifications ont fait apparaître les défectuosités ou]
+    3-4 - 172.42 - 785.77 29.16 - ff2 - 40.0 - rgb(0, 0, 0) - [anomalies mentionnées dans le récapitulatif des « liste récapitulative des observations is-]
+    3-4 - 172.42 - 771.25 29.16 - ff2 - 40.0 - rgb(0, 0, 0) - [sues de la vérification » auxquelles il y a lieu de remédier.]
+  Cluster 4
+    3-5 - 64.45 - 49.92 17.5 - ff2 - 24.0 - rgb(0, 0, 0) - [Rapport TM  – V 2][ ][rapport n° : 8793914/6.1.1.R]
+    3-5 - 64.45 - 37.6 17.5 - ff2 - 24.0 - rgb(0, 0, 0) - [Copyright  BUREAU VERITAS]
+  Cluster 5
+    3-6 - 116.06 - 1.66 17.5 - ff2 - 24.0 - rgb(0, 0, 0) - [page  3/9]
+Page 4
+  Cluster 0
+    4-1 - 66.22 - 1056.37 51.35 - ff6 - 56.0 - rgb(255, 255, 255) - [Liste récapitulative]
+  Cluster 1
+    4-2 - 66.22 - 1036.46 47.68 - ff6 - 52.0 - rgb(255, 255, 255) - [des observations issues de la]
+    4-2 - 66.22 - 1016.83 47.68 - ff6 - 52.0 - rgb(255, 255, 255) - [vérification]
+  Cluster 2
+    4-3 - 66.22 - 937.12 30.12 - ff4 - 36.0 - rgb(0, 0, 0) - [Périmètre vérifié dans le rapport |][ CHATEAU DE VILLIERS LE MAHIEU]
+  Cluster 3
+    4-4 - 62.66 - 886.04 55.02 - ff6 - 60.0 - rgb(0, 0, 0) - [ÉQUIPEMENT(S) VÉRIFIÉ(S)]
+  Cluster 4
+    4-5 - 66.22 - 827.03 40.35 - ff6 - 44.0 - rgb(0, 0, 0) - [Fiche N° 1 : ][NON CE]
+  Cluster 5
+    4-6 - 66.22 - 789.8 19.2 - ff7 - 28.0 - rgb(0, 0, 0) - [N° interne : 3190]
+    4-6 - 66.22 - 777.17 19.2 - ff7 - 28.0 - rgb(0, 0, 0) - [Localisation : Bâtiment annexe]
+
+    =====
+    4-6 - 361.04 - 789.8 19.2 - ff8 - 28.0 - rgb(0, 0, 0) - [Marque : CFA]
+    4-6 - 361.04 - 777.56 19.2 - ff8 - 28.0 - rgb(0, 0, 0) - [Type : Ascenseur Hydraulique]
+    4-6 - 361.04 - 765.32 19.2 - ff8 - 28.0 - rgb(0, 0, 0) - [N° de série : 94N00334.01]
+    4-6 - 361.04 - 753.08 19.2 - ff8 - 28.0 - rgb(0, 0, 0) - [Année de mise en service : 2001]
+  Cluster 6
+    4-7 - 529.19 - 720.75 18.0 - ff9 - 24.0 - rgb(179, 179, 179) - [ ]
+  Cluster 7
+    4-8 - 206.78 - 719.95 22.97 - ff4 - 32.0 - rgb(0, 0, 0) - [Actions à entreprendre]
+  Cluster 8
+    4-9 - 62.66 - 718.63 25.84 - ff4 - 36.0 - rgb(0, 0, 0) - [ ][Point vérifié]
+  Cluster 9
+    4-10 - 66.22 - 698.48 27.38 - ff5 - 40.0 - rgb(0, 0, 0) - [7.11- Eclairage de]
+    4-10 - 66.22 - 681.07 27.38 - ff5 - 40.0 - rgb(0, 0, 0) - [secours]
+
+    =====
+    4-10 - 209.88 - 698.31 27.42 - ff7 - 40.0 - rgb(0, 0, 0) - [L'éclairage de secours cabine n'est pas assez puissant]
+  Cluster 10
+    4-11 - 209.88 - 683.1 22.97 - ff4 - 32.0 - rgb(0, 0, 0) - [[Danger concernant les usagers et les intervenants]]
+  Cluster 11
+    4-12 - 245.27 - 648.67 16.08 - ff4 - 22.4 - rgb(77, 77, 26) - [er ]
+  Cluster 12
+    4-13 - 66.22 - 646.82 20.1 - ff4 - 28.0 - rgb(77, 77, 26) - [Code Obs. :]
+    4-13 - 66.22 - 627.15 20.1 - ff4 - 28.0 - rgb(0, 0, 0) - [AD/150720/100430/0]
+
+    =====
+    4-13 - 209.88 - 645.67 20.1 - ff4 - 28.0 - rgb(77, 77, 26) - [Date de 1]
+    4-13 - 209.88 - 625.79 20.1 - ff4 - 28.0 - rgb(0, 0, 0) - [15/07/2020 ]
+
+    =====
+    4-13 - 252.88 - 645.67 20.1 - ff4 - 28.0 - rgb(77, 77, 26) - [signalement:]
+  Cluster 13
+    4-14 - 66.22 - 563.25 27.38 - ff5 - 40.0 - rgb(0, 0, 0) - [8.1- Organe de]
+    4-14 - 66.22 - 545.84 27.38 - ff5 - 40.0 - rgb(0, 0, 0) - [commande]
+
+    =====
+    4-14 - 209.88 - 563.1 27.42 - ff7 - 40.0 - rgb(0, 0, 0) - [Voyant boutons cabine défectueux]
+  Cluster 14
+    4-15 - 209.88 - 547.87 22.97 - ff4 - 32.0 - rgb(0, 0, 0) - [[Danger concernant les usagers]]
+  Cluster 15
+    4-16 - 245.27 - 513.46 16.08 - ff4 - 22.4 - rgb(77, 77, 26) - [er ]
+  Cluster 16
+    4-17 - 66.22 - 511.59 20.1 - ff4 - 28.0 - rgb(77, 77, 26) - [Code Obs. :]
+    4-17 - 66.22 - 491.92 20.1 - ff4 - 28.0 - rgb(0, 0, 0) - [AD/150720/101002/0]
+
+    =====
+    4-17 - 209.88 - 510.46 20.1 - ff4 - 28.0 - rgb(77, 77, 26) - [Date de 1]
+    4-17 - 209.88 - 490.58 20.1 - ff4 - 28.0 - rgb(0, 0, 0) - [15/07/2020 ]
+
+    =====
+    4-17 - 252.88 - 510.46 20.1 - ff4 - 28.0 - rgb(77, 77, 26) - [signalement:]
+  Cluster 17
+    4-18 - 66.22 - 428.04 27.38 - ff5 - 40.0 - rgb(0, 0, 0) - [11.12- Dispositif]
+    4-18 - 66.22 - 410.63 27.38 - ff5 - 40.0 - rgb(0, 0, 0) - [s'opposant à la dérive si]
+    4-18 - 66.22 - 393.22 27.38 - ff5 - 40.0 - rgb(0, 0, 0) - [ascenseur hydraulique]
+
+    =====
+    4-18 - 209.88 - 427.87 27.42 - ff7 - 40.0 - rgb(0, 0, 0) - [Pas de taquets anti dérive sur l'appareil]
+  Cluster 18
+    4-19 - 209.88 - 412.66 22.97 - ff4 - 32.0 - rgb(0, 0, 0) - [[Danger concernant les usagers et les intervenants]]
+  Cluster 19
+    4-20 - 245.27 - 374.54 16.08 - ff4 - 22.4 - rgb(77, 77, 26) - [er ]
+  Cluster 20
+    4-21 - 66.22 - 372.67 20.1 - ff4 - 28.0 - rgb(77, 77, 26) - [Code Obs. :]
+    4-21 - 66.22 - 353.0 20.1 - ff4 - 28.0 - rgb(0, 0, 0) - [AD/150720/095829/0]
+
+    =====
+    4-21 - 209.88 - 371.54 20.1 - ff4 - 28.0 - rgb(77, 77, 26) - [Date de 1]
+    4-21 - 209.88 - 351.66 20.1 - ff4 - 28.0 - rgb(0, 0, 0) - [15/07/2020 ]
+
+    =====
+    4-21 - 252.88 - 371.54 20.1 - ff4 - 28.0 - rgb(77, 77, 26) - [signalement:]
+  Cluster 21
+    4-22 - 66.22 - 289.12 27.38 - ff5 - 40.0 - rgb(0, 0, 0) - [12.5- Eclairage normal et]
+    4-22 - 66.22 - 271.71 27.38 - ff5 - 40.0 - rgb(0, 0, 0) - [de secours]
+
+    =====
+    4-22 - 209.88 - 288.95 27.42 - ff7 - 40.0 - rgb(0, 0, 0) - [L'éclairage de secours ne fonctionne pas]
+  Cluster 22
+    4-23 - 209.88 - 273.74 22.97 - ff4 - 32.0 - rgb(0, 0, 0) - [[Danger concernant les intervenants]]
+  Cluster 23
+    4-24 - 245.27 - 239.32 16.08 - ff4 - 22.4 - rgb(77, 77, 26) - [er ]
+  Cluster 24
+    4-25 - 66.22 - 237.44 20.1 - ff4 - 28.0 - rgb(77, 77, 26) - [Code Obs. :]
+    4-25 - 66.22 - 217.79 20.1 - ff4 - 28.0 - rgb(0, 0, 0) - [AD/150720/095206/0]
+
+    =====
+    4-25 - 209.88 - 236.31 20.1 - ff4 - 28.0 - rgb(77, 77, 26) - [Date de 1]
+    4-25 - 209.88 - 216.44 20.1 - ff4 - 28.0 - rgb(0, 0, 0) - [15/07/2020 ]
+
+    =====
+    4-25 - 252.88 - 236.31 20.1 - ff4 - 28.0 - rgb(77, 77, 26) - [signalement:]
+  Cluster 25
+    4-26 - 64.45 - 50.58 17.5 - ff2 - 24.0 - rgb(0, 0, 0) - [Rapport TM  – V 2][ ][rapport n° : 8793914/6.1.1.R]
+    4-26 - 64.45 - 38.26 17.5 - ff2 - 24.0 - rgb(0, 0, 0) - [Copyright BUREAU VERITAS]
+  Cluster 26
+    4-27 - 113.45 - 1.66 17.5 - ff2 - 24.0 - rgb(0, 0, 0) - [page  4/9]
+Page 5
+  Cluster 0
+    5-1 - 87.71 - 1002.17 36.11 - ff1 - 40.0 - rgb(255, 255, 255) - [Fiche N°1]
+
+    =====
+    5-1 - 175.4 - 1020.41 36.11 - ff1 - 40.0 - rgb(0, 0, 0) - [ASCENSEUR(S) ET EQUIPEMENTS]
+    5-1 - 175.4 - 1005.88 36.11 - ff1 - 40.0 - rgb(0, 0, 0) - [ASSIMILES]
+    5-1 - 175.4 - 983.94 36.11 - ff1 - 40.0 - rgb(0, 0, 0) - [Marque :][ CFA]
+
+    =====
+    5-1 - 434.11 - 1013.35 36.11 - ff1 - 40.0 - rgb(0, 0, 0) - [N° série :][ 94N00334.01]
+    5-1 - 434.11 - 991.0 36.11 - ff1 - 40.0 - rgb(0, 0, 0) - [N° interne : ][3190]
+  Cluster 1
+    5-2 - 175.4 - 939.39 36.11 - ff1 - 40.0 - rgb(0, 0, 0) - [Type : ][Ascenseur Hydraulique]
+    5-2 - 175.4 - 917.06 36.11 - ff1 - 40.0 - rgb(0, 0, 0) - [Nature : ][NON CE]
+    5-2 - 175.4 - 894.71 36.11 - ff1 - 40.0 - rgb(0, 0, 0) - [Date de mise en service : ][2001 ][Texte de référence : ][Art. R 125.2.4 du CCH et]
+    5-2 - 175.4 - 850.45 36.11 - ff1 - 40.0 - rgb(0, 0, 0) - [Localisation :][ Bâtiment annexe]
+
+    =====
+    5-2 - 434.11 - 880.19 29.16 - ff2 - 40.0 - rgb(0, 0, 0) - [arrêté CT du 7 Août 2012]
+  Cluster 2
+    5-3 - 62.66 - 819.27 29.16 - ff2 - 40.0 - rgb(0, 0, 0) - [Lors de la vérification de l'équipement, nous avons été accompagnés par : Mr Louarn (société  ILEX)]
+
+    =====
+    5-3 - 105.22 - 788.11 36.11 - ff1 - 40.0 - rgb(0, 0, 0) - [Avis général :][ ][Non satisfaisant][ ][ ][: Les vérifications ont fait apparaître les défectuosités ou anomalies]
+
+    =====
+    5-3 - 201.63 - 773.59 29.16 - ff2 - 40.0 - rgb(0, 0, 0) - [mentionnées dans le récapitulatif des « liste récapitulative des observations issues de]
+    5-3 - 201.63 - 759.06 29.16 - ff2 - 40.0 - rgb(0, 0, 0) - [la vérification » auxquelles il y a lieu de remédier.]
+  Cluster 3
+    5-4 - 62.66 - 699.23 36.11 - ff1 - 40.0 - rgb(0, 0, 0) - [Points non satisfaisants - Actions à entreprendre]
+  Cluster 4
+    5-5 - 62.66 - 678.07 26.24 - ff2 - 36.0 - rgb(0, 0, 0) - [Les observations sont indiquées au niveau du chapitre « Liste récapitulative des actions à entreprendre »]
+  Cluster 5
+    5-6 - 62.66 - 637.13 36.11 - ff1 - 40.0 - rgb(0, 0, 0) - [Etude de sécurité]
+  Cluster 6
+    5-7 - 119.26 - 616.52 26.35 - ffa - 36.0 - rgb(0, 0, 0) - [Généralités]
+  Cluster 7
+    5-8 - 66.22 - 602.82 23.33 - ff2 - 32.0 - rgb(0, 0, 0) - [Dates]
+
+    =====
+    5-8 - 68.34 - 580.81 23.33 - ff2 - 32.0 - rgb(0, 0, 0) - [Année de la première étude de sé-]
+
+    =====
+    5-8 - 197.21 - 569.19 23.33 - ff2 - 32.0 - rgb(0, 0, 0) - [curité :]
+
+    =====
+    5-8 - 235.83 - 580.81 28.89 - ff1 - 32.0 - rgb(0, 0, 0) - [2020][ ][Date d'actualisation de l'étude : ][15/07/2020]
+  Cluster 8
+    5-9 - 119.26 - 544.43 26.35 - ffa - 36.0 - rgb(0, 0, 0) - [Accès et cheminement]
+  Cluster 9
+    5-10 - 178.14 - 523.95 28.89 - ff2 - 32.0 - rgb(0, 0, 0) - [Risque(s) :][ ][Sans risque particulier]
+  Cluster 10
+    5-11 - 119.26 - 499.19 26.35 - ffa - 36.0 - rgb(0, 0, 0) - [Local machines et/ou poulies]
+  Cluster 11
+    5-12 - 178.14 - 478.71 28.89 - ff2 - 32.0 - rgb(0, 0, 0) - [Risque(s) :][ ][Sans risque particulier]
+  Cluster 12
+    5-13 - 119.26 - 453.93 26.35 - ffa - 36.0 - rgb(0, 0, 0) - [Toit de cabine]
+  Cluster 13
+    5-14 - 178.14 - 433.46 28.89 - ff2 - 32.0 - rgb(0, 0, 0) - [Risque(s) :][ ][Sans risque particulier]
+  Cluster 14
+    5-15 - 119.26 - 408.69 26.35 - ffa - 36.0 - rgb(0, 0, 0) - [Gaine (portes et portillons de visite ou de secours)]
+  Cluster 15
+    5-16 - 178.14 - 388.22 28.89 - ff2 - 32.0 - rgb(0, 0, 0) - [Risque(s) :][ ][Sans risque particulier]
+  Cluster 16
+    5-17 - 119.26 - 363.45 26.35 - ffa - 36.0 - rgb(0, 0, 0) - [Cuvette]
+  Cluster 17
+    5-18 - 178.14 - 342.97 28.89 - ff2 - 32.0 - rgb(0, 0, 0) - [Risque(s) :][ ][Sans risque particulier]
+  Cluster 18
+    5-19 - 119.26 - 318.2 26.35 - ffa - 36.0 - rgb(0, 0, 0) - [Portes palières]
+  Cluster 19
+    5-20 - 178.14 - 297.73 28.89 - ff2 - 32.0 - rgb(0, 0, 0) - [Risque(s) :][ ][Sans risque particulier]
+  Cluster 20
+    5-21 - 62.66 - 270.33 36.11 - ff1 - 40.0 - rgb(0, 0, 0) - [Caractéristiques]
+  Cluster 21
+    5-22 - 119.26 - 249.72 26.35 - ffa - 36.0 - rgb(0, 0, 0) - [Caractéristiques de l'établissement]
+  Cluster 22
+    5-23 - 84.88 - 187.16 28.89 - ff2 - 32.0 - rgb(0, 0, 0) - [Description de l'établissement :][ ][Etablissement comprenant]
+
+    =====
+    5-23 - 105.22 - 148.69 23.33 - ff2 - 32.0 - rgb(0, 0, 0) - [Prescriptions et dérogation]
+    5-23 - 105.22 - 137.09 23.33 - ff2 - 32.0 - rgb(0, 0, 0) - [émanant de la commission]
+
+    =====
+    5-23 - 119.26 - 214.02 28.89 - ff2 - 32.0 - rgb(0, 0, 0) - [Origine du classement :][ ][Indiqué par le chef]
+    5-23 - 119.26 - 125.46 23.33 - ff2 - 32.0 - rgb(0, 0, 0) - [de sécurité et portées à]
+
+    =====
+    5-23 - 124.75 - 229.24 28.89 - ff2 - 32.0 - rgb(0, 0, 0) - [Type d'établissement :][ ][O ][Catégorie :][ ][3]
+
+    =====
+    5-23 - 132.47 - 113.84 23.33 - ff2 - 32.0 - rgb(0, 0, 0) - [notre connaissance :]
+
+    =====
+    5-23 - 235.83 - 202.4 28.89 - ff1 - 32.0 - rgb(0, 0, 0) - [d'établissement]
+    5-23 - 235.83 - 175.55 28.89 - ff1 - 32.0 - rgb(0, 0, 0) - [plusieurs bâtiment pouvant]
+    5-23 - 235.83 - 163.93 28.89 - ff1 - 32.0 - rgb(0, 0, 0) - [recevant du publique]
+    5-23 - 235.83 - 148.69 28.89 - ff1 - 32.0 - rgb(0, 0, 0) - [Néant]
+
+    =====
+    5-23 - 439.41 - 175.55 23.33 - ff2 - 32.0 - rgb(0, 0, 0) - [pricipales modifications :]
+
+    =====
+    5-23 - 486.2 - 187.16 23.33 - ff2 - 32.0 - rgb(0, 0, 0) - [Historique des]
+
+    =====
+    5-23 - 513.4 - 214.02 28.89 - ff2 - 32.0 - rgb(0, 0, 0) - [Activité :][ ][Hotel]
+
+    =====
+    5-23 - 560.08 - 187.16 28.89 - ff1 - 32.0 - rgb(0, 0, 0) - [2020: Aucune modification]
+  Cluster 23
+    5-24 - 119.26 - 89.08 26.35 - ffa - 36.0 - rgb(0, 0, 0) - [Type d'établissement]
+  Cluster 24
+    5-25 - 64.45 - 50.62 17.5 - ff2 - 24.0 - rgb(0, 0, 0) - [Rapport TM  – V 2][ ][rapport n° : 8793914/6.1.1.R]
+    5-25 - 64.45 - 38.28 17.5 - ff2 - 24.0 - rgb(0, 0, 0) - [Copyright BUREAU VERITAS]
+  Cluster 25
+    5-26 - 113.45 - 1.65 17.5 - ff2 - 24.0 - rgb(0, 0, 0) - [page  5/9]
+Page 6
+  Cluster 0
+    6-1 - 87.71 - 1002.17 36.11 - ff1 - 40.0 - rgb(255, 255, 255) - [Fiche N°1]
+
+    =====
+    6-1 - 175.4 - 1020.41 36.11 - ff1 - 40.0 - rgb(0, 0, 0) - [ASCENSEUR(S) ET EQUIPEMENTS]
+    6-1 - 175.4 - 1005.88 36.11 - ff1 - 40.0 - rgb(0, 0, 0) - [ASSIMILES]
+    6-1 - 175.4 - 983.94 36.11 - ff1 - 40.0 - rgb(0, 0, 0) - [Marque :][ CFA]
+
+    =====
+    6-1 - 434.11 - 1013.35 36.11 - ff1 - 40.0 - rgb(0, 0, 0) - [N° série :][ 94N00334.01]
+    6-1 - 434.11 - 991.0 36.11 - ff1 - 40.0 - rgb(0, 0, 0) - [N° interne : ][3190]
+  Cluster 1
+    6-2 - 124.75 - 947.71 28.89 - ff2 - 32.0 - rgb(0, 0, 0) - [Type d'établissement :][ ][ETABLISSEMENT RECEVANT DU PUBLIC - 1er GROUPE]
+  Cluster 2
+    6-3 - 119.26 - 922.95 26.35 - ffa - 36.0 - rgb(0, 0, 0) - [Caractéristiques générales de l'appareil]
+  Cluster 3
+    6-4 - 66.22 - 909.25 23.33 - ff2 - 32.0 - rgb(0, 0, 0) - [Désignation de l'appareil]
+    6-4 - 66.22 - 864.75 23.33 - ff2 - 32.0 - rgb(0, 0, 0) - [Conditions d'accès à l'appareil]
+    6-4 - 66.22 - 805.01 23.33 - ff2 - 32.0 - rgb(0, 0, 0) - [Caractéristiques génériques]
+    6-4 - 66.22 - 730.05 23.33 - ff2 - 32.0 - rgb(0, 0, 0) - [Suspentes]
+
+    =====
+    6-4 - 106.5 - 842.74 28.89 - ff2 - 32.0 - rgb(0, 0, 0) - [Position de la machinerie :][ ][Basse latérale ][Accès à la machinerie :][ ][Porte]
+
+    =====
+    6-4 - 132.47 - 692.82 28.89 - ff2 - 32.0 - rgb(0, 0, 0) - [Diamètre/Pas (mm) :][ ][13.0]
+
+    =====
+    6-4 - 138.29 - 827.51 28.89 - ff2 - 32.0 - rgb(0, 0, 0) - [Accès à la cuvette :][ ][Porte palière et échelle]
+    6-4 - 138.29 - 783.02 28.89 - ff2 - 32.0 - rgb(0, 0, 0) - [Nombre de niveau :][ ][3 ][Nombre de services :][ ][1]
+
+    =====
+    6-4 - 161.99 - 752.54 28.89 - ff2 - 32.0 - rgb(0, 0, 0) - [Vitesse (m/s) :][ ][0.5]
+
+    =====
+    6-4 - 167.73 - 887.24 28.89 - ff2 - 32.0 - rgb(0, 0, 0) - [Désignation :][ ][Ascenseur]
+    6-4 - 167.73 - 767.78 28.89 - ff2 - 32.0 - rgb(0, 0, 0) - [Charge (kg) :][ ][750 ][Nombre de personnes :][ ][10]
+
+    =====
+    6-4 - 173.51 - 708.04 28.89 - ff2 - 32.0 - rgb(0, 0, 0) - [Suspentes :][ ][Câble(s) ][Nombre :][ ][4]
+  Cluster 4
+    6-5 - 119.26 - 668.06 26.35 - ffa - 36.0 - rgb(0, 0, 0) - [Caractéristiques des portes]
+  Cluster 5
+    6-6 - 66.22 - 654.36 23.33 - ff2 - 32.0 - rgb(0, 0, 0) - [Portes]
+
+    =====
+    6-6 - 153.87 - 632.35 28.89 - ff2 - 32.0 - rgb(0, 0, 0) - [Portes cabines :][ ][automatiques à ouvertures]
+
+    =====
+    6-6 - 235.83 - 620.72 28.89 - ff1 - 32.0 - rgb(0, 0, 0) - [latérales]
+
+    =====
+    6-6 - 477.56 - 632.35 28.89 - ff2 - 32.0 - rgb(0, 0, 0) - [Portes palières :][ ][automatiques à ouvertures]
+
+    =====
+    6-6 - 560.08 - 620.72 28.89 - ff1 - 32.0 - rgb(0, 0, 0) - [latérales]
+  Cluster 6
+    6-7 - 62.66 - 593.33 36.11 - ff1 - 40.0 - rgb(0, 0, 0) - [Documents mis a notre disposition par le propriétaire]
+  Cluster 7
+    6-8 - 119.26 - 572.72 26.35 - ffa - 36.0 - rgb(0, 0, 0) - [Etude de sécurité]
+  Cluster 8
+    6-9 - 170.04 - 537.02 28.89 - ff2 - 32.0 - rgb(0, 0, 0) - [Réalisé par :][ ][SOCIETE ILEX]
+
+    =====
+    6-9 - 181.03 - 552.24 28.89 - ff2 - 32.0 - rgb(0, 0, 0) - [Présenté :][ ][Oui ][Etude de sécurité du :][ ][11/12/2012]
+  Cluster 9
+    6-10 - 119.26 - 512.24 26.35 - ffa - 36.0 - rgb(0, 0, 0) - [Dossier technique / notice d'instructions ou d'entretien]
+  Cluster 10
+    6-11 - 181.03 - 491.76 28.89 - ff2 - 32.0 - rgb(0, 0, 0) - [Présenté :][ ][Oui ][Etat :][ ][Complet]
+  Cluster 11
+    6-12 - 119.26 - 467.0 26.35 - ffa - 36.0 - rgb(0, 0, 0) - [Carnet d'entretien]
+  Cluster 12
+    6-13 - 181.03 - 446.52 28.89 - ff2 - 32.0 - rgb(0, 0, 0) - [Présenté :][ ][Oui ][Carnet d'entretien ou]
+
+    =====
+    6-13 - 412.36 - 434.9 23.33 - ff2 - 32.0 - rgb(0, 0, 0) - [rapport d'activité de l'appareil :]
+
+    =====
+    6-13 - 560.08 - 446.52 28.89 - ff1 - 32.0 - rgb(0, 0, 0) - [3190]
+  Cluster 13
+    6-14 - 119.26 - 410.14 26.35 - ffa - 36.0 - rgb(0, 0, 0) - [Registre de sécurité]
+  Cluster 14
+    6-15 - 181.03 - 389.66 28.89 - ff2 - 32.0 - rgb(0, 0, 0) - [Présenté :][ ][Oui ][Etabli par :][ ][L'établissement]
+  Cluster 15
+    6-16 - 119.26 - 364.9 26.35 - ffa - 36.0 - rgb(0, 0, 0) - [Rapport de vérification après travaux]
+  Cluster 16
+    6-17 - 181.03 - 344.41 28.89 - ff2 - 32.0 - rgb(0, 0, 0) - [Présenté :][ ][Non]
+  Cluster 17
+    6-18 - 119.26 - 319.64 26.35 - ffa - 36.0 - rgb(0, 0, 0) - [Rapport de controle technique suivant r.125.2.4]
+  Cluster 18
+    6-19 - 181.03 - 299.17 28.89 - ff2 - 32.0 - rgb(0, 0, 0) - [Présenté :][ ][Non]
+  Cluster 19
+    6-20 - 62.66 - 271.78 36.11 - ff1 - 40.0 - rgb(0, 0, 0) - [Validation de l'obligation de contrôle technique article 4 arrêté du 7/08/2012]
+  Cluster 20
+    6-21 - 160.22 - 246.66 28.89 - ff2 - 32.0 - rgb(0, 0, 0) - [Commentaire :][ ][Certaines partie de]
+
+    =====
+    6-21 - 235.83 - 235.04 28.89 - ff1 - 32.0 - rgb(0, 0, 0) - [l'installation n'ayant pu être]
+    6-21 - 235.83 - 223.43 28.89 - ff1 - 32.0 - rgb(0, 0, 0) - [soumise à vérification,]
+    6-21 - 235.83 - 211.81 28.89 - ff1 - 32.0 - rgb(0, 0, 0) - [l'obligation de contrôle tech-]
+    6-21 - 235.83 - 200.19 28.89 - ff1 - 32.0 - rgb(0, 0, 0) - [nique ne peut être reconnue]
+    6-21 - 235.83 - 188.56 28.89 - ff1 - 32.0 - rgb(0, 0, 0) - [comme satisfaite en applica-]
+    6-21 - 235.83 - 176.96 28.89 - ff1 - 32.0 - rgb(0, 0, 0) - [tion de l'article 4 de l'arrêté]
+    6-21 - 235.83 - 165.33 28.89 - ff1 - 32.0 - rgb(0, 0, 0) - [du 7 Août 2012.]
+
+    =====
+    6-21 - 419.34 - 246.66 28.89 - ff2 - 32.0 - rgb(0, 0, 0) - ["Voir action à entreprendre" :][ ][Le contrôle technique de]
+
+    =====
+    6-21 - 560.08 - 235.04 28.89 - ff1 - 32.0 - rgb(0, 0, 0) - [l'intégralité de l'installation]
+    6-21 - 560.08 - 223.43 28.89 - ff1 - 32.0 - rgb(0, 0, 0) - [doit être reconduit pour exa-]
+    6-21 - 560.08 - 211.81 28.89 - ff1 - 32.0 - rgb(0, 0, 0) - [miner et essayer tous les]
+    6-21 - 560.08 - 200.19 28.89 - ff1 - 32.0 - rgb(0, 0, 0) - [points de contrôle définies]
+    6-21 - 560.08 - 188.56 28.89 - ff1 - 32.0 - rgb(0, 0, 0) - [dans l'annexe de l'arrêté du 7]
+    6-21 - 560.08 - 176.96 28.89 - ff1 - 32.0 - rgb(0, 0, 0) - [Août 2012 sans exception.]
+  Cluster 21
+    6-22 - 64.45 - 50.62 17.5 - ff2 - 24.0 - rgb(0, 0, 0) - [Rapport TM  – V 2][ ][rapport n° : 8793914/6.1.1.R]
+    6-22 - 64.45 - 38.28 17.5 - ff2 - 24.0 - rgb(0, 0, 0) - [Copyright BUREAU VERITAS]
+  Cluster 22
+    6-23 - 113.45 - 1.65 17.5 - ff2 - 24.0 - rgb(0, 0, 0) - [page  6/9]
+Page 7
+  Cluster 0
+    7-1 - 87.71 - 1002.17 36.11 - ff1 - 40.0 - rgb(255, 255, 255) - [Fiche N°1]
+
+    =====
+    7-1 - 175.4 - 1020.41 36.11 - ff1 - 40.0 - rgb(0, 0, 0) - [ASCENSEUR(S) ET EQUIPEMENTS]
+    7-1 - 175.4 - 1005.88 36.11 - ff1 - 40.0 - rgb(0, 0, 0) - [ASSIMILES]
+    7-1 - 175.4 - 983.94 36.11 - ff1 - 40.0 - rgb(0, 0, 0) - [Marque :][ CFA]
+
+    =====
+    7-1 - 434.11 - 1013.35 36.11 - ff1 - 40.0 - rgb(0, 0, 0) - [N° série :][ 94N00334.01]
+    7-1 - 434.11 - 991.0 36.11 - ff1 - 40.0 - rgb(0, 0, 0) - [N° interne : ][3190]
+  Cluster 1
+    7-2 - 66.22 - 938.78 27.08 - ff1 - 30.0 - rgb(0, 0, 0) - [Situation de l’installation par rapport à la mise à niveau réglementaire exigée par les articles R.125.1.2 à R.125.1.4 du]
+    7-2 - 66.22 - 927.89 27.08 - ff1 - 30.0 - rgb(0, 0, 0) - [CCH pour les ascenseurs installés avant le 27 Août 2000.]
+
+    =====
+    7-2 - 648.22 - 933.34 27.08 - ff1 - 30.0 - rgb(0, 0, 0) - [Statut ]
+  Cluster 2
+    7-3 - 66.22 - 911.61 17.5 - ff2 - 24.0 - rgb(0, 0, 0) - [I) Avant le 31 décembre 2010]
+    7-3 - 66.22 - 895.75 17.5 - ff2 - 24.0 - rgb(0, 0, 0) - [1.Serrures munies de dispositifs de contrôle de la fermeture et du verrouillage des portes palières. ]
+    7-3 - 66.22 - 879.89 17.5 - ff2 - 24.0 - rgb(0, 0, 0) - [2.Lorsqu’il est nécessaire de prévenir des actes de nature à porter atteinte au verrouillage de la porte palière, un dispositif empêchant ou limitant de tels]
+    7-3 - 66.22 - 855.31 17.5 - ff2 - 24.0 - rgb(0, 0, 0) - [3.Dispositif de détection de la présence des personnes destiné à les protéger contre le choc des portes coulissantes lors de leur fermeture. ]
+    7-3 - 66.22 - 839.45 17.5 - ff2 - 24.0 - rgb(0, 0, 0) - [4.Clôture de la gaine d’ascenseur empêchant l’accès à cette gaine et aux éléments de déverrouillage des serrures de portes palières. ]
+    7-3 - 66.22 - 823.59 17.5 - ff2 - 24.0 - rgb(0, 0, 0) - [5.Pour les ascenseurs électriques, un parachute de cabine et un limiteur de vitesse en descente. ]
+    7-3 - 66.22 - 807.72 17.5 - ff2 - 24.0 - rgb(0, 0, 0) - [6.Dispositif destiné à éviter toute chute en gaine lorsque la cabine est immobilisée en dehors de la zone de déverrouillage. ]
+    7-3 - 66.22 - 791.86 17.5 - ff2 - 24.0 - rgb(0, 0, 0) - [7.Commande de manœuvre d’inspection et d’arrêt de la cabine en vue de protéger les personnels d’intervention opérant sur le toit de la cabine, en gaine ou]
+    7-3 - 66.22 - 767.27 17.5 - ff2 - 24.0 - rgb(0, 0, 0) - [8.Dispositifs permettant aux personnels d’intervention d’accéder sans danger aux locaux de machines ou de poulies. ]
+    7-3 - 66.22 - 751.41 17.5 - ff2 - 24.0 - rgb(0, 0, 0) - [9.Un système de verrouillage des portes et portillons destinés à la visite technique de la gaine et de la cuvette ainsi que des portes de secours, avec une]
+    7-3 - 66.22 - 725.67 17.5 - ff2 - 24.0 - rgb(0, 0, 0) - [II) Avant le 3]
+    7-3 - 66.22 - 709.81 17.5 - ff2 - 24.0 - rgb(0, 0, 0) - [1.Dans les ascenseurs installés dans les établissements recevant du public avant le 01/01/1983, système de contrôle, d’arrêt et maintien à niveau de la]
+    7-3 - 66.22 - 685.23 17.5 - ff2 - 24.0 - rgb(0, 0, 0) - [2.Un système de téléalarme entre la cabine et un service d’intervention et un éclairage de secours en cabine. ]
+    7-3 - 66.22 - 669.37 17.5 - ff2 - 24.0 - rgb(0, 0, 0) - [3.Une résistance mécanique suffisante des portes palières lorsqu’elles comportent un vitrage. ]
+    7-3 - 66.22 - 653.51 17.5 - ff2 - 24.0 - rgb(0, 0, 0) - [4.Pour les ascenseurs hydrauliques, un système de prévention des risques de chute libre, de dérive et d’excès de vitesse de la cabine. ]
+    7-3 - 66.22 - 637.64 17.5 - ff2 - 24.0 - rgb(0, 0, 0) - [5.Une protection avec marquage ou signalisation éliminant le risque de contact direct des personnels d’intervention avec des composants ou conducteurs]
+    7-3 - 66.22 - 613.07 17.5 - ff2 - 24.0 - rgb(0, 0, 0) - [6.Un dispositif de protection des personnels d’intervention contre le risque de happement par les organes mobiles de transmission, notamment les poulies,]
+    7-3 - 66.22 - 588.48 17.5 - ff2 - 24.0 - rgb(0, 0, 0) - [7.Un éclairage fixe du local de machines ou de poulies assurant un éclairement suffisant des zones de travail et de circulation. ]
+    7-3 - 66.22 - 571.45 17.5 - ff2 - 24.0 - rgb(0, 0, 0) - [III) Avant le 3]
+    7-3 - 66.22 - 555.59 17.5 - ff2 - 24.0 - rgb(0, 0, 0) - [1.Dans les ascenseurs installés dans les établissements recevant du public après le 31/12/1982, système de contrôle, d’arrêt et maintien à niveau de la]
+
+    =====
+    7-3 - 76.7 - 871.17 17.5 - ff2 - 24.0 - rgb(0, 0, 0) - [actes. ]
+    7-3 - 76.7 - 783.15 17.5 - ff2 - 24.0 - rgb(0, 0, 0) - [en cuvette. ]
+    7-3 - 76.7 - 742.7 17.5 - ff2 - 24.0 - rgb(0, 0, 0) - [commande automatique de l’arrêt de l’ascenseur lors de l’ouverture de ces portes et portillons par les personnels d’intervention. ]
+    7-3 - 76.7 - 701.09 17.5 - ff2 - 24.0 - rgb(0, 0, 0) - [cabine afin d’assurer l’accessibilité sans danger à tous les niveaux desservis.]
+    7-3 - 76.7 - 628.93 17.5 - ff2 - 24.0 - rgb(0, 0, 0) - [nus sous tension, dans les armoires de commande, les armoires électriques et les tableaux d’arrivée de courant. ]
+    7-3 - 76.7 - 604.34 17.5 - ff2 - 24.0 - rgb(0, 0, 0) - [câbles ou courroies. ]
+    7-3 - 76.7 - 546.88 17.5 - ff2 - 24.0 - rgb(0, 0, 0) - [cabine afin d’assurer l’accessibilité sans danger à tous les niveaux desservis.]
+
+    =====
+    7-3 - 116.06 - 725.67 17.5 - ff2 - 24.0 - rgb(0, 0, 0) - [ juillet 2014]
+
+    =====
+    7-3 - 117.66 - 571.45 17.5 - ff2 - 24.0 - rgb(0, 0, 0) - [ juillet 2018 ]
+  Cluster 3
+    7-4 - 109.96 - 728.25 14.0 - ff2 - 19.2 - rgb(0, 0, 0) - [er]
+  Cluster 4
+    7-5 - 112.12 - 574.03 14.0 - ff2 - 19.2 - rgb(0, 0, 0) - [er]
+  Cluster 5
+    7-6 - 62.66 - 425.48 36.11 - ff1 - 40.0 - rgb(0, 0, 0) - [Liste des point applicables ]
+  Cluster 6
+    7-7 - 66.22 - 410.9 20.41 - ff2 - 28.0 - rgb(0, 0, 0) - [Le tableau ci dessous mentionne les différents points de vérifications dont l'équipement a fait l'objet ainsi que les avis correspondants. Compte tenu des]
+    7-7 - 66.22 - 400.74 20.41 - ff2 - 28.0 - rgb(0, 0, 0) - [caractéristiques particulières de l'appareil, seules les rubriques spécifiques à celui-ci sont prises en compte lors de l'édition du rapport. La numérotation des]
+    7-7 - 66.22 - 390.57 20.41 - ff2 - 28.0 - rgb(0, 0, 0) - [opérations de contrôle peut donc apparaître discontinue : les rubriques manquantes étant sans objet pour l'appareil concerné.]
+    7-7 - 66.22 - 380.41 25.28 - ff2 - 28.0 - rgb(0, 0, 0) - [Les avis sont libellés comme suit: ][S][: Satisfaisant, ][NS][: Non Satisfaisant, ][NV][: Non Vérifié, ][SO][: Sans Objet.]
+  Cluster 7
+    7-8 - 66.22 - 342.07 36.11 - ff1 - 40.0 - rgb(0, 0, 0) - [Repère][ ][Point de vérification][ ][Avis]
+
+    =====
+    7-8 - 390.57 - 342.07 36.11 - ff1 - 40.0 - rgb(0, 0, 0) - [Repère][ ][Point de vérification][ ][Avis]
+  Cluster 8
+    7-9 - 70.32 - 318.84 25.28 - ff1 - 28.0 - rgb(0, 0, 0) - [B.]
+    7-9 - 70.32 - 182.38 25.28 - ff1 - 28.0 - rgb(0, 0, 0) - [1.][ ][Gaine]
+
+    =====
+    7-9 - 81.52 - 296.44 25.28 - ff2 - 28.0 - rgb(0, 0, 0) - [B.1][ ][Etude de sécurité][ ][S]
+    7-9 - 81.52 - 274.04 20.41 - ff2 - 28.0 - rgb(0, 0, 0) - [B.2]
+    7-9 - 81.52 - 251.64 25.28 - ff2 - 28.0 - rgb(0, 0, 0) - [B.3][ ][Carnet d'entretien][ ][S]
+    7-9 - 81.52 - 234.32 25.28 - ff2 - 28.0 - rgb(0, 0, 0) - [B.4][ ][Registre de sécurité][ ][S]
+    7-9 - 81.52 - 217.01 25.28 - ff2 - 28.0 - rgb(0, 0, 0) - [B.5][ ][Rapport de vérification après travaux][ ][S]
+    7-9 - 81.52 - 199.69 25.28 - ff2 - 28.0 - rgb(0, 0, 0) - [B.6][ ][Rapport de controle technique suivant R.125.2.4][ ][S]
+    7-9 - 81.52 - 165.06 25.28 - ff2 - 28.0 - rgb(0, 0, 0) - [1.1][ ][Parois de protection][ ][S]
+    7-9 - 81.52 - 142.66 20.41 - ff2 - 28.0 - rgb(0, 0, 0) - [1.2]
+    7-9 - 81.52 - 120.26 25.28 - ff2 - 28.0 - rgb(0, 0, 0) - [1.3][ ][Garde-pieds, seuils][ ][S]
+    7-9 - 81.52 - 102.95 25.28 - ff2 - 28.0 - rgb(0, 0, 0) - [1.4][ ][Moyen d'accès à la cuvette][ ][S]
+
+    =====
+    7-9 - 142.56 - 323.92 25.28 - ff1 - 28.0 - rgb(0, 0, 0) - [Documents mis a notre disposition par le]
+    7-9 - 142.56 - 313.75 25.28 - ff1 - 28.0 - rgb(0, 0, 0) - [propriétaire]
+    7-9 - 142.56 - 279.12 20.41 - ff2 - 28.0 - rgb(0, 0, 0) - [Dossier technique / notice d'instructions ou]
+    7-9 - 142.56 - 268.96 20.41 - ff2 - 28.0 - rgb(0, 0, 0) - [d'entretien]
+    7-9 - 142.56 - 147.75 20.41 - ff2 - 28.0 - rgb(0, 0, 0) - [Panneaux de service, portes, portillons de visite,]
+    7-9 - 142.56 - 137.58 20.41 - ff2 - 28.0 - rgb(0, 0, 0) - [portes de secours]
+
+    =====
+    7-9 - 365.39 - 274.04 25.28 - ff1 - 28.0 - rgb(0, 0, 0) - [S]
+    7-9 - 365.39 - 142.66 25.28 - ff1 - 28.0 - rgb(0, 0, 0) - [S]
+
+    =====
+    7-9 - 394.65 - 310.18 25.28 - ff1 - 28.0 - rgb(0, 0, 0) - [2.][ ][Cuvette]
+    7-9 - 394.65 - 206.28 25.28 - ff1 - 28.0 - rgb(0, 0, 0) - [3.][ ][Guidages]
+    7-9 - 394.65 - 171.65 25.28 - ff1 - 28.0 - rgb(0, 0, 0) - [4.][ ][Equipement des paliers]
+
+    =====
+    7-9 - 405.86 - 323.92 25.28 - ff2 - 28.0 - rgb(0, 0, 0) - [1.5][ ][Eclairage][ ][S]
+    7-9 - 405.86 - 292.86 25.28 - ff2 - 28.0 - rgb(0, 0, 0) - [2.1][ ][Etat général][ ][S]
+    7-9 - 405.86 - 275.55 25.28 - ff2 - 28.0 - rgb(0, 0, 0) - [2.2][ ][Dispositif d'arrêt][ ][S]
+    7-9 - 405.86 - 258.23 25.28 - ff2 - 28.0 - rgb(0, 0, 0) - [2.3][ ][Dispositif de demande de secours][ ][S]
+    7-9 - 405.86 - 240.92 25.28 - ff2 - 28.0 - rgb(0, 0, 0) - [2.5][ ][Amortisseurs, socles, butées][ ][S]
+    7-9 - 405.86 - 223.6 25.28 - ff2 - 28.0 - rgb(0, 0, 0) - [2.6][ ][Eclairage][ ][S]
+    7-9 - 405.86 - 188.97 25.28 - ff2 - 28.0 - rgb(0, 0, 0) - [3.1][ ][Eléments de guidage][ ][S]
+    7-9 - 405.86 - 149.25 20.41 - ff2 - 28.0 - rgb(0, 0, 0) - [4.1]
+    7-9 - 405.86 - 126.85 25.28 - ff2 - 28.0 - rgb(0, 0, 0) - [4.2][ ][Affichage (déplacement de la cabine)][ ][S]
+    7-9 - 405.86 - 109.54 25.28 - ff2 - 28.0 - rgb(0, 0, 0) - [4.4][ ][Organes de commande avec voyant][ ][S]
+
+    =====
+    7-9 - 466.89 - 154.34 20.41 - ff2 - 28.0 - rgb(0, 0, 0) - [Signalisation présence cabine, sens de]
+    7-9 - 466.89 - 144.17 20.41 - ff2 - 28.0 - rgb(0, 0, 0) - [déplacement]
+
+    =====
+    7-9 - 689.73 - 149.25 25.28 - ff1 - 28.0 - rgb(0, 0, 0) - [S]
+  Cluster 9
+    7-10 - 181.03 - 87.98 14.58 - ff2 - 20.0 - rgb(0, 0, 0) - [«Référentiel» V 7]
+
+    =====
+    7-10 - 505.63 - 94.58 14.58 - ff2 - 20.0 - rgb(0, 0, 0) - [«Référentiel» V 7]
+  Cluster 10
+    7-11 - 64.45 - 50.62 17.5 - ff2 - 24.0 - rgb(0, 0, 0) - [Rapport TM  – V 2][ ][rapport n° : 8793914/6.1.1.R]
+    7-11 - 64.45 - 38.28 17.5 - ff2 - 24.0 - rgb(0, 0, 0) - [Copyright BUREAU VERITAS]
+  Cluster 11
+    7-12 - 113.45 - 1.65 17.5 - ff2 - 24.0 - rgb(0, 0, 0) - [page  7/9]
+Page 8
+  Cluster 0
+    8-1 - 66.22 - 950.37 36.11 - ff1 - 40.0 - rgb(0, 0, 0) - [Repère][ ][Point de vérification][ ][Avis]
+
+    =====
+    8-1 - 87.71 - 1002.17 36.11 - ff1 - 40.0 - rgb(255, 255, 255) - [Fiche N°1]
+
+    =====
+    8-1 - 175.4 - 1020.41 36.11 - ff1 - 40.0 - rgb(0, 0, 0) - [ASCENSEUR(S) ET EQUIPEMENTS]
+    8-1 - 175.4 - 1005.88 36.11 - ff1 - 40.0 - rgb(0, 0, 0) - [ASSIMILES]
+    8-1 - 175.4 - 983.94 36.11 - ff1 - 40.0 - rgb(0, 0, 0) - [Marque :][ CFA]
+
+    =====
+    8-1 - 390.57 - 950.37 36.11 - ff1 - 40.0 - rgb(0, 0, 0) - [Repère][ ][Point de vérification][ ][Avis]
+
+    =====
+    8-1 - 434.11 - 1013.35 36.11 - ff1 - 40.0 - rgb(0, 0, 0) - [N° série :][ 94N00334.01]
+    8-1 - 434.11 - 991.0 36.11 - ff1 - 40.0 - rgb(0, 0, 0) - [N° interne : ][3190]
+  Cluster 1
+    8-2 - 70.32 - 932.23 25.28 - ff1 - 28.0 - rgb(0, 0, 0) - [5.][ ][Portes palières]
+    8-2 - 70.32 - 818.17 25.28 - ff1 - 28.0 - rgb(0, 0, 0) - [6.][ ][Organes de suspension]
+    8-2 - 70.32 - 696.94 25.28 - ff1 - 28.0 - rgb(0, 0, 0) - [7.][ ][Cabine]
+    8-2 - 70.32 - 496.3 25.28 - ff1 - 28.0 - rgb(0, 0, 0) - [8.][ ][Organes de commande en cabine]
+    8-2 - 70.32 - 409.72 25.28 - ff1 - 28.0 - rgb(0, 0, 0) - [9.][ ][Toit de cabine]
+    8-2 - 70.32 - 312.98 25.28 - ff1 - 28.0 - rgb(0, 0, 0) - [10.][ ][Contrepoids - organes de compensation]
+
+    =====
+    8-2 - 81.52 - 909.83 20.41 - ff2 - 28.0 - rgb(0, 0, 0) - [5.1]
+    8-2 - 81.52 - 887.43 25.28 - ff2 - 28.0 - rgb(0, 0, 0) - [5.2][ ][Condamnations électriques contrôle de fermeture][ ][S]
+    8-2 - 81.52 - 870.12 25.28 - ff2 - 28.0 - rgb(0, 0, 0) - [5.3][ ][Déverrouillage de secours][ ][S]
+    8-2 - 81.52 - 852.8 25.28 - ff2 - 28.0 - rgb(0, 0, 0) - [5.4][ ][Signal sonore et lumineux][ ][S]
+    8-2 - 81.52 - 835.48 25.28 - ff2 - 28.0 - rgb(0, 0, 0) - [5.5][ ][Eléments constitutifs (dont vitrage)][ ][S]
+    8-2 - 81.52 - 800.84 25.28 - ff2 - 28.0 - rgb(0, 0, 0) - [6.1][ ][Caractéristiques][ ][S]
+    8-2 - 81.52 - 783.52 25.28 - ff2 - 28.0 - rgb(0, 0, 0) - [6.2][ ][Etat général][ ][S]
+    8-2 - 81.52 - 766.21 25.28 - ff2 - 28.0 - rgb(0, 0, 0) - [6.3][ ][Attaches][ ][S]
+    8-2 - 81.52 - 748.89 25.28 - ff2 - 28.0 - rgb(0, 0, 0) - [6.4][ ][Poulies, pignons, protecteurs][ ][S]
+    8-2 - 81.52 - 731.58 25.28 - ff2 - 28.0 - rgb(0, 0, 0) - [6.5][ ][Vérin][ ][S]
+    8-2 - 81.52 - 714.26 25.28 - ff2 - 28.0 - rgb(0, 0, 0) - [6.6][ ][Affichage][ ][S]
+    8-2 - 81.52 - 679.63 25.28 - ff2 - 28.0 - rgb(0, 0, 0) - [7.1][ ][Eléments constitutifs (parois, plancher, toit)][ ][S]
+    8-2 - 81.52 - 657.23 20.41 - ff2 - 28.0 - rgb(0, 0, 0) - [7.2]
+    8-2 - 81.52 - 634.83 25.28 - ff2 - 28.0 - rgb(0, 0, 0) - [7.5][ ][Porte(s) de cabine (protection passage)][ ][S]
+    8-2 - 81.52 - 617.51 25.28 - ff2 - 28.0 - rgb(0, 0, 0) - [7.6][ ][Dispositif de verrouillage][ ][S]
+    8-2 - 81.52 - 600.2 25.28 - ff2 - 28.0 - rgb(0, 0, 0) - [7.7][ ][Contrôle de fermeture de la porte de cabine][ ][S]
+    8-2 - 81.52 - 582.88 25.28 - ff2 - 28.0 - rgb(0, 0, 0) - [7.8][ ][Eclairage normal][ ][S]
+    8-2 - 81.52 - 565.57 25.28 - ff2 - 28.0 - rgb(0, 0, 0) - [7.9][ ][Ventilation][ ][S]
+    8-2 - 81.52 - 548.25 25.28 - ff2 - 28.0 - rgb(0, 0, 0) - [7.10][ ][Affichage][ ][S]
+    8-2 - 81.52 - 530.93 25.28 - ff2 - 28.0 - rgb(0, 0, 0) - [7.11][ ][Eclairage de secours][ ][NS]
+    8-2 - 81.52 - 513.62 25.28 - ff2 - 28.0 - rgb(0, 0, 0) - [7.12][ ][Garde pieds][ ][S]
+    8-2 - 81.52 - 478.99 25.28 - ff2 - 28.0 - rgb(0, 0, 0) - [8.1][ ][Organe de commande][ ][NS]
+    8-2 - 81.52 - 461.67 25.28 - ff2 - 28.0 - rgb(0, 0, 0) - [8.2][ ][Dispositif d'arrêt en cabine][ ][S]
+    8-2 - 81.52 - 444.35 25.28 - ff2 - 28.0 - rgb(0, 0, 0) - [8.3][ ][Bouton de réouverture des portes][ ][S]
+    8-2 - 81.52 - 427.04 25.28 - ff2 - 28.0 - rgb(0, 0, 0) - [8.4][ ][Dispositif de demande de secours][ ][S]
+    8-2 - 81.52 - 392.4 25.28 - ff2 - 28.0 - rgb(0, 0, 0) - [9.1][ ][Dispositif d'arrêt sur toit de cabine][ ][S]
+    8-2 - 81.52 - 375.09 25.28 - ff2 - 28.0 - rgb(0, 0, 0) - [9.2][ ][Manoeuvre d'inspection sur toit de cabine][ ][S]
+    8-2 - 81.52 - 357.77 25.28 - ff2 - 28.0 - rgb(0, 0, 0) - [9.3][ ][Balustrade][ ][S]
+    8-2 - 81.52 - 335.37 20.41 - ff2 - 28.0 - rgb(0, 0, 0) - [9.4]
+    8-2 - 81.52 - 295.66 25.28 - ff2 - 28.0 - rgb(0, 0, 0) - [10.1][ ][Eléments constitutifs du contrepoids][ ][S]
+
+    =====
+    8-2 - 142.56 - 914.91 20.41 - ff2 - 28.0 - rgb(0, 0, 0) - [Serrures, contrôle électrique, efficacité,]
+    8-2 - 142.56 - 904.75 20.41 - ff2 - 28.0 - rgb(0, 0, 0) - [inaccessibilité, protection projections de liquides]
+    8-2 - 142.56 - 662.31 20.41 - ff2 - 28.0 - rgb(0, 0, 0) - [Porte ou trappe de secours (contrôle de]
+    8-2 - 142.56 - 652.14 20.41 - ff2 - 28.0 - rgb(0, 0, 0) - [fermeture, verrouillage)]
+    8-2 - 142.56 - 340.46 20.41 - ff2 - 28.0 - rgb(0, 0, 0) - [Dispositif de demande de secours sur toit de]
+    8-2 - 142.56 - 330.29 20.41 - ff2 - 28.0 - rgb(0, 0, 0) - [cabine]
+
+    =====
+    8-2 - 365.39 - 909.83 25.28 - ff1 - 28.0 - rgb(0, 0, 0) - [S]
+    8-2 - 365.39 - 657.23 25.28 - ff1 - 28.0 - rgb(0, 0, 0) - [S]
+    8-2 - 365.39 - 335.37 25.28 - ff1 - 28.0 - rgb(0, 0, 0) - [S]
+
+    =====
+    8-2 - 394.65 - 908.32 25.28 - ff1 - 28.0 - rgb(0, 0, 0) - [11.][ ][Dispositif de sécurité]
+    8-2 - 394.65 - 684.32 25.28 - ff1 - 28.0 - rgb(0, 0, 0) - [12.][ ][Locaux de la machine et des poulies]
+    8-2 - 394.65 - 580.42 25.28 - ff1 - 28.0 - rgb(0, 0, 0) - [13.][ ][Machine]
+    8-2 - 394.65 - 493.84 25.28 - ff1 - 28.0 - rgb(0, 0, 0) - [14.][ ][Electricite de l'ensemble de l'installation]
+    8-2 - 394.65 - 399.17 25.28 - ff1 - 28.0 - rgb(0, 0, 0) - [15.]
+    8-2 - 394.65 - 371.68 25.28 - ff1 - 28.0 - rgb(0, 0, 0) - [17.]
+
+    =====
+    8-2 - 405.86 - 927.15 20.41 - ff2 - 28.0 - rgb(0, 0, 0) - [10.2]
+    8-2 - 405.86 - 885.92 20.41 - ff2 - 28.0 - rgb(0, 0, 0) - [11.4]
+    8-2 - 405.86 - 858.44 20.41 - ff2 - 28.0 - rgb(0, 0, 0) - [11.5]
+    8-2 - 405.86 - 836.03 25.28 - ff2 - 28.0 - rgb(0, 0, 0) - [11.6][ ][Butée ou limiteur cabine (maintenance)][ ][S]
+    8-2 - 405.86 - 813.63 20.41 - ff2 - 28.0 - rgb(0, 0, 0) - [11.7]
+    8-2 - 405.86 - 791.23 25.28 - ff2 - 28.0 - rgb(0, 0, 0) - [11.8][ ][Organe de liaison (position cabine)][ ][S]
+    8-2 - 405.86 - 773.92 25.28 - ff2 - 28.0 - rgb(0, 0, 0) - [11.9][ ][Hors-course en manoeuvre normale][ ][S]
+    8-2 - 405.86 - 756.6 25.28 - ff2 - 28.0 - rgb(0, 0, 0) - [11.10][ ][Limiteur de course inspection][ ][S]
+    8-2 - 405.86 - 734.2 20.41 - ff2 - 28.0 - rgb(0, 0, 0) - [11.11]
+    8-2 - 405.86 - 706.72 20.41 - ff2 - 28.0 - rgb(0, 0, 0) - [11.12]
+    8-2 - 405.86 - 667.0 25.28 - ff2 - 28.0 - rgb(0, 0, 0) - [12.1][ ][Accès aux locaux][ ][S]
+    8-2 - 405.86 - 649.69 25.28 - ff2 - 28.0 - rgb(0, 0, 0) - [12.2][ ][Sol][ ][S]
+    8-2 - 405.86 - 632.37 25.28 - ff2 - 28.0 - rgb(0, 0, 0) - [12.3][ ][Accès intérieur(s) au local machine][ ][S]
+    8-2 - 405.86 - 615.06 25.28 - ff2 - 28.0 - rgb(0, 0, 0) - [12.4][ ][Interrupteur force motrice][ ][S]
+    8-2 - 405.86 - 597.74 25.28 - ff2 - 28.0 - rgb(0, 0, 0) - [12.5][ ][Eclairage normal et de secours][ ][NS]
+    8-2 - 405.86 - 563.11 25.28 - ff2 - 28.0 - rgb(0, 0, 0) - [13.1][ ][Mécanismes][ ][S]
+    8-2 - 405.86 - 545.79 25.28 - ff2 - 28.0 - rgb(0, 0, 0) - [13.2][ ][Manoeuvre de secours manuelle][ ][S]
+    8-2 - 405.86 - 528.48 25.28 - ff2 - 28.0 - rgb(0, 0, 0) - [13.3][ ][Manoeuvre électrique de rappel][ ][S]
+    8-2 - 405.86 - 511.16 25.28 - ff2 - 28.0 - rgb(0, 0, 0) - [13.5][ ][Précision d'arrêt de la cabine][ ][S]
+    8-2 - 405.86 - 471.44 20.41 - ff2 - 28.0 - rgb(0, 0, 0) - [14.1]
+    8-2 - 405.86 - 443.96 20.41 - ff2 - 28.0 - rgb(0, 0, 0) - [14.2]
+    8-2 - 405.86 - 421.56 25.28 - ff2 - 28.0 - rgb(0, 0, 0) - [14.3][ ][Protection contre les contacts directs][ ][S]
+
+    =====
+    8-2 - 466.89 - 932.23 20.41 - ff2 - 28.0 - rgb(0, 0, 0) - [Eléments constitutifs des organes de]
+    8-2 - 466.89 - 922.06 20.41 - ff2 - 28.0 - rgb(0, 0, 0) - [compensation]
+    8-2 - 466.89 - 891.01 20.41 - ff2 - 28.0 - rgb(0, 0, 0) - [Dispositif s'opposant à la vitesse excessive de la]
+    8-2 - 466.89 - 880.84 20.41 - ff2 - 28.0 - rgb(0, 0, 0) - [cabine en montée]
+    8-2 - 466.89 - 863.52 20.41 - ff2 - 28.0 - rgb(0, 0, 0) - [Dispositif de verrouillage de la cabine pour les]
+    8-2 - 466.89 - 853.35 20.41 - ff2 - 28.0 - rgb(0, 0, 0) - [opérations de maintenance]
+    8-2 - 466.89 - 818.71 20.41 - ff2 - 28.0 - rgb(0, 0, 0) - [Dispositif de contrôle de rupture ou de mou de]
+    8-2 - 466.89 - 808.55 20.41 - ff2 - 28.0 - rgb(0, 0, 0) - [suspente]
+    8-2 - 466.89 - 739.28 20.41 - ff2 - 28.0 - rgb(0, 0, 0) - [Parachute et limiteur de vitesse si ascenseur]
+    8-2 - 466.89 - 729.12 20.41 - ff2 - 28.0 - rgb(0, 0, 0) - [hydraulique]
+    8-2 - 466.89 - 711.8 20.41 - ff2 - 28.0 - rgb(0, 0, 0) - [Dispositif s'opposant à la dérive si ascenseur]
+    8-2 - 466.89 - 701.64 20.41 - ff2 - 28.0 - rgb(0, 0, 0) - [hydraulique]
+    8-2 - 466.89 - 476.53 20.41 - ff2 - 28.0 - rgb(0, 0, 0) - [Interconnexion des masses métalliques, circuit de]
+    8-2 - 466.89 - 466.36 20.41 - ff2 - 28.0 - rgb(0, 0, 0) - [terre]
+    8-2 - 466.89 - 449.05 20.41 - ff2 - 28.0 - rgb(0, 0, 0) - [Etat général des éléments constitutifs, protection]
+    8-2 - 466.89 - 438.88 20.41 - ff2 - 28.0 - rgb(0, 0, 0) - [des circuits, disjoncteur etc...]
+    8-2 - 466.89 - 404.25 25.28 - ff1 - 28.0 - rgb(0, 0, 0) - [Conformité de l'installation R. 125-1-2 à R.]
+    8-2 - 466.89 - 394.08 25.28 - ff1 - 28.0 - rgb(0, 0, 0) - [125-1-4]
+    8-2 - 466.89 - 376.77 25.28 - ff1 - 28.0 - rgb(0, 0, 0) - [Validation de l'obligation de contrôle]
+    8-2 - 466.89 - 366.6 25.28 - ff1 - 28.0 - rgb(0, 0, 0) - [technique article 4 arrêté du 7/08/2012]
+
+    =====
+    8-2 - 686.44 - 706.72 25.28 - ff1 - 28.0 - rgb(0, 0, 0) - [NS]
+
+    =====
+    8-2 - 689.73 - 927.15 25.28 - ff1 - 28.0 - rgb(0, 0, 0) - [S]
+    8-2 - 689.73 - 885.92 25.28 - ff1 - 28.0 - rgb(0, 0, 0) - [S]
+    8-2 - 689.73 - 858.44 25.28 - ff1 - 28.0 - rgb(0, 0, 0) - [S]
+    8-2 - 689.73 - 813.63 25.28 - ff1 - 28.0 - rgb(0, 0, 0) - [S]
+    8-2 - 689.73 - 734.2 25.28 - ff1 - 28.0 - rgb(0, 0, 0) - [S]
+    8-2 - 689.73 - 471.44 25.28 - ff1 - 28.0 - rgb(0, 0, 0) - [S]
+    8-2 - 689.73 - 443.96 25.28 - ff1 - 28.0 - rgb(0, 0, 0) - [S]
+  Cluster 2
+    8-3 - 505.63 - 351.64 14.58 - ff2 - 20.0 - rgb(0, 0, 0) - [«Référentiel» V 7]
+  Cluster 3
+    8-4 - 181.03 - 280.7 14.58 - ff2 - 20.0 - rgb(0, 0, 0) - [«Référentiel» V 7]
+  Cluster 4
+    8-5 - 64.45 - 50.62 17.5 - ff2 - 24.0 - rgb(0, 0, 0) - [Rapport TM  – V 2][ ][rapport n° : 8793914/6.1.1.R]
+    8-5 - 64.45 - 38.28 17.5 - ff2 - 24.0 - rgb(0, 0, 0) - [Copyright BUREAU VERITAS]
+  Cluster 5
+    8-6 - 113.45 - 1.65 17.5 - ff2 - 24.0 - rgb(0, 0, 0) - [page  8/9]
+Page 9
+  Cluster 0
+    9-1 - 87.71 - 1002.17 36.11 - ff1 - 40.0 - rgb(255, 255, 255) - [Fiche N°1]
+
+    =====
+    9-1 - 175.4 - 1020.41 36.11 - ff1 - 40.0 - rgb(0, 0, 0) - [ASCENSEUR(S) ET EQUIPEMENTS]
+    9-1 - 175.4 - 1005.88 36.11 - ff1 - 40.0 - rgb(0, 0, 0) - [ASSIMILES]
+    9-1 - 175.4 - 983.94 36.11 - ff1 - 40.0 - rgb(0, 0, 0) - [Marque :][ CFA]
+
+    =====
+    9-1 - 434.11 - 1013.35 36.11 - ff1 - 40.0 - rgb(0, 0, 0) - [N° série :][ 94N00334.01]
+    9-1 - 434.11 - 991.0 36.11 - ff1 - 40.0 - rgb(0, 0, 0) - [N° interne : ][3190]
+  Cluster 1
+    9-2 - 62.66 - 938.35 36.11 - ff1 - 40.0 - rgb(0, 0, 0) - [Détail des points de contrôle]
+  Cluster 2
+    9-3 - 62.66 - 919.54 20.41 - ff2 - 28.0 - rgb(0, 0, 0) - [Le tableau ci-dessous indique, pour les différentes parties de l’installation de l’ascenseur, la nature des contrôles ayant été réalisés selon le canevas PREF,]
+    9-3 - 62.66 - 909.38 20.41 - ff2 - 28.0 - rgb(0, 0, 0) - [c’est-à-dire :]
+
+    =====
+    9-3 - 108.64 - 869.99 25.28 - ff1 - 28.0 - rgb(0, 0, 0) - [R:][ ][Réalisation ][ ][Examen visuel des conditions de réalisation des dispositifs en prenant pour référence les règles et]
+    9-3 - 108.64 - 832.08 25.28 - ff1 - 28.0 - rgb(0, 0, 0) - [E:][ ][Etat de conservation ][ ][Examen ayant pour objet de vérifier que les éléments examinés ne présentent pas de détérioration]
+
+    =====
+    9-3 - 109.96 - 887.56 25.28 - ff1 - 28.0 - rgb(0, 0, 0) - [P:][ ][Présence ][ ][Examen visuel consistant à s’assurer de l’existence des dispositifs déterminants pour la sécurité ]
+    9-3 - 109.96 - 804.34 25.28 - ff1 - 28.0 - rgb(0, 0, 0) - [F:][ ][Fonctionnement ][ ][Vérification à l’aide d’essais de fonctionnement, de la capacité des éléments examinés à accomplir la]
+
+    =====
+    9-3 - 274.39 - 859.82 20.41 - ff2 - 28.0 - rgb(0, 0, 0) - [prescriptions techniques complétés, s’il y a lieu, par des appréciations dimensionnelles et d’adéquation des]
+    9-3 - 274.39 - 849.65 20.41 - ff2 - 28.0 - rgb(0, 0, 0) - [composants]
+    9-3 - 274.39 - 821.91 20.41 - ff2 - 28.0 - rgb(0, 0, 0) - [apparente susceptible de compromettre leurs fonction et/ou d’être à l’origine de situations dangereuses]
+    9-3 - 274.39 - 794.17 20.41 - ff2 - 28.0 - rgb(0, 0, 0) - [fonction requise ]
+  Cluster 3
+    9-4 - 64.45 - 50.62 17.5 - ff2 - 24.0 - rgb(0, 0, 0) - [Rapport TM  – V 2][ ][rapport n° : 8793914/6.1.1.R]
+    9-4 - 64.45 - 38.28 17.5 - ff2 - 24.0 - rgb(0, 0, 0) - [Copyright BUREAU VERITAS]
+  Cluster 4
+    9-5 - 113.45 - 1.65 17.5 - ff2 - 24.0 - rgb(0, 0, 0) - [page  9/9]

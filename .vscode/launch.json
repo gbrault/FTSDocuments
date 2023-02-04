@@ -11,7 +11,7 @@
             "program": "fts_pdf2htmlEX.py",
             "console": "integratedTerminal",
             "justMyCode": true,
-            "args": ["-f","corpus/penpa/CASTE-ING-2021072015"]
+            "args": ["-f","corpus\\Tutorial_EDIT"] // ["-f","corpus\\penpa\\CASTE-ING-2021072015"]// ["-f","corpus\\penpa\\VERITAS-87939146.1.1.R_3190"] // ["-f","corpus\\penpa\\ELTRON-2212036179"] 
         },
         {
             "name": "Python: Flask",
