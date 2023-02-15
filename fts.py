@@ -345,7 +345,7 @@ class FTSSearch:
             # convert the pdf to records
             try:
                 # create the doumentfiles record
-                documentsfile = ftsDocumentsFiles(file=file)
+                documentsfile = ftsDocumentsFiles(file=file, start_index=datetime.datetime.now(), end_index=datetime.datetime.now())
                 session.add(documentsfile)
                 session.commit()
                 # get the root directory
@@ -363,7 +363,8 @@ class FTSSearch:
                     documentsfilespage = ftsDocumentsFilesPages(   document_id=documentsfile.id,
                                                                     pnumber=page.number,
                                                                     width=page.rect.width,
-                                                                    height=page.rect.height)
+                                                                    height=page.rect.height
+                                                                    )
                     session.add(documentsfilespage)
                     session.commit()
                     # get the textblocks
