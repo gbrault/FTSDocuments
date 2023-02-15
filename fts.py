@@ -40,6 +40,9 @@ import re
 import logging
 import os
 import datetime
+import subprocess
+import shutil
+import fitz
 
 logger = logging.getLogger(__name__)
 
@@ -49,92 +52,29 @@ __email__ = "gbrault@seadev.org"
 __license__ = "MIT"
 __status__ = "Development"
 
-def convert_pdf_to_html(path):
-    from io import StringIO
-    from pdfminer.pdfinterp import PDFResourceManager, PDFPageInterpreter
-    from pdfminer.converter import HTMLConverter
-    from pdfminer.layout import LAParams
-    from pdfminer.pdfpage import PDFPage
-    from pdfminer.image import ImageWriter
-    logger = logging.getLogger("pdfminer")
-    logger.setLevel(logging.ERROR)
-    manager = PDFResourceManager()
-    output = StringIO()
-    outdir = path.replace(".pdf","")
-    imagewriter = None # imagewriter=ImageWriter(outdir)
-    converter = HTMLConverter(manager, output, laparams=LAParams(), codec=None,imagewriter=imagewriter,showpageno=False)
-    interpreter = PDFPageInterpreter(manager, converter)
+# Functions ===========================================================================================================================
 
-    with open(path, 'rb') as fh:
-        for page in PDFPage.get_pages(fh, caching=True, check_extractable=True):
-            interpreter.process_page(page)
-
-    return output.getvalue()
-
-def enable_fts( db: Connection=None, 
-                content: str='',
-                fts: str='',
-                columns: List[str]=[], 
-                col_attrs: dict={}):
-    """Enable full text search for a table in a database.
-    Args:
-        db (Connection): Database connection.
-        table (str): Name of the table to enable full text search.
-        columns (List[str]): List of columns to enable full text search.
-        col_attrs (dict): Dictionary of column attributes.
-    """
-    global FTS_LEAN_VIEW, FTS_LEAN_VIEWView
-    # Specifics ==================================================================================================================
-            
-    column_list = ','.join(f'`{c}`' for c in columns)
-    column_list_wattrs = ','.join(f'`{c}` {col_attrs[c] if c in col_attrs else ""}' for c in columns)
-    table = content
-    fts_table = fts
-    sql_script_1 = '''
-        CREATE VIRTUAL TABLE IF NOT EXISTS `{fts_table}` USING fts5
-        (
-            {column_list_wattrs},
-            content=`{table}`
-        )'''.format(
-        fts_table=fts_table,
-        table=table,
-        column_list_wattrs=column_list_wattrs
-    )
-    db.executescript(sql_script_1)
-
-    #cursor = db.cursor()
-    #cursor.execute("SELECT name FROM sqlite_master WHERE type='table';")
-    #tables = cursor.fetchall()
-    #print(tables)
-
-    sql_script_2 ='''
-        CREATE TRIGGER IF NOT EXISTS `{fts_table}_insert` AFTER INSERT ON `{table}`
-        BEGIN
-            INSERT INTO `{fts_table}` (rowid, {column_list}) VALUES (new.rowid, {new_columns});
-        END;
-        CREATE TRIGGER IF NOT EXISTS `{fts_table}_delete` AFTER DELETE ON `{table}`
-        BEGIN
-            INSERT INTO `{fts_table}` (`{fts_table}`, rowid, {column_list}) VALUES ('delete', old.rowid, {old_columns});
-        END;
-        CREATE TRIGGER IF NOT EXISTS `{table}_fts_update` AFTER UPDATE ON `{table}`
-        BEGIN
-            INSERT INTO `{fts_table}` (`{table}_fts`, rowid, {column_list}) VALUES ('delete', old.rowid, {old_columns});
-            INSERT INTO `{fts_table}` (rowid, {column_list}) VALUES (new.rowid, {new_columns});
-        END;
-    '''.format(
-        fts_table=fts_table,
-        table=table,
-        column_list=column_list,
-        new_columns=','.join(f'new.`{c}`' for c in columns),
-        old_columns=','.join(f'old.`{c}`' for c in columns),
-    )
-
-    db.executescript(sql_script_2)
-
-    from fts_models_views import FTS_LEAN_VIEW, FTS_LEAN_VIEWView
-
+def flags_decomposer(flags):
+    """Make font flags human readable."""
+    l = {}
+    if flags & 2 ** 0:
+        l.update({"superscript": True})
+    if flags & 2 ** 1:
+        l.update({"italic": True})
+    if flags & 2 ** 2:
+        l.update({"serifed": True})
+    else:
+        l.update({"sans": True})
+    if flags & 2 ** 3:
+        l.update({"monospaced": True})
+    else:
+        l.update({"proportional": True})
+    if flags & 2 ** 4:
+        l.update({"bold": True})
+    return l
 
 def represent(table,paths):
+    """Return a string representation of a table."""
     repr = ""
     for path in paths:
         segments = path.split('.')
@@ -149,15 +89,16 @@ def represent(table,paths):
 
 # Models ===========================================================================================================================
 
-class FTS_DocumentFiles(Model):
+class ftsDocumentsFiles(Model):
+    """DocumentsFiles table"""
     __bind_key__ = fts_config.SCHEMA_FTS
-    __tablename__ = 'ftsdocumentfiles'
-    id = Column(Integer, primary_key=True, autoincrement=True, nullable=False, comment='''DocumentFiles table's record unique id''')
+    __tablename__ = 'ftsdocumentsfiles'
+    id = Column(Integer, primary_key=True, autoincrement=True, nullable=False, comment='''DocumentsFiles table's record unique id''')
     file = Column(FileColumn, nullable=False,comment='''Document File name''')
     # start index timestamp
-    start_index = Column(DateTime, nullable=False, comment='''Start index timestamp''')
+    start_index = Column(DateTime, nullable=False, default=datetime.datetime.now() ,comment='''Start index timestamp''')
     # end index timestamp
-    end_index = Column(DateTime, nullable=False, comment='''End index timestamp''')
+    end_index = Column(DateTime, nullable=False, default=datetime.datetime.now(), comment='''End index timestamp''')
     def __repr__(self):
         return f"{represent(self, ['file_name'])}"  
     def file_name(self):
@@ -165,51 +106,90 @@ class FTS_DocumentFiles(Model):
     def download(self):
         return Markup(
             '<a href="'
-            + url_for("FTS_DocumentFilesView.download", filename=str(self.file))
+            + url_for("ftsDocumentsFilesView.download", filename=str(self.file))
             + f'">{self.file_name()}</a>'
         )
     def indexing_duration(self):
         return self.end_index - self.start_index
 
-class FTS_DocumentsFilesDivs(Model):
+class ftsDocumentsFilesPages(Model):
+    """DocumentsFilesPages table"""
     __bind_key__ = fts_config.SCHEMA_FTS
-    __tablename__ = 'ftsdocumentsfilesdivs'
+    __tablename__ = 'ftsdocumentsfilespages'
     __table_args__ = (
         ForeignKeyConstraint(
             ['document_id'],
-            ['ftsdocumentfiles.id']
+            ['ftsdocumentsfiles.id']
             ),
     )    
-    id = Column(Integer, primary_key=True, autoincrement=True, nullable=False, comment='''DocumentsFilesDivs table's record unique id''')
-    document_id = Column(Integer, nullable=False, comment='''document unique id (table FTS_DocumentFiles)''')
-    left = Column(Float, nullable=False, comment='''x left top''')
-    top = Column(Float, nullable=False, comment='''y left top''')
-    width = Column(Float, nullable=False, comment='''x right bottom''')
-    height = Column(Float, nullable=False, comment='''y right bottom''')
-    page = Column(Integer, nullable=False, comment='''Page number of the block''')
-    documentfiles = relationship('FTS_DocumentFiles', backref='ftsdocumentsfilesdivs', foreign_keys=[document_id])
+    id = Column(Integer, primary_key=True, autoincrement=True, nullable=False, comment='''DocumentsFilesPages table's record unique id''')
+    document_id = Column(Integer, nullable=False, comment='''document unique id (table ftsDocumentFiles)''')
+    pnumber = Column(Integer, nullable=False, comment='''Page number''')
+    width = Column(Float, nullable=False, comment='''width''')
+    height = Column(Float, nullable=False, comment='''height''')
+    documentfiles = relationship('ftsDocumentsFiles', backref='ftsdocumentsfilespages', foreign_keys=[document_id])
+    def __repr__(self):
+        return f"{get_file_original_name(self.documentfiles.file)} {self.pnumber}"
+    def document_reference(self):
+        return Markup(
+            '<a href="'
+            + url_for("ftsDocumentsFilesView.show", pk=self.document_id)
+            + f'">{(str(self.documentfiles.file_name()))} - page {self.pnumber}</a>'
+        )
 
-class FTS_DocumentsFilesSpans(Model):
+class ftsDocumentsFilesTextBlocks(Model):
+    """DocumentsFilesTextBlocks table"""
     __bind_key__ = fts_config.SCHEMA_FTS
-    __tablename__ = 'ftsdocumentsfilesspans'
+    __tablename__ = 'ftsdocumentsfilestextblocks'
     __table_args__ = (
         ForeignKeyConstraint(
-            ['div_id'],
-            ['ftsdocumentsfilesdivs.id']
+            ['page_id'],
+            ['ftsdocumentsfilespages.id']
             ),
     )    
-    id = Column(Integer, primary_key=True, autoincrement=True, nullable=False, comment='''DocumentsFilesContent table's record unique id''')
-    div_id = Column(Integer, nullable=False, comment='''DB unique record identifier of the document''')
-    font_family = Column(String(255), nullable=False, comment='''Font name''')
-    font_size = Column(Float, nullable=False, comment='''Font size''')
-    text = Column(Text, nullable=False, comment='''Text''')
-    documentfilesdivs = relationship('FTS_DocumentsFilesDivs', backref='ftsdocumentsfilesspans', foreign_keys=[div_id])
+    id = Column(Integer, primary_key=True, autoincrement=True, nullable=False, comment='''DocumentsFilesTextBlocs table's record unique id''')
+    page_id = Column(Integer, nullable=False, comment='''document page unique id (table ftsDocumentFilesPages)''')
+    bnumber = Column(Integer, nullable=False, comment='''Block number''')
+    btype = Column(Integer, nullable=False, default=0, comment='''Block type''')
+    bbox0 = Column(Float, nullable=False, comment='''x left top''')
+    bbox1 = Column(Float, nullable=False, comment='''y left top''')
+    bbox2 = Column(Float, nullable=False, comment='''x right bottom''')
+    bbox3 = Column(Float, nullable=False, comment='''y right bottom''')
+    text = Column(Text, nullable=False, comment='''Block text''')
+    size = Column(Float, nullable=False, comment='''Block size''')
+    pages = relationship('ftsDocumentsFilesPages', backref='ftsdocumentsfilestextblocks', foreign_keys=[page_id])
+    def file_name(self):
+        return get_file_original_name(str(self.pages.documentfiles.file))
+    def __repr__(self):
+        return f"{self.file_name()} p:{self.pages.pnumber} b:{self.bnumber}"
+    def page_reference(self):
+        return Markup(
+            '<a href="'
+            + url_for("ftsDocumentFilesPagesView.show", pk=self.page_id)
+            + f'">{self.pages.pnumber}</a>'
+        )
+    @renders('text')
+    def highlight_text(self):
+        text = self.text
+        if text is None:
+            return ''
+        if hasattr(self,'_filters'):
+            for i,filter in enumerate(self._filters.filters):
+                if filter.column_name == 'text':
+                    values_to_highlight = [ t for t in self._filters.values[i][0].split() if t not in ['AND','OR','NOT'] ]
+                    for value in values_to_highlight:
+                        value = value.strip('"').strip("'")
+                        text = re.sub('(?i)'+re.escape(value), lambda k: '<mark>' + value + '</mark>', text)
+            return Markup(text.replace('\n','<br>').replace('\r',''))
+        else:
+            return text
           
 
 # Views ===========================================================================================================================================
 
-class FTS_DocumentFilesView(ModelView):
-    datamodel = SQLAInterface(FTS_DocumentFiles)
+class ftsDocumentsFilesView(ModelView):
+    """DocumentsFilesView view"""
+    datamodel = SQLAInterface(ftsDocumentsFiles)
     list_columns = ['id', 'download','start_index','indexing_duration']
     label_columns = dict(
         id = 'Id',
@@ -222,188 +202,50 @@ class FTS_DocumentFilesView(ModelView):
     edit_columns = ['file']
     add_columns = [ 'file']
 
-class FTS_DocumentsFilesDivsView(ModelView):
-    datamodel = SQLAInterface(FTS_DocumentsFilesDivs)
+class ftsDocumentFilesPagesView(ModelView):
+    """DocumentsFilesPagesView view"""
+    datamodel = SQLAInterface(ftsDocumentsFilesPages)
+    list_columns = ['id', 'document_reference','width','height']
     label_columns = dict(
         id = 'Id',
         document_id = 'Document Id',
-        left = 'Left',
-        top = 'Top',
-        width = 'Width',
-        height = 'Height',
-        page = 'Page'
+        pnumber = 'Page Number',
+        width = 'width',
+        height = 'height',
+        document_reference = 'Document Reference'
         )
-    description_columns = dict(
-        id = 'DocumentFilesContent table\'s record unique id',
-        document_id = 'document identifier (table FTS_DocumentFiles)',
-        left = 'x left top',
-        top = 'y left top',
-        width = 'div width',
-        height = 'div height',
-        page = 'Page number of the block'
-        )
-    list_columns = ['document_id', 'page', 'left', 'top', 'width', 'height']
-    show_columns = ['id', 'document_id', 'page', 'left', 'top', 'width', 'height']
-    add_columns =  ['id', 'document_id', 'page', 'left', 'top', 'width', 'height']
-    edit_columns =  ['id', 'document_id', 'page', 'left', 'top', 'width', 'height']
+    show_columns = ['id', 'document_id','pnumber','width','height']
+    edit_columns = ['document_id','pnumber','width','height']
+    add_columns = [ 'document_id','pnumber','width','height']
 
-class FTS_DocumentsFilesSpansView(ModelView):
-    datamodel = SQLAInterface(FTS_DocumentsFilesSpans)
+class ftsDocumentFilesTextBlocksView(ModelView):
+    """DocumentsFilesTextBlocksView view"""
+    base_permissions = ['can_list']
+    datamodel = SQLAInterface(ftsDocumentsFilesTextBlocks)
+    list_columns = ['file_name','page_reference','highlight_text']
     label_columns = dict(
         id = 'Id',
-        div_id = 'Div Id',
-        font_family = 'Font Family',
-        font_size = 'Font Size',
-        text = 'Text'
+        page_id = 'Page Id',
+        bbox0 = 'Bbox0',
+        bbox1 = 'Bbox1',
+        bbox2 = 'Bbox2',
+        bbox3 = 'Bbox3',
+        text = 'Text',
+        size = 'Size',
+        page_reference = 'Page Reference',
+        highlight_text = 'Text',
+        file_name = 'File Name'
         )
-    description_columns = dict(
-        id = 'DocumentsFilesContent table\'s record unique id',
-        div_id = 'div identifier (table FTS_DocumentsFilesDivs)',
-        font_family = 'Font name',
-        font_size = 'Font size',
-        text = 'Text'
-        )
-    list_columns = ['font_family', 'font_size', 'text']
-    show_columns = ['id', 'div_id', 'font_family', 'font_size', 'text']
-    add_columns =  ['id', 'div_id', 'font_family', 'font_size', 'text']
-    edit_columns =  ['id', 'div_id', 'font_family', 'font_size', 'text']
+    show_columns = ['id', 'page_id','bbox0','bbox1','bbox2','bbox3']
+    edit_columns = ['page_id','bbox0','bbox1','bbox2','bbox3']
+    add_columns = [ 'page_id','bbox0','bbox1','bbox2','bbox3']
 
-# Functions needing Models ===========================================================================================================================
-def convert_pdf_to_records(session, file):
-    """Save the converted pdf files to the database
-
-    :param session: SQLAlchemy session
-    :param path: path to the pdf file
-    :return: None
-
-    Summary:
-    1. convert pdf to html
-    2. Process the document to create records into the database
-        - save the document to the database
-        - find the page breaker template
-        - In between each page_breaker
-            - find the divs
-            - find the spans
-            - save the divs and spans to the database
-    """
-    from bs4 import BeautifulSoup
-    import re
-    path = os.path.join(fts_config.UPLOAD_FOLDER, file)
-    # convert pdf to html  ===================================================================================================
-    logger.info("Saving the document to the database")
-    now = datetime.datetime.now()
-    fts_documentfiles = FTS_DocumentFiles(file=file, start_index=now, end_index=now)
-    session.add(fts_documentfiles)
-    session.commit()    
-    try:
-        logger.info("Converting pdf to html")
-        html_doc = convert_pdf_to_html(path)
-        logger.info("Converted pdf to html")
-    except Exception as e:
-        logger.error("Error converting pdf to html: ", e)
-        return
-    # save the document to the database
-    soup = BeautifulSoup(html_doc, 'html.parser')
-    # find the first span with style width and height: it is the page breaker template
-    body = soup.find("body")
-    span = body.find("span") # this is the template
-    # parse the style attribute of the span for the height and width
-    # style example is style="position:absolute; border: gray 1px solid; left:0px; top:50px; width:595px; height:842px;"
-    # get the width and height
-    style = span["style"]
-    t_width = re.search("width:\s*(\d+)px", style).group(1)
-    t_page_height = re.search("height:\s*(\d+)px", style).group(1)
-    # code to identify the page breakers using beautifull soup
-    # the page breaker spans are the spans with the same height and width as the template
-    page = 1  # prepare the page number for the page records
-    div_number = 1 # prepare the div number for the div records
-    for span in body.find_all("span"):
-        # parse the style attribute of the span for the height and width
-        # style example is style="position:absolute; border: gray 1px solid; left:0px; top:50px; width:595px; height:842px;"
-        # get the width and height
-        style = span["style"]
-        if "width" in style:
-            width = re.search("width:\s*(\d+)px", style).group(1)
-            height = re.search("height:\s*(\d+)px", style).group(1)
-            if width == t_width and height == t_page_height:
-                # the page_records divs are all the divs embedding spans
-                # we can find the page_records divs, iterating from the next_sibilings of the page breaker, until the next page breaker (a span with the same height and width as the template)
-                # the page_records divs are all the divs embedding spans
-                starter = span.find_next_sibling()
-                while True:
-                    if starter is None:
-                        break
-                    # if the next sibling is a span with the same height and width as the template, we stop
-                    if starter.name == "span":
-                        # parse the style attribute of the span for the height and width
-                        # style example is style="position:absolute; border: gray 1px solid; left:0px; top:50px; width:595px; height:842px;"
-                        # get the width and height
-                        style = starter["style"]
-                        if "width" in style:
-                            width = re.search("width:(\d+)px", style).group(1)
-                            height = re.search("height:(\d+)px", style).group(1)
-                            if width == t_width and height == t_page_height:
-                                break
-                    # if the next sibling is a div, we add it to the page_records
-                    if starter.name == "div":
-                        # if the div has embedded spans, we add it to the page_records
-                        # get the spans
-                        spans = starter.find_all("span")
-                        if len(spans) > 0:
-                            # parse the style attribute of the div for the height and width, top and left
-                            # style="position:absolute; border: textbox 1px solid; writing-mode:lr-tb; left:325px; top:187px; width:223px; height:56px;"
-                            style = starter["style"]
-                            width = re.search("width:\s*(\d+)px", style).group(1)
-                            height = re.search("height:\s*(\d+)px", style).group(1)
-                            top = re.search("top:\s*(\d+)px", style).group(1)
-                            left = re.search("left:\s*(\d+)px", style).group(1)
-                            # save the page_record to the database
-                            page_record = FTS_DocumentsFilesDivs(
-                                page=page,
-                                width=width,
-                                height=height,
-                                top=top,
-                                left=left,
-                                document_id=fts_documentfiles.id
-                            )
-                            session.add(page_record)
-                            session.commit()
-                            # add the spans to the page_records_spans
-                            for span in spans:
-                                # add a reference to the page_record
-                                span.page_record = starter
-                                span.div_number = div_number
-                                div_number += 1
-                                # parse the style attribute of the span for the font-size, font-family
-                                # style="font-family: Arial-BoldMT; font-size:17px"
-                                style = span["style"]
-                                font_size = re.search("font-size:\s*(\d+)px", style).group(1)
-                                font_family = re.search("font-family:\s*(\w+)", style).group(1)
-                                # save the page_record_span to the database
-                                try:
-                                    page_record_span = FTS_DocumentsFilesSpans(
-                                        font_size=font_size,
-                                        font_family=font_family,
-                                        text=span.get_text(),
-                                        div_id=page_record.id)
-                                    session.add(page_record_span)
-                                    session.commit()
-                                except Exception as e:
-                                    logger.error("Error saving page_record_span: {}".format(e))
-                    starter = starter.find_next_sibling()
-                page += 1
-    # update the document record
-    now = datetime.datetime.now()
-    fts_documentfiles.end_index=now
-    session.commit()
-    logger.info("Document {} indexed".format(fts_documentfiles.id))
 
 # Menu ===========================================================================================================================================
 def fts_menus(appbuilder):
-    appbuilder.add_view(FTS_DocumentFilesView,"DocumentsFiles",icon="fa-file",category="Full_Text_Search")
-    appbuilder.add_view(FTS_DocumentsFilesDivsView,"DocumentsFilesDivs",icon="fa-search",category="Full_Text_Search")
-    appbuilder.add_view(FTS_DocumentsFilesSpansView,"DocumentsFilesSpans",icon="fa-search",category="Full_Text_Search")
-    appbuilder.add_view(FTS_LEAN_VIEWView,"Documents Full Text Search",icon="fa-binoculars",category="Documents")
+    appbuilder.add_view(ftsDocumentsFilesView,"DocumentsFiles",icon="fa-file",category="Full_Text_Search")
+    appbuilder.add_view(ftsDocumentFilesPagesView,"DocumentsFilesPages",icon="fa-files-o",category="Full_Text_Search")
+    appbuilder.add_view(ftsDocumentFilesTextBlocksView,"DocumentsFilesTextBlocks",icon="fa-search",category="Documents")
 
 # FTSSearch ===========================================================================================================================================
 
@@ -425,72 +267,147 @@ class FTSSearch:
             if len(self.tasklist) > 0:
                 task = self.tasklist.pop(0) # first in first out
                 if task['action'] == 'index':
-                    self.threadpool.submit(pdf_to_documentsfilescontent, task['documentfiles'])
+                    self.threadpool.submit(self.pdf_to_documentsfilescontent, task['documentfiles'], task['username'])
                 if task['action'] == 'delete':
-                    self.threadpool.submit(pdf_delete, task['documentfiles'])
+                    self.threadpool.submit(self.pdf_delete, task['documentfiles'], task['username'])
             else:
                 time.sleep(1)
 
-    def index(self, documentfiles):
+    def index(self, documentfiles, username):
         # check if request already in tasklist
         for task in self.tasklist:
             if task['action'] == 'index' and task['documentfiles'] == documentfiles.file:
-                self.appbuilder.send_alert('Document already in tasklist for indexing',"alert-warning")
+                self.appbuilder.send_alert(username,'Document already in tasklist for indexing',"alert-warning")
                 return
         # check if the document is already indexed and flash a message and return if it is
-        file = self.appbuilder.session.query(FTS_DocumentFiles).filter(FTS_DocumentFiles.file == documentfiles.file).all()
+        file = self.appbuilder.session.query(ftsDocumentsFiles).filter(ftsDocumentsFiles.file == documentfiles.file).all()
         if file is not None and len(file) > 0:
             if file[0].end_index == file[0].start_index:
-                self.appbuilder.send_alert('Document is indexing wait till end of indexing','alert-warning')
+                self.appbuilder.send_alert(username,'Document is indexing wait till end of indexing','alert-warning')
                 return
             else:
                 self.appbuilder.send_alert('Reindexing the Document','alert-info')
                 # reindexing the document, so delete the document index
-                self.tasklist.append({'action': 'delete', 'documentfiles': documentfiles.file})
+                self.tasklist.append({'action': 'delete', 'documentfiles': documentfiles.file, 'username': username})
                 # add the document to the tasklist for indexing
-                self.tasklist.append({'action': 'index', 'documentfiles': documentfiles.file})
+                self.tasklist.append({'action': 'index', 'documentfiles': documentfiles.file, 'username': username})
                 return
         # add the document to the tasklist for indexing
-        self.tasklist.append({'action': 'index', 'documentfiles': documentfiles.file})
-        self.appbuilder.send_alert('Document added to tasklist for indexing','alert-info')
+        self.tasklist.append({'action': 'index', 'documentfiles': documentfiles.file, 'username': username})
+        self.appbuilder.send_alert(username, 'Document added to tasklist for indexing','alert-info')
 
-    def delete(self, documentfiles):
+    def delete(self, documentfiles, username):
         # check if request already in tasklist
         for task in self.tasklist:
             if task['action'] == 'delete' and task['documentfiles'] == documentfiles.file:
-                self.appbuilder.send_alert('Document already in tasklist for deleting','alert-warning')
+                self.appbuilder.send_alert(username,'Document already in tasklist for deleting','alert-warning')
                 return
-        doc = self.appbuilder.session.query(FTS_DocumentFiles).filter(FTS_DocumentFiles.file == documentfiles.file).all()
+        doc = self.appbuilder.session.query(ftsDocumentsFiles).filter(ftsDocumentsFiles.file == documentfiles.file).all()
         if doc is not None and len(doc) > 0:
-            self.tasklist.append({'action': 'delete', 'documentfiles': doc[0].id})
+            self.tasklist.append({'action': 'delete', 'documentfiles': doc[0].id, 'username': username})
 
-def pdf_delete(id):
-    engine = create_engine(fts_config.dbftsurl)
-    Session = sessionmaker(engine)
-    with Session() as session:
-        # find the FTS_Documents Files with the id
-        fts_document = session.query(FTS_DocumentFiles).filter(FTS_DocumentFiles.id == id).first()
-        # for each FTS_DocumentsFiles find all FTS_DocumentsFilesDivs
-        fts_documentsfiles = session.query(FTS_DocumentsFilesDivs).filter(FTS_DocumentsFilesDivs.document_id == id).all()
-        # find all FTS_DocumentsFilesSpans with the div_id
-        for fts_documentsfile in fts_documentsfiles:
-            fts_documentsfilesspans = session.query(FTS_DocumentsFilesSpans).filter(FTS_DocumentsFilesSpans.div_id == fts_documentsfile.id).all()
-            # delete all FTS_DocumentsFilesSpans
-            for fts_documentsfilesspan in fts_documentsfilesspans:
-                session.delete(fts_documentsfilesspan)
-            # delete all FTS_DocumentsFilesDivs
-            session.delete(fts_documentsfile)
-        # delete all FTS_DocumentsFiles
-        session.delete(fts_document)
-        # commit the changes
-        session.commit()
+    def pdf_delete(self, id, username):
+        engine = create_engine(fts_config.dbftsurl)
+        Session = sessionmaker(engine)
+        with Session() as session:
+            # find the ftsDocuments Files with the id
+            ftsdocument = session.query(ftsDocumentsFiles).filter(ftsDocumentsFiles.id == id).first()
+            # delete the file and the html conversion
+            try:
+                # get the root directory
+                rootpath = self.appbuilder.app.config['UPLOAD_FOLDER']
+                # get the file path
+                filepath = os.path.join(rootpath, ftsdocument.file.replace(".pdf", ""))
+                # suppress the directory with shutil.rmtree
+                shutil.rmtree(filepath)
+            except Exception as e:
+                logger.error("Error deleting file: {}".format(e))
+            # for each ftsDocumentsFiles find all ftsDocumentsFilesPages
+            ftsdocumentsfilespages = session.query(ftsDocumentsFilesPages).filter(ftsDocumentsFilesPages.document_id == id).all()
+            # find all ftsDocumentsFilesBlocks with the page_id
+            for ftsdocumentsfilepage in ftsdocumentsfilespages:
+                ftsdocumentsfilestextblocs = session.query(ftsDocumentsFilesTextBlocks).filter(ftsDocumentsFilesTextBlocks.page_id == ftsdocumentsfilespages.id).all()
+                # find all ftsDocumentsFilesLines with the textblock_id
+                for ftsdocumentsfilestextbloc in ftsdocumentsfilestextblocs:
+                    # delete all ftsDocumentsFilesTextBlocks
+                    session.delete(ftsdocumentsfilestextbloc)
+                # delete all ftsDocumentsFilesPages
+                session.delete(ftsdocumentsfilepage)
+            # delete all ftsDocumentsFiles
+            session.delete(ftsdocument)
+            # commit the changes
+            session.commit()
 
-def pdf_to_documentsfilescontent(file):
-    engine = create_engine(fts_config.dbftsurl)
-    Session = sessionmaker(engine)
-    with Session() as session:
-        # convert the pdf to records
-        convert_pdf_to_records(session, file)
+    def pdf_to_documentsfilescontent(self, file, username):
+        engine = create_engine(fts_config.dbftsurl)
+        Session = sessionmaker(engine)
+        with Session() as session:
+            # convert the pdf to records
+            try:
+                # create the doumentfiles record
+                documentsfile = ftsDocumentsFiles(file=file)
+                session.add(documentsfile)
+                session.commit()
+                # get the root directory
+                rootpath = self.appbuilder.app.config['UPLOAD_FOLDER']
+                # get the file path
+                filepath = os.path.join(rootpath, file)
+                # read the pdf file with fitz
+                doc = fitz.open(filepath)
+                # navigate through the pages
+                for page in doc:
+                    # display the page number every 25 pages
+                    if page.number % 25 == 0:
+                        self.appbuilder.send_alert(username, f'Indexing page: {page.number}/{len(doc)}', 'alert-info')
+                    # create the page record
+                    documentsfilespage = ftsDocumentsFilesPages(   document_id=documentsfile.id,
+                                                                    pnumber=page.number,
+                                                                    width=page.rect.width,
+                                                                    height=page.rect.height)
+                    session.add(documentsfilespage)
+                    session.commit()
+                    # get the textblocks
+                    textblocks = page.get_text("dict")["blocks"]
+                    # navigate through the textblocks
+                    for bno, textblock in enumerate(textblocks):
+                        if textblock['type'] == 1:
+                            continue
+                        # create the textblock record
+                        bbox0 = textblock["bbox"][0]
+                        bbox1 = textblock["bbox"][1]
+                        bbox2 = textblock["bbox"][2]
+                        bbox3 = textblock["bbox"][3]
+                        text = ""
+                        size = 0
+                        # get the lines
+                        lines = textblock["lines"]
+                        # navigate through the lines
+                        for lno, line in enumerate(lines):
+                            # get the spans
+                            spans = line["spans"]
+                            # navigate through the spans
+                            for sno, span in enumerate(spans):
+                                # get size and text
+                                size = max(size,span["size"])
+                                flags = span["flags"]
+                                text += span["text"]
+                # update the end time
+                        documentsfilestextblock = ftsDocumentsFilesTextBlocks( page_id=documentsfilespage.id,
+                                                                                bnumber = bno,
+                                                                                bbox0=bbox0,
+                                                                                bbox1=bbox1,
+                                                                                bbox2=bbox2,
+                                                                                bbox3=bbox3,
+                                                                                text=text,
+                                                                                size=size,)
+                        session.add(documentsfilestextblock)
+                        session.commit()
+                documentsfile.end_index = datetime.datetime.now()
+                session.commit()
+                # send the end of indexing alert
+                self.appbuilder.send_alert(username, f'The document has been indexed {file} in {documentsfile.end_index-documentsfile.start_index}', 'alert-success')
+            except Exception as e:
+                self.appbuilder.send_alert(username, 'Error during indexing the document: ' + str(e), 'alert-danger')
 
 def prepare_fts(appbuilder):
     engine = create_engine(fts_config.dbftsurl)
@@ -498,9 +415,87 @@ def prepare_fts(appbuilder):
     with Session() as session:
         # get the raw connection
         connection = session.connection()
-        # enable the FTS
-        enable_fts( db=connection.connection.dbapi_connection, 
-                    content='ftsdocumentsfilesspans',
-                    fts='ftsdocumentsfilescontent_fts',
-                    columns=['div_id','text','font_family','font_size'], 
-                    col_attrs={'div_id': 'UNINDEXED', 'font_family': 'UNINDEXED', 'font_size': 'UNINDEXED'})
+        # create view to search in the documents
+        connection.execute('''CREATE VIEW IF NOT EXISTS ftsbyspans AS
+                            SELECT
+                                ROW_NUMBER() OVER() AS id,
+                                ftsdocumentsfiles.id AS document_id,
+                                ftsdocumentsfiles.file AS document_file,
+                                ftsdocumentsfilespages.pnumber AS page_number,
+                                ftsdocumentsfilespages.width AS page_width,
+                                ftsdocumentsfilespages.height AS page_height,
+                                ftsdocumentsfilestextblocks.bnumber AS textblock_number,
+                                ftsdocumentsfilestextblocks.bbox0 AS textblock_bbox0,
+                                ftsdocumentsfilestextblocks.bbox1 AS textblock_bbox1,
+                                ftsdocumentsfilestextblocks.bbox2 AS textblock_bbox2,
+                                ftsdocumentsfilestextblocks.bbox3 AS textblock_bbox3,
+                                ftsdocumentsfileslines.lnumber AS line_number,
+                                ftsdocumentsfileslines.bbox0 AS line_bbox0,
+                                ftsdocumentsfileslines.bbox1 AS line_bbox1,
+                                ftsdocumentsfileslines.bbox2 AS line_bbox2,
+                                ftsdocumentsfileslines.bbox3 AS line_bbox3,
+                                ftsdocumentsfileslines.wmode AS line_wmode,
+                                ftsdocumentsfileslines.dir_0 AS line_dir_0,
+                                ftsdocumentsfileslines.dir_1 AS line_dir_1,
+                                ftsdocumentsfilesspans.snumber AS span_number,
+                                ftsdocumentsfilesspans.text AS span_text,
+                                ftsdocumentsfilesspans.bbox0 AS span_bbox0,
+                                ftsdocumentsfilesspans.bbox1 AS span_bbox1,
+                                ftsdocumentsfilesspans.bbox2 AS span_bbox2,
+                                ftsdocumentsfilesspans.bbox3 AS span_bbox3,
+                                ftsdocumentsfilesspans.color AS span_color,
+                                ftsdocumentsfilesspans.font AS span_font,
+                                ftsdocumentsfilesspans.size AS span_size,
+                                ftsdocumentsfilesspans.flags AS span_flags,
+                                ftsdocumentsfilesspans.origin_0 AS span_origin_0,
+                                ftsdocumentsfilesspans.origin_1 AS span_origin_1
+                            FROM
+                                ftsdocumentsfiles
+                            LEFT JOIN
+                                ftsdocumentsfilespages ON ftsdocumentsfiles.id = ftsdocumentsfilespages.document_id
+                            LEFT JOIN
+                                ftsdocumentsfilestextblocks ON ftsdocumentsfilespages.id = ftsdocumentsfilestextblocks.page_id
+                            LEFT JOIN
+                                ftsdocumentsfileslines ON ftsdocumentsfilestextblocks.id = ftsdocumentsfileslines.block_id
+                            LEFT JOIN
+                                ftsdocumentsfilesspans ON ftsdocumentsfileslines.id = ftsdocumentsfilesspans.line_id
+                            ORDER BY
+                                ftsdocumentsfiles.id,
+                                ftsdocumentsfilespages.pnumber,
+                                ftsdocumentsfilestextblocks.bnumber,
+                                ftsdocumentsfileslines.lnumber,
+                                ftsdocumentsfilesspans.snumber''')
+        # create view grouping spans by textblock
+        connection.execute('''CREATE VIEW IF NOT EXISTS ftsbyblocks AS
+                            SELECT
+                                ROW_NUMBER() OVER (ORDER BY ftsdocumentsfiles.id, ftsdocumentsfilespages.pnumber, ftsdocumentsfilestextblocks.bnumber) AS id,
+                                ftsdocumentsfiles.id AS document_id,
+                                ftsdocumentsfiles.file AS document_file,
+                                ftsdocumentsfilespages.pnumber AS page_number,
+                                ftsdocumentsfilespages.width AS page_width,
+                                ftsdocumentsfilespages.height AS page_height,
+                                ftsdocumentsfilestextblocks.bnumber AS textblock_number,
+                                ftsdocumentsfilestextblocks.bbox0 AS textblock_bbox0,
+                                ftsdocumentsfilestextblocks.bbox1 AS textblock_bbox1,
+                                ftsdocumentsfilestextblocks.bbox2 AS textblock_bbox2,
+                                ftsdocumentsfilestextblocks.bbox3 AS textblock_bbox3,
+                                GROUP_CONCAT(ftsdocumentsfilesspans.text, ' ') AS textblock_text
+                            FROM
+                                ftsdocumentsfiles
+                            LEFT JOIN
+                                ftsdocumentsfilespages ON ftsdocumentsfiles.id = ftsdocumentsfilespages.document_id
+                            LEFT JOIN
+                                ftsdocumentsfilestextblocks ON ftsdocumentsfilespages.id = ftsdocumentsfilestextblocks.page_id
+                            LEFT JOIN
+                                ftsdocumentsfileslines ON ftsdocumentsfilestextblocks.id = ftsdocumentsfileslines.block_id
+                            LEFT JOIN
+                                ftsdocumentsfilesspans ON ftsdocumentsfileslines.id = ftsdocumentsfilesspans.line_id
+                            GROUP BY
+                                ftsdocumentsfiles.id,
+                                ftsdocumentsfilespages.pnumber,
+                                ftsdocumentsfilestextblocks.bnumber
+                            ORDER BY
+                                ftsdocumentsfiles.id,
+                                ftsdocumentsfilespages.pnumber,
+                                ftsdocumentsfilestextblocks.bbox1,
+                                ftsdocumentsfilestextblocks.bbox0''')

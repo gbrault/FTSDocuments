@@ -29,6 +29,8 @@ import json
 import time, datetime
 import threading
 from flask_login import AnonymousUserMixin
+import sqlalchemy
+import Levenshtein as lev
 
 # LOGGING =======================================================================================================================
 
@@ -47,7 +49,6 @@ metadata_obj = db.metadata
 sock = Sock(app)
 
 listners = {} # dictionnary hodling the listners clients
-
 
 # MODELS =======================================================================================================================
 
@@ -100,7 +101,7 @@ def receive_after_insert(mapper, connection, target):
     if not os.path.isfile(os.path.join(app.config['UPLOAD_FOLDER'], target.file)):
         raise Exception('File not found: ' + target.file)
     # synchronous call: pdf_to_documentsfilescontent(target.file)
-    ftssearch.index(target)
+    ftssearch.index(target, g.user.username)
 
 # listen for the 'after_delete' event
 @event.listens_for(DocumentFiles, 'after_delete')
@@ -108,7 +109,7 @@ def receive_after_insert(mapper, connection, target):
     if os.path.isfile(os.path.join(app.config['UPLOAD_FOLDER'], target.file)):
         raise Exception('File is found: ' + target.file)
     # synchronous call: pdf_delete(target.file)
-    ftssearch.delete(target)
+    ftssearch.delete(target, g.user.username)
 
 # listen for the 'after_update' event
 @event.listens_for(DocumentFiles, 'after_update')
@@ -178,6 +179,31 @@ class DocumentView(CompactCRUDMixin,ModelView):
 # FTS ==========================================================================================================================
 from fts import *  # needs to be placed here as work done before is needed
 ftssearch = FTSSearch(appbuilder) # launch the indexing process in a separate thread
+# define the match operator for sqlite
+class Matchop:
+    def matching(self, request, text, threshold=0.8):
+        try:
+            if not hasattr(self,'words'):
+                self.words = request.split()
+                self.words = [word.lower() for word in self.words if len(word) > 2]
+                self.words = set(self.words)
+            if text is None:
+                return False
+            text = text.lower()
+            result = set()
+            for word in self.words:
+                th = 2 if len(word)<7 else 3 # if word is short, 1 errors max, else 2 errors max
+                if '0' <= word[0] <= '9': th = 1 # no error for numbers
+                for w in text.split():
+                    d = lev.distance(word, w)
+                    if d < th: 
+                        result.add(word)
+                        pass
+
+            return (len(result) / len(self.words)) >= threshold
+        except Exception as e:
+            logging.error(e)
+            return False
 
 # INIT =======================================================================================================================
 
@@ -188,12 +214,10 @@ lastname = "min"
 email = "admin@email.com"
 password = "password"
 
-FTS_DocumentFiles.__bind_key__ = schema_fts
-
 db.create_all(bind=schema)
-db.create_all(bind=schema_fts) # create the fts schema, needed by the fts5 virtual table
+db.create_all(bind=schema_fts) # create the fts schema, 
 
-prepare_fts(appbuilder) # create the virtual table
+prepare_fts(appbuilder) # do the necesary work to prepare fts
 
 db.create_all(bind=schema_fts) # create the appropriate models and views used for fts
 
@@ -243,10 +267,12 @@ def send_alert(username,message,alert_type="alert-info"):
         - username: the username of the user to send the alert to
         - message: the message to send
         - alert_type: the type of alert (alert-primary, alert-secondary, alert-success, alert-info, alert-warning, alert-danger, alert-light, alert-dark)"""
-    for key, items in listners.items():
-        if username == "*" or items["user"].usrename == username:
+    keys = list(listners.keys())
+    for key in keys:
+        if username == "*" or listners[key]["user"].username == username:
             try:
-                items["socket"].send(json.dumps({"type": "alert", "alerttype": alert_type, "text": message}))
+                message = message.replace("\n","<br>")
+                listners[key]["socket"].send(json.dumps({"type": "alert", "alerttype": alert_type, "text": message}))
             except:
                 del listners[key]
 
@@ -301,4 +327,10 @@ t = threading.Thread(target=send_time,args=())
 t.start()
 
 appbuilder.send_alert = send_alert
+
+@app.before_request
+def before_request():
+    @event.listens_for(db.get_engine(bind=fts_config.SCHEMA_FTS), "connect")
+    def sqlite_engine_connect(dbapi_connection, connection_record):
+        dbapi_connection.create_function('MATCHING', 2, Matchop().matching)
 

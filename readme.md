@@ -17,7 +17,7 @@ I have added a few features to the original project:
 - Document Files is the list of documents, including a description and a file. They are attached To a Document Library.
 - The real new feature is that each time a document is uploaded in the library, a Full Text Search index is created.
 - I have added a search view in the document library using the search box. The search is based on the Full Text Search index if you use the Match capability.
-- The Match capability is added for Text and Strings columns. It is based on the [FTS5](https://www.sqlite.org/fts5.html) extension of SQLite.
+- The Match capability is added for Text and Strings columns. 
 - I have also improved the rendering, has all the words in the match search request are highlighted in the document.
 
 To do that, I have changed few things in the flask-appbuilder project:
@@ -99,7 +99,8 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 ## Changelog
 
-- 2021-03-01: Initial version
+- 2021-02-03: Initial version
+- 2021-02-15: Optimized the indexing, added asynchronous feedback, dropped FTS5.
 
 ## Some software:
 
