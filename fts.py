@@ -43,6 +43,39 @@ import datetime
 import subprocess
 import shutil
 import fitz
+# from whooshalchemy import IndexService
+# whoosh_config = {"WHOOSH_BASE": os.path.join(__file__.replace(".py",""),"whoosh")}
+from fts5sqlalchemy import enable_fts
+from flask_appbuilder.models.sqla.filters import FilterMatch
+
+def hook(filter, query, field, value):
+    """Hook for FilterMatch to use FTS5.
+    the value field is the request string
+    the field is the field to search in
+    the query is the sqlalchemy query
+    to be improved to take into account the language and the typos of the request (value)
+    """
+    # if the field is backup with an FTS5 index then use it
+    if filter.datamodel.model_name == "ftsDocumentsFilesTextBlocks":
+        if field.name == "text":
+            # find the index with looking with match in the ftsdocumentsfilestextblocks_fts FTS5 index
+            # needs to access the database to make the match query to get the indexes
+            # this is not efficient
+            engine = create_engine(fts_config.dbftsurl)
+            Session = sessionmaker(engine)
+            with Session() as session:
+                # get the indexes of the FTS5 index
+                indexes = session.execute(f"SELECT id FROM ftsdocumentsfilestextblocks_fts WHERE ftsdocumentsfilestextblocks_fts MATCH '{value}'")
+                indexes = [i[0] for i in indexes]
+                # filter the query: get only the records with the indexes found
+
+                query = query.filter(filter.datamodel.list_columns['id'].in_(indexes))
+                return query
+    else:
+        # if the field is not backup with an FTS5 index then use the default FilterMatch wich is a LIKE
+        return query.filter(field.like(value))
+
+FilterMatch.hook = hook
 
 logger = logging.getLogger(__name__)
 
@@ -146,7 +179,8 @@ class ftsDocumentsFilesTextBlocks(Model):
             ['page_id'],
             ['ftsdocumentsfilespages.id']
             ),
-    )    
+    )
+    __searchable__ = ['text']    
     id = Column(Integer, primary_key=True, autoincrement=True, nullable=False, comment='''DocumentsFilesTextBlocs table's record unique id''')
     page_id = Column(Integer, nullable=False, comment='''document page unique id (table ftsDocumentFilesPages)''')
     bnumber = Column(Integer, nullable=False, comment='''Block number''')
@@ -310,33 +344,38 @@ class FTSSearch:
         engine = create_engine(fts_config.dbftsurl)
         Session = sessionmaker(engine)
         with Session() as session:
-            # find the ftsDocuments Files with the id
-            ftsdocument = session.query(ftsDocumentsFiles).filter(ftsDocumentsFiles.id == id).first()
-            # delete the file and the html conversion
             try:
+                # open the whoosh service
+                #index_service = IndexService(config=whoosh_config, session=session)
+                # add the Model to the index service
+                #index_service.register_class(ftsDocumentsFilesTextBlocks)
+                # convert the pdf to records
+                # find the ftsDocuments Files with the id
+                ftsdocument = session.query(ftsDocumentsFiles).filter(ftsDocumentsFiles.id == id).first()
+                # delete the file and the html conversion
                 # get the root directory
                 rootpath = self.appbuilder.app.config['UPLOAD_FOLDER']
                 # get the file path
                 filepath = os.path.join(rootpath, ftsdocument.file.replace(".pdf", ""))
                 # suppress the directory with shutil.rmtree
                 shutil.rmtree(filepath)
+                # for each ftsDocumentsFiles find all ftsDocumentsFilesPages
+                ftsdocumentsfilespages = session.query(ftsDocumentsFilesPages).filter(ftsDocumentsFilesPages.document_id == id).all()
+                # find all ftsDocumentsFilesBlocks with the page_id
+                for ftsdocumentsfilepage in ftsdocumentsfilespages:
+                    ftsdocumentsfilestextblocs = session.query(ftsDocumentsFilesTextBlocks).filter(ftsDocumentsFilesTextBlocks.page_id == ftsdocumentsfilespages.id).all()
+                    # find all ftsDocumentsFilesLines with the textblock_id
+                    for ftsdocumentsfilestextbloc in ftsdocumentsfilestextblocs:
+                        # delete all ftsDocumentsFilesTextBlocks
+                        session.delete(ftsdocumentsfilestextbloc)
+                    # delete all ftsDocumentsFilesPages
+                    session.delete(ftsdocumentsfilepage)
+                # delete all ftsDocumentsFiles
+                session.delete(ftsdocument)
+                # commit the changes
+                session.commit()
             except Exception as e:
                 logger.error("Error deleting file: {}".format(e))
-            # for each ftsDocumentsFiles find all ftsDocumentsFilesPages
-            ftsdocumentsfilespages = session.query(ftsDocumentsFilesPages).filter(ftsDocumentsFilesPages.document_id == id).all()
-            # find all ftsDocumentsFilesBlocks with the page_id
-            for ftsdocumentsfilepage in ftsdocumentsfilespages:
-                ftsdocumentsfilestextblocs = session.query(ftsDocumentsFilesTextBlocks).filter(ftsDocumentsFilesTextBlocks.page_id == ftsdocumentsfilespages.id).all()
-                # find all ftsDocumentsFilesLines with the textblock_id
-                for ftsdocumentsfilestextbloc in ftsdocumentsfilestextblocs:
-                    # delete all ftsDocumentsFilesTextBlocks
-                    session.delete(ftsdocumentsfilestextbloc)
-                # delete all ftsDocumentsFilesPages
-                session.delete(ftsdocumentsfilepage)
-            # delete all ftsDocumentsFiles
-            session.delete(ftsdocument)
-            # commit the changes
-            session.commit()
 
     def pdf_to_documentsfilescontent(self, file, username):
         engine = create_engine(fts_config.dbftsurl)
@@ -344,7 +383,11 @@ class FTSSearch:
         with Session() as session:
             # convert the pdf to records
             try:
-                # create the doumentfiles record
+                # open the whoosh service
+                #index_service = IndexService(config=whoosh_config, session=session)
+                # add the Model to the index service
+                #index_service.register_class(ftsDocumentsFilesTextBlocks)
+                # create the documentfiles record
                 documentsfile = ftsDocumentsFiles(file=file, start_index=datetime.datetime.now(), end_index=datetime.datetime.now())
                 session.add(documentsfile)
                 session.commit()
@@ -500,3 +543,9 @@ def prepare_fts(appbuilder):
                                 ftsdocumentsfilespages.pnumber,
                                 ftsdocumentsfilestextblocks.bbox1,
                                 ftsdocumentsfilestextblocks.bbox0''')
+        # create the fts5 resources
+        enable_fts( db=connection.connection.dbapi_connection, 
+                    content='ftsdocumentsfilestextblocks',
+                    fts='ftsdocumentsfilestextblocks_fts',
+                    columns=['id','text'], 
+                    col_attrs={'id': 'UNINDEXED'})
