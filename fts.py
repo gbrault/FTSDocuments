@@ -1,4 +1,4 @@
-"""Full Text Shearch for Flask App Builder
+"""Full Text Search for Flask App Builder
 
 Summary: This module enables full text search for a table in a database.
 
@@ -79,7 +79,7 @@ FilterMatch.hook = hook
 
 logger = logging.getLogger(__name__)
 
-__version__ = "0.0.1"
+__version__ = "1.0.0"
 __author__ = "Gilbert Brault"
 __email__ = "gbrault@seadev.org"
 __license__ = "MIT"
@@ -179,8 +179,7 @@ class ftsDocumentsFilesTextBlocks(Model):
             ['page_id'],
             ['ftsdocumentsfilespages.id']
             ),
-    )
-    __searchable__ = ['text']    
+    )   
     id = Column(Integer, primary_key=True, autoincrement=True, nullable=False, comment='''DocumentsFilesTextBlocs table's record unique id''')
     page_id = Column(Integer, nullable=False, comment='''document page unique id (table ftsDocumentFilesPages)''')
     bnumber = Column(Integer, nullable=False, comment='''Block number''')
@@ -197,10 +196,15 @@ class ftsDocumentsFilesTextBlocks(Model):
     def __repr__(self):
         return f"{self.file_name()} p:{self.pages.pnumber} b:{self.bnumber}"
     def page_reference(self):
+        search=''
+        if hasattr(self,'_filters'):
+            for i,filter in enumerate(self._filters.filters):
+                if filter.column_name == 'text':
+                    values_to_highlight = [ t for t in self._filters.values[i][0].split() if t not in ['AND','OR','NOT'] ]
+                    search = '#search=%22' + '+'.join(values_to_highlight)+'%22'
+        href = url_for("DocumentFilesView.download", filename=str(self.pages.documentfiles.file),as_attachment=0)+ f'#page={self.pages.pnumber+1}{search}'
         return Markup(
-            '<a href="'
-            + url_for("ftsDocumentFilesPagesView.show", pk=self.page_id)
-            + f'">{self.pages.pnumber}</a>'
+            f'<a href="{href}" target="_blank">{self.pages.pnumber+1}</a>'
         )
     @renders('text')
     def highlight_text(self):
@@ -208,11 +212,27 @@ class ftsDocumentsFilesTextBlocks(Model):
         if text is None:
             return ''
         if hasattr(self,'_filters'):
+            """This code applies text highlighting to a search result based on the user's search query. Here's an overview of what the code is doing:
+               - It loops through each filter defined by the user's search query.
+               - If the filter is for the "text" column, it extracts the values to highlight from the search query.
+               - It splits the text into individual words and removes any query operators (such as "AND", "OR", and "NOT").
+               - It uses the Levenshtein distance algorithm (measuring the similarity between two strings) to compare each word in the text to each value to highlight, 
+                 and adds the word to a set of words to highlight if the similarity score is above a certain threshold (0.7).
+               - It uses regular expressions to replace each word to highlight in the text with an HTML tag (the <mark> tag) to indicate that it should be highlighted in the search results.
+            Overall, this code is trying to identify which words in the search query match the words in the text to be highlighted, 
+            and then add HTML markup to highlight those matching words in the search results.
+            """
             for i,filter in enumerate(self._filters.filters):
                 if filter.column_name == 'text':
-                    values_to_highlight = [ t for t in self._filters.values[i][0].split() if t not in ['AND','OR','NOT'] ]
-                    for value in values_to_highlight:
-                        value = value.strip('"').strip("'")
+                    values_to_highlight = set([ t.strip('"').strip("'") for t in self._filters.values[i][0].split() if t not in ['AND','OR','NOT'] ])
+                    words_in_text = set([ t.strip(".,;()") for t in text.split() if t not in ['AND','OR','NOT'] ])
+                    from Levenshtein import ratio
+                    words_to_highlight = set()
+                    for word in words_in_text:
+                        for value in values_to_highlight:
+                            if ratio(word,value) > 0.7:
+                                words_to_highlight.add(word)
+                    for value in words_to_highlight:
                         text = re.sub('(?i)'+re.escape(value), lambda k: '<mark>' + value + '</mark>', text)
             return Markup(text.replace('\n','<br>').replace('\r',''))
         else:
@@ -270,6 +290,7 @@ class ftsDocumentFilesTextBlocksView(ModelView):
         highlight_text = 'Text',
         file_name = 'File Name'
         )
+    search_columns = ['text']
     show_columns = ['id', 'page_id','bbox0','bbox1','bbox2','bbox3']
     edit_columns = ['page_id','bbox0','bbox1','bbox2','bbox3']
     add_columns = [ 'page_id','bbox0','bbox1','bbox2','bbox3']
@@ -434,7 +455,13 @@ class FTSSearch:
                                 # get size and text
                                 size = max(size,span["size"])
                                 flags = span["flags"]
-                                text += span["text"]
+                                if text[-1]==" " or span["text"][0]==" ":
+                                    text += span["text"]
+                                else:
+                                    if text == "":
+                                        text = span["text"]
+                                    else:
+                                        text += " " + span["text"]
                 # update the end time
                         documentsfilestextblock = ftsDocumentsFilesTextBlocks( page_id=documentsfilespage.id,
                                                                                 bnumber = bno,
@@ -459,90 +486,6 @@ def prepare_fts(appbuilder):
     with Session() as session:
         # get the raw connection
         connection = session.connection()
-        # create view to search in the documents
-        connection.execute('''CREATE VIEW IF NOT EXISTS ftsbyspans AS
-                            SELECT
-                                ROW_NUMBER() OVER() AS id,
-                                ftsdocumentsfiles.id AS document_id,
-                                ftsdocumentsfiles.file AS document_file,
-                                ftsdocumentsfilespages.pnumber AS page_number,
-                                ftsdocumentsfilespages.width AS page_width,
-                                ftsdocumentsfilespages.height AS page_height,
-                                ftsdocumentsfilestextblocks.bnumber AS textblock_number,
-                                ftsdocumentsfilestextblocks.bbox0 AS textblock_bbox0,
-                                ftsdocumentsfilestextblocks.bbox1 AS textblock_bbox1,
-                                ftsdocumentsfilestextblocks.bbox2 AS textblock_bbox2,
-                                ftsdocumentsfilestextblocks.bbox3 AS textblock_bbox3,
-                                ftsdocumentsfileslines.lnumber AS line_number,
-                                ftsdocumentsfileslines.bbox0 AS line_bbox0,
-                                ftsdocumentsfileslines.bbox1 AS line_bbox1,
-                                ftsdocumentsfileslines.bbox2 AS line_bbox2,
-                                ftsdocumentsfileslines.bbox3 AS line_bbox3,
-                                ftsdocumentsfileslines.wmode AS line_wmode,
-                                ftsdocumentsfileslines.dir_0 AS line_dir_0,
-                                ftsdocumentsfileslines.dir_1 AS line_dir_1,
-                                ftsdocumentsfilesspans.snumber AS span_number,
-                                ftsdocumentsfilesspans.text AS span_text,
-                                ftsdocumentsfilesspans.bbox0 AS span_bbox0,
-                                ftsdocumentsfilesspans.bbox1 AS span_bbox1,
-                                ftsdocumentsfilesspans.bbox2 AS span_bbox2,
-                                ftsdocumentsfilesspans.bbox3 AS span_bbox3,
-                                ftsdocumentsfilesspans.color AS span_color,
-                                ftsdocumentsfilesspans.font AS span_font,
-                                ftsdocumentsfilesspans.size AS span_size,
-                                ftsdocumentsfilesspans.flags AS span_flags,
-                                ftsdocumentsfilesspans.origin_0 AS span_origin_0,
-                                ftsdocumentsfilesspans.origin_1 AS span_origin_1
-                            FROM
-                                ftsdocumentsfiles
-                            LEFT JOIN
-                                ftsdocumentsfilespages ON ftsdocumentsfiles.id = ftsdocumentsfilespages.document_id
-                            LEFT JOIN
-                                ftsdocumentsfilestextblocks ON ftsdocumentsfilespages.id = ftsdocumentsfilestextblocks.page_id
-                            LEFT JOIN
-                                ftsdocumentsfileslines ON ftsdocumentsfilestextblocks.id = ftsdocumentsfileslines.block_id
-                            LEFT JOIN
-                                ftsdocumentsfilesspans ON ftsdocumentsfileslines.id = ftsdocumentsfilesspans.line_id
-                            ORDER BY
-                                ftsdocumentsfiles.id,
-                                ftsdocumentsfilespages.pnumber,
-                                ftsdocumentsfilestextblocks.bnumber,
-                                ftsdocumentsfileslines.lnumber,
-                                ftsdocumentsfilesspans.snumber''')
-        # create view grouping spans by textblock
-        connection.execute('''CREATE VIEW IF NOT EXISTS ftsbyblocks AS
-                            SELECT
-                                ROW_NUMBER() OVER (ORDER BY ftsdocumentsfiles.id, ftsdocumentsfilespages.pnumber, ftsdocumentsfilestextblocks.bnumber) AS id,
-                                ftsdocumentsfiles.id AS document_id,
-                                ftsdocumentsfiles.file AS document_file,
-                                ftsdocumentsfilespages.pnumber AS page_number,
-                                ftsdocumentsfilespages.width AS page_width,
-                                ftsdocumentsfilespages.height AS page_height,
-                                ftsdocumentsfilestextblocks.bnumber AS textblock_number,
-                                ftsdocumentsfilestextblocks.bbox0 AS textblock_bbox0,
-                                ftsdocumentsfilestextblocks.bbox1 AS textblock_bbox1,
-                                ftsdocumentsfilestextblocks.bbox2 AS textblock_bbox2,
-                                ftsdocumentsfilestextblocks.bbox3 AS textblock_bbox3,
-                                GROUP_CONCAT(ftsdocumentsfilesspans.text, ' ') AS textblock_text
-                            FROM
-                                ftsdocumentsfiles
-                            LEFT JOIN
-                                ftsdocumentsfilespages ON ftsdocumentsfiles.id = ftsdocumentsfilespages.document_id
-                            LEFT JOIN
-                                ftsdocumentsfilestextblocks ON ftsdocumentsfilespages.id = ftsdocumentsfilestextblocks.page_id
-                            LEFT JOIN
-                                ftsdocumentsfileslines ON ftsdocumentsfilestextblocks.id = ftsdocumentsfileslines.block_id
-                            LEFT JOIN
-                                ftsdocumentsfilesspans ON ftsdocumentsfileslines.id = ftsdocumentsfilesspans.line_id
-                            GROUP BY
-                                ftsdocumentsfiles.id,
-                                ftsdocumentsfilespages.pnumber,
-                                ftsdocumentsfilestextblocks.bnumber
-                            ORDER BY
-                                ftsdocumentsfiles.id,
-                                ftsdocumentsfilespages.pnumber,
-                                ftsdocumentsfilestextblocks.bbox1,
-                                ftsdocumentsfilestextblocks.bbox0''')
         # create the fts5 resources
         enable_fts( db=connection.connection.dbapi_connection, 
                     content='ftsdocumentsfilestextblocks',
