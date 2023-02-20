@@ -1,0 +1,14 @@
+{"patches": [{"file": "models/sqla/filters.py", "kind": "shadow"},
+             {"file": "models/sqla/interface.py", "kind": "shadow"},
+             {"file": "views.py", "kind": "replace"},
+             {"file": "static/appbuilder/js/ab_filters.js"}],
+ "js":{
+    "static/appbuilder/js/ab_filters.js":[{"original": "$in.attr('name','_flt_' + e.val + '_' + name);","patched": "$in.attr('name','_flt_' + e.delegateTarget.value + '_' + name);"}]
+ },
+ "py":{
+    "views.py": [
+        {"original": "import json\n", "patched": "import json\nimport sqlalchemy\n"}, 
+        {"original":"        except FABException as exc:\n            flash(f\"An error occurred: {exc}\", \"warning\")\n            return redirect(self.get_redirect())\n", 
+        "patched": "        except FABException as exc:\n            flash(f\"An error occurred: {exc}\", \"warning\")\n            return redirect(self.get_redirect())\n        except sqlalchemy.exc.OperationalError as exc:\n            flash( f\"An error occurred: {exc}. \", \"warning\")\n            return redirect(self.get_redirect())\n"}]
+ }
+}

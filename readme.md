@@ -19,10 +19,47 @@ I have added a few features to the original project:
 - I have added a search view in the document library using the search box. The search is based on the Full Text Search index if you use the Match capability.
 - The Match capability is added for Text and Strings columns. 
 - I have also improved the rendering, has all the words in the match search request are highlighted in the document.
+- A patched version of the flask-appbuilder is used to enable the Match capability.
 
-To do that, I have changed few things in the flask-appbuilder project:
+## Performance
 
-You need to use https://github.com/seadevfr/Flask-AppBuilder.git to install the appropriate version of flask-appbuilder.
+- Indexing a document takes about 1 second per page.
+- Searching for a query is quite fast
+- See the FTS5 SQLITE documentation for more information ref: https://www.sqlite.org/fts5.html.
+
+## Patching
+
+To do that, I have changed few things in the flask-appbuilder project. For this I have created a patch mechanism to overload the original code.
+This overload needs to use the `package_patch.py` file. This script is used to patch the original flask-appbuilder package.
+
+- The original package is installed in the "site-packages" directory with the `pip install -r requirements.txt` command.
+- It firts creates a copy of the original package in the "flask_appbuilder" directory.
+    - If the "flask_appbuilder" directory already exists, it is deleted.
+- While doing this copy, using the flask_appbuilder.json file, for each file to be patched, it will:
+    - rename the original file by prepending the "original_" prefix.
+    - replace the original file by the patching file (which has the name of the original file).
+- This way, the original code is not modified and the patching code is used instead.
+- The whole `flask_appbuilder` in the venv directory is then completly shadowed.
+- By shadowing the package, it is possible to overload the original code with the patching code.
+- This enables to add new features to the original package without modifying the original code.
+- Then we can update the original package without having to redo the patching.
+- This is convinient as **Daniel Vaz Gaspar** cannot accept all the changes I have made to the original package.
+- And it is still possible to use the latest version of `flask_appbuilder`.
+- Of course, to use the latest version of the original package
+    - The patching needs to be redone.
+    - The patching files need to be reviewed to chack if they are still valid.
+    - The patching files need to be updated if needed.
+- The patching mechanism is not limited to the `flask_appbuilder` package.
+- The patch_flask_appbuilder direcory contains:
+    - the flask_appbuilder.json file which contains the list of files to be patched.
+    - the patching files which are the files to be used to patch the original files.
+- to use `package_patch.py`:
+    - Get to the parent directory of the patch_flask_appbuilder directory.
+        - Makes sure the patch_flask_appbuilder.json is there.
+        - Makes sure the patching files are there.
+    - have a copy of `python package_patch.py` in this parent directory.
+    - run `python package_patch.py --package flask_appbuilder`  to patch the flask_appbuilder package.
+    - the flask_appbuilder package is now patched and a subdirectory "flask_appbuilder" is created.
 
 ## Installation
 
@@ -34,6 +71,7 @@ Outline to install the application.
 - git clone this repository
 - create a virtualenv
 - install the dependencies
+- patch the flask_appbuilder package
 - use the "Python: Flask" option to run the app
 - the login page should show up
 

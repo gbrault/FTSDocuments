@@ -1,5 +1,5 @@
 flask
-git+https://github.com/seadevfr/Flask-AppBuilder.git
+flask-appbuilder
 pymupdf
 beautifulsoup4
 cssutils

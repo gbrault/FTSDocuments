@@ -5,6 +5,15 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "name": "Patch",
+            "type": "python",
+            "request": "launch",
+            "program": "package_patch.py",
+            "console": "integratedTerminal",
+            "justMyCode": true,
+            "args":["--package", "flask_appbuilder"]
+        },
+        {
             "name": "Python: Flask",
             "type": "python",
             "request": "launch",

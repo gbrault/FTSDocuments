@@ -3,3 +3,4 @@ __pycache__/
 penpa/
 poppler/
 attic/
+flask_appbuilder/
