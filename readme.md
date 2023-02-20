@@ -29,10 +29,22 @@ I have added a few features to the original project:
 
 ## Patching
 
+### How to use `package_patch.py`:
+
+You need to do that only once. And again to get the latest version of the original package.
+    - Get to the parent directory of the patch_flask_appbuilder directory.
+        - Makes sure the patch_flask_appbuilder.json is there.
+        - Makes sure the patching files are there.
+    - have a copy of `python package_patch.py` in this parent directory.
+    - run `python package_patch.py --package flask_appbuilder`  to patch the flask_appbuilder package.
+    - the flask_appbuilder package is now patched and a subdirectory "flask_appbuilder" is created.
+
 To do that, I have changed few things in the flask-appbuilder project. For this I have created a patch mechanism to overload the original code.
 This overload needs to use the `package_patch.py` file. This script is used to patch the original flask-appbuilder package.
 
-- The original package is installed in the "site-packages" directory with the `pip install -r requirements.txt` command.
+### How the patching mechanism works:
+
+- The original package is installed in the venv "site-packages" directory with the `pip install -r requirements.txt` command.
 - It firts creates a copy of the original package in the "flask_appbuilder" directory.
     - If the "flask_appbuilder" directory already exists, it is deleted.
 - While doing this copy, using the flask_appbuilder.json file, for each file to be patched, it will:
@@ -53,13 +65,6 @@ This overload needs to use the `package_patch.py` file. This script is used to p
 - The patch_flask_appbuilder direcory contains:
     - the flask_appbuilder.json file which contains the list of files to be patched.
     - the patching files which are the files to be used to patch the original files.
-- to use `package_patch.py`:
-    - Get to the parent directory of the patch_flask_appbuilder directory.
-        - Makes sure the patch_flask_appbuilder.json is there.
-        - Makes sure the patching files are there.
-    - have a copy of `python package_patch.py` in this parent directory.
-    - run `python package_patch.py --package flask_appbuilder`  to patch the flask_appbuilder package.
-    - the flask_appbuilder package is now patched and a subdirectory "flask_appbuilder" is created.
 
 ## Installation
 
