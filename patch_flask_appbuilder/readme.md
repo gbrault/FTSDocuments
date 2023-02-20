@@ -83,3 +83,9 @@ Now, any subsequent calls to `add()` will use the new version that adds 5 to the
 However, it's important to use monkey patching judiciously, as it can make code harder to understand and debug, especially when done in a large codebase with multiple developers. 
 
 It's generally better to modify code directly, rather than relying on monkey patching, whenever possible.
+
+With the methodology we are using, as the Monkey Patching is centralized in the patch file directory, it is easier to understand and debug.
+
+No modification to the package source code makes easier communication with the package maintainer.
+
+Scattering the monkey patching in the code makes it difficult to understand and debug.
