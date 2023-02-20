@@ -145,6 +145,9 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 - 2021-02-03: Initial version
 - 2021-02-15: Optimized the indexing, added asynchronous feedback, dropped FTS5.
+- 2021-02-16: Added the Match capability for Text and String columns, using FTS5 again! (performance issue)
+- 2021-02-17: Added the patching mechanism to enable the Match capability.
+- 2021-02-18: Finalized documentation and the patching capability.
 
 ## Some software:
 
