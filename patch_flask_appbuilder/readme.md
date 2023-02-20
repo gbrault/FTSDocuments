@@ -56,3 +56,30 @@
     - For classes, the patching is done on the class definition, not on the instances
     - If any reference to the original code is kept, the patching will not work unless you patch the reference too
 - In some situation, reference to the package needs to be done and sometime, this leads to circular issues
+
+# What is Monkey Patching?
+
+According to ChatGPT, monkey patching is a way to modify the behavior of a module or class at runtime. It's a way to extend or override functionality without modifying the original source code.
+
+In Python, monkey patching refers to the practice of modifying the behavior of an object or module at runtime by modifying its attributes or methods. 
+Essentially, it means overriding or extending existing code at runtime, without modifying the original source code.
+
+For example, let's say you have a function `add()` that adds two numbers:
+
+```python
+def add(a, b):
+    return a + b
+```
+Now, suppose you want to change the behavior of `add()` to always add 5 to the result. You can achieve this by "monkey patching" the `add()` function:
+    
+```python
+def new_add(a, b):
+    return add(a, b) + 5
+
+add = new_add
+```
+Now, any subsequent calls to `add()` will use the new version that adds 5 to the result. This can be useful in certain situations, such as when you need to temporarily modify the behavior of a module or function to fit your needs.
+
+However, it's important to use monkey patching judiciously, as it can make code harder to understand and debug, especially when done in a large codebase with multiple developers. 
+
+It's generally better to modify code directly, rather than relying on monkey patching, whenever possible.

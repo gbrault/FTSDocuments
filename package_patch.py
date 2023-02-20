@@ -46,7 +46,7 @@ def patch_package(package_name):
                     if directives["kind"] == "replace":
                         for patching in patch['py'][cfile_]:
                             template = template.replace(patching['original'].encode(), patching['patched'].encode())
-                            f.write(template)
+                        f.write(template)
                     elif directives["kind"] == "shadow":    
                         # copy the patch file
                         with open(os.path.join("patch_"+package_name,package_name,file_), "rb") as f2:

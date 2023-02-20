@@ -7,7 +7,10 @@
  },
  "py":{
     "views.py": [
-        {"original": "import json\n", "patched": "import json\nimport sqlalchemy\n"}, 
+        {"original": "import json\n", "patched": "import json\nimport sqlalchemy\n"},
+        {"original": "@expose(\"/download/<string:filename>\")", "patched": "@expose(\"/download/<string:filename>\")\n    @expose(\"/download/<string:filename>/<int:as_attachment>\")"},
+        {"original": "download(self, filename):", "patched": "download(self, filename, as_attachment=1):\n        if as_attachment == 1:\n            as_attachment = True\n        else:\n            as_attachment = False"},
+        {"original": "as_attachment=True", "patched": "as_attachment=as_attachment"},
         {"original":"        except FABException as exc:\n            flash(f\"An error occurred: {exc}\", \"warning\")\n            return redirect(self.get_redirect())\n", 
         "patched": "        except FABException as exc:\n            flash(f\"An error occurred: {exc}\", \"warning\")\n            return redirect(self.get_redirect())\n        except sqlalchemy.exc.OperationalError as exc:\n            flash( f\"An error occurred: {exc}. \", \"warning\")\n            return redirect(self.get_redirect())\n"}]
  }
