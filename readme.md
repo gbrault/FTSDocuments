@@ -29,6 +29,9 @@ I have added a few features to the original project:
 
 ## Patching
 
+To do that, I have changed few things in the flask-appbuilder project. For this I have created a patch mechanism to overload the original code.
+This overload needs to use the `package_patch.py` file. This script is used to patch the original flask-appbuilder package.
+
 ### How to use `package_patch.py`:
 
 You need to do that only once. And again to get the latest version of the original package.
@@ -39,9 +42,6 @@ You need to do that only once. And again to get the latest version of the origin
 - have a copy of `python package_patch.py` in this parent directory.
 - run `python package_patch.py --package flask_appbuilder`  to patch the flask_appbuilder package.
 - the flask_appbuilder package is now patched and a subdirectory "flask_appbuilder" is created.
-
-To do that, I have changed few things in the flask-appbuilder project. For this I have created a patch mechanism to overload the original code.
-This overload needs to use the `package_patch.py` file. This script is used to patch the original flask-appbuilder package.
 
 ### How the patching mechanism works:
 
