@@ -1,5 +1,7 @@
 # FTSDOCUMENTS
 
+<img src="images/accueil.png" width="1000px">
+
 ## Description
 
 **THIS IS A WORK IN PROGRESS**
