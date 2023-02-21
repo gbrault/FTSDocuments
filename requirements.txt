@@ -6,4 +6,3 @@ cssutils
 flask-sock
 python-Levenshtein
 sqlalchemy
-whoosh
