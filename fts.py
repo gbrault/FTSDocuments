@@ -455,7 +455,7 @@ class FTSSearch:
                                 # get size and text
                                 size = max(size,span["size"])
                                 flags = span["flags"]
-                                if text[-1]==" " or span["text"][0]==" ":
+                                if len(text) >0 and (text[-1]==" " or span["text"][0]==" "):
                                     text += span["text"]
                                 else:
                                     if text == "":
